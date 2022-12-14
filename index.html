@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UsdPay" />
+    <meta name="keywords" content="UsdPay" />
+    <title>UsdPay</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- шрифты -->
+    <link rel="preload" href="templates/assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" href="templates/assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" href="templates/assets/fonts/Montserrat-Bold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="templates/assets/css/bundle.min.css?v=1">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row header_row_top">
+                <div class="logo"><img src="templates/assets/imgs/logo.svg" alt=""></div>
+                <div class="language">
+                    <select name="language" id="#">
+                        <option selected value="Ru">Ru</option>
+                        <option value="En">En</option>
+                    </select>
+                </div>
+                <nav class="header_menu">
+                    <ul>
+                        <li><a href="#" class="active">Мой аккаунт</a></li>
+                        <li><a href="#">Тарифы</a></li>
+                        <li><a href="#">Разработчикам</a></li>
+                        <li><a href="#">Поддержка</a></li>
+                    </ul>
+                </nav>
+                <div class="header_profile">
+                    <a href="#" class="name">hello@konstantinopolsky.com</a>
+                    <a href="#" class="exit">
+                        <svg>
+                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#exit">
+                            </use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="row header_row">
+                <div class="wallet_card -balans">
+                    <div class="wallet_card_top">
+                        <div class="wallet_card_title">Баланс</div>
+                        <button class="profit_hide">
+                            <svg>
+                                <use xlink:href="templates/assets/imgs/sprite.symbol.svg#eye_hide">
+                                </use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="wallet_card_center">
+                        <svg class="wallet">
+                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#wallet">
+                            </use>
+                        </svg>
+                        <div class="wallet_card_balans">650,220<span>.85 USDT</span></div>
+                    </div>
+                    <div class="wallet_card_bottom">
+                        <div class="wallet_card_profit_percent">+2.5%</div>
+                        <div class="wallet_card_profit_price">+1,610.22 USDT</div>
+                        <div class="wallet_card_time">За сутки</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="content">
+                <div class="content_left">
+                    <div class="menu">
+                        <ul class="menu_list">
+                            <li class="menu_item active">
+                                <a href="#" class="menu_item_link">
+                                    <svg class="menu_icon">
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#category">
+                                        </use>
+                                    </svg>
+                                    Обзор
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="#" class="menu_item_link">
+                                    <svg class="menu_icon">
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#store">
+                                        </use>
+                                    </svg>
+                                    Магазины 
+                                    <span class="number">2</span>
+                                </a>
+                                <a href="#" class="menu_icon_add">
+                                    <svg>
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#plus">
+                                        </use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="#" class="menu_item_link">
+                                    <svg class="menu_icon">
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#receipts">
+                                        </use>
+                                    </svg>
+                                    Поступления
+                                    <span class="number_new">1</span>
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="#" class="menu_item_link">
+                                    <svg class="menu_icon">
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#payments">
+                                        </use>
+                                    </svg>
+                                    Выплаты
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="#" class="menu_item_link">
+                                    <svg class="menu_icon">
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#partners">
+                                        </use>
+                                    </svg>
+                                    Партнёры
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu_list">
+                            <li class="menu_item">
+                                <a href="#" class="menu_item_link">
+                                    <svg class="menu_icon">
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#settings">
+                                        </use>
+                                    </svg>
+                                    Настройки
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="#" class="menu_item_link">
+                                    <svg class="menu_icon">
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#api">
+                                        </use>
+                                    </svg>
+                                    API
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="#" class="menu_item_link">
+                                    <svg class="menu_icon">
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#safety">
+                                        </use>
+                                    </svg>
+                                    Безопасность
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="#" class="menu_item_link">
+                                    <svg class="menu_icon">
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#support">
+                                        </use>
+                                    </svg>
+                                    Поддержка
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content_right">
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="templates/assets/js/bundle.min.js?v=1"></script>
+</body>
+
+</html>
