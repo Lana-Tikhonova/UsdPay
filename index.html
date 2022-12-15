@@ -49,7 +49,7 @@
                     </a>
                 </div>
             </div>
-            <div class="row header_row">
+            <div class="row header_row_bottom">
                 <div class="wallet_card -balans">
                     <div class="wallet_card_top">
                         <div class="wallet_card_title">Баланс</div>
@@ -72,8 +72,66 @@
                         <div class="wallet_card_profit_price">+1,610.22 USDT</div>
                         <div class="wallet_card_time">За сутки</div>
                     </div>
-
                 </div>
+                <div class="wallet_card -shop">
+                    <div class="swiper shop_slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                
+                                <div class="wallet_card_top">
+                                    <div class="wallet_card_title">BotPay</div>
+                                </div>
+                                <div class="wallet_card_center">
+                                    <div class="wallet_card_balans -small">+5,220<span>.11 USDT</span></div>
+                                    <div class="wallet_card_time">За сутки</div>
+                                </div>
+                                <div class="wallet_card_bottom">
+                                    <a href="#" class="wallet_card_link">crm.botpay.me</a>
+                                    <div class="wallet_card_id">ID: 15954</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="wallet_card_top">
+                                    <div class="wallet_card_title">PayBotPay</div>
+                                </div>
+                                <div class="wallet_card_center">
+                                    <div class="wallet_card_balans -small">+5,670<span>.11 USDT</span></div>
+                                    <div class="wallet_card_time">За сутки</div>
+                                </div>
+                                <div class="wallet_card_bottom">
+                                    <a href="#" class="wallet_card_link">crm.botpay.me</a>
+                                    <div class="wallet_card_id">ID: 15954</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="circle-pagination"></div>
+                    </div>
+                </div>
+                <div class="chart_receipts_month">
+                    <div class="chart_receipts_title">Поступления за декабрь</div>
+                    <div id="chart"></div>
+                    <div class="chart_receipts_sum">24,440 <span>USDT</span></div>
+                </div>
+                <a href="#" class="header_btn">
+                    <span class="header_btn_icon">
+                        <svg class="plus">
+                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#plus">
+                            </use>
+                        </svg>
+                    </span>
+                    <span class="header_btn_title">Добавить
+                        магазин</span>
+                </a>
+                <a href="#" class="header_btn">
+                    <span class="header_btn_icon">
+                        <svg class="arrow_lenght_right">
+                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#arrow_lenght_right">
+                            </use>
+                        </svg>
+                    </span>
+                    <span class="header_btn_title">Вывести
+                        средства</span>
+                </a>
             </div>
         </div>
     </header>
@@ -178,7 +236,40 @@
                     </div>
                 </div>
                 <div class="content_right">
-
+                    <div class="content_card">
+                        <div class="date_selection">
+                            <label class="date_selection_item">
+                                <input name="date_selection" type="radio" value="" checked>
+                                <span>24 часа</span>
+                            </label>
+                            <label class="date_selection_item">
+                                <input name="date_selection" type="radio" value="">
+                                <span>7 дней</span>
+                            </label>
+                            <label class="date_selection_item">
+                                <input name="date_selection" type="radio" value="">
+                                <span>30 дней</span>
+                            </label>
+                            <label class="date_selection_item">
+                                <input name="date_selection" type="radio" value="">
+                                <span>90 дней</span>
+                            </label>
+                        </div>
+                        <div class="statistics_list">
+                            <div class="statistics_item">
+                                <span class="statistics_item_title">Общая сумма поступлений</span>
+                                <div class="statistics_item_number">12,8520<span>.88 USDT</span></div>
+                            </div>
+                            <div class="statistics_item">
+                                <span class="statistics_item_title">Подтвержденных оплат</span>
+                                <div class="statistics_item_number">256</div>
+                            </div>
+                            <div class="statistics_item">
+                                <span class="statistics_item_title">Процент успеха</span>
+                                <div class="statistics_item_number">88%</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
