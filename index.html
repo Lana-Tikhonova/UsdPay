@@ -77,7 +77,7 @@
                     <div class="swiper shop_slider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                
+
                                 <div class="wallet_card_top">
                                     <div class="wallet_card_title">BotPay</div>
                                 </div>
@@ -156,7 +156,7 @@
                                         <use xlink:href="templates/assets/imgs/sprite.symbol.svg#store">
                                         </use>
                                     </svg>
-                                    Магазины 
+                                    Магазины
                                     <span class="number">2</span>
                                 </a>
                                 <a href="#" class="menu_icon_add">
@@ -240,20 +240,25 @@
                         <div class="date_selection">
                             <label class="date_selection_item">
                                 <input name="date_selection" type="radio" value="" checked>
-                                <span>24 часа</span>
+                                <span class="date_selection_text">24 часа</span>
                             </label>
                             <label class="date_selection_item">
                                 <input name="date_selection" type="radio" value="">
-                                <span>7 дней</span>
+                                <span class="date_selection_text">7 дней</span>
                             </label>
                             <label class="date_selection_item">
                                 <input name="date_selection" type="radio" value="">
-                                <span>30 дней</span>
+                                <span class="date_selection_text">30 дней</span>
                             </label>
                             <label class="date_selection_item">
                                 <input name="date_selection" type="radio" value="">
-                                <span>90 дней</span>
+                                <span class="date_selection_text">90 дней</span>
                             </label>
+                            <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.0/dist/index.umd.min.js">
+                            </script>
+                            <div class="date_input date_selection_item">
+                                <input type="text" class="date_input_input" placeholder="ДД.ММ.ГГГГ — ДД.ММ.ГГГГ">
+                            </div>
                         </div>
                         <div class="statistics_list">
                             <div class="statistics_item">
@@ -269,6 +274,248 @@
                                 <div class="statistics_item_number">88%</div>
                             </div>
                         </div>
+                    </div>
+                    <div class="content_card">
+                        <div class="title_wrap">
+                            <h2 class="title_arrow">Статистика поступлений</h2>
+                            <div class="select_wrapper">
+                                <select name="" class="select_add">
+                                    <option selected value="2022">2022</option>
+                                    <option value="2021">2021</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="receipts_block">
+                            <div class="shop_list_slider_wrapper">
+                                <div class="swiper shop_list_slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="#" class="shop_item active"> BotPay</a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="shop_item">PayKassa</a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="shop_item">CoinPayments</a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="shop_item"> BotPay</a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="shop_item">PayKassa</a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="shop_item">CoinPayments</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop_slider_arrows">
+                                    <div class="swiper-button-prev shop_slider_arrows_prev"></div>
+                                    <div class="swiper-button-next shop_slider_arrows_next"></div>
+                                </div>
+                            </div>
+
+                            <div class="receipts_statistics">
+                                <div class="receipts_fraction">
+                                    <div class="receipts_statistics_title">Доля</div>
+                                    <!-- <div id="pie"></div> -->
+                                </div>
+                                <div class="receipts_quantity">
+                                    <div class="receipts_statistics_title">Количество всех сделок</div>
+                                    <div class="receipts_quantity_diagrams">
+
+                                    </div>
+                                    <div class="receipts_quantity_list_wrapper">
+                                        <div class="receipts_quantity_list">
+                                            <div class="receipts_quantity_item"><span
+                                                    style="background: #00CA8B"></span>BotPay</div>
+                                            <div class="receipts_quantity_item"><span
+                                                    style="background: #FFA800"></span>PayKassa</div>
+                                            <div class="receipts_quantity_item"><span
+                                                    style="background: #5F95FF"></span>CoinPayments</div>
+                                            <div class="receipts_quantity_item"><span
+                                                    style="background: #00CA8B"></span>BotPay</div>
+                                            <div class="receipts_quantity_item"><span
+                                                    style="background: #FFA800"></span>PayKassa</div>
+                                            <div class="receipts_quantity_item"><span
+                                                    style="background: #5F95FF"></span>CoinPayments</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="content_card">
+                        <h2 class="title_arrow">Поступления</h2>
+                        <div class="date_selection">
+                            <label class="date_selection_item">
+                                <input name="date_selectionTwo" type="radio" value="" checked>
+                                <span class="date_selection_text">24 часа</span>
+                            </label>
+                            <label class="date_selection_item">
+                                <input name="date_selectionTwo" type="radio" value="">
+                                <span class="date_selection_text">7 дней</span>
+                            </label>
+                            <label class="date_selection_item">
+                                <input name="date_selectionTwo" type="radio" value="">
+                                <span class="date_selection_text">30 дней</span>
+                            </label>
+                            <label class="date_selection_item">
+                                <input name="date_selectionTwo" type="radio" value="">
+                                <span class="date_selection_text">90 дней</span>
+                            </label>
+                            <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.0/dist/index.umd.min.js">
+                            </script>
+                            <div class="date_input date_selection_item">
+                                <input type="text" class="date_input_input" placeholder="ДД.ММ.ГГГГ — ДД.ММ.ГГГГ">
+                            </div>
+                            <div class="select_wrapper">
+                                <select name="" class="select_add">
+                                    <option selected value="Сначала последние">Сначала последние</option>
+                                    <option value="Сначала последние">Сначала последние</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="table">
+                            <div class="table_thead">
+                                <div class="table_th table_status">Статус</div>
+                                <div class="table_th table_date">Дата</div>
+                                <div class="table_th table_id">Invoice ID</div>
+                                <div class="table_th table_shop">Магазин</div>
+                                <div class="table_th table_sum">Сумма, USDT</div>
+                                <div class="table_th table_arrow"></div>
+                            </div>
+                            <div class="table_tbody">
+                                <div class="table_tbody_item">
+                                    <div class="table_tbody_top">
+                                        <div class="table_td table_status"><span style="background: #00CA8B;"></span>
+                                            Подтвержден</div>
+                                        <div class="table_td table_date">12:21:50 • 25 авг 2022</div>
+                                        <div class="table_td table_id">15228759</div>
+                                        <div class="table_td table_shop" style="font-weight: 600;">BotPay</div>
+                                        <div class="table_td table_sum">86.50</div>
+                                        <div class="table_td table_arrow">
+                                            <div class="info_open"></div>
+                                        </div>
+                                    </div>
+                                    <div class="table_tbody_bottom">
+                                        <ul class="info_tr_col">
+                                            <li>
+                                                <span>Merchant ID:</span>
+                                                <span>15954 (crm.botpay.me)</span>
+                                            </li>
+                                            <li>
+                                                <span>Способ оплаты:</span>
+                                                <span>TRON_TRC20 USDT</span>
+                                            </li>
+                                            <li>
+                                                <span>Номер заказа:</span>
+                                                <span>3_1652102602</span>
+                                            </li>
+                                            <li>
+                                                <span>Комментарий:</span>
+                                                <span>Пополнение баланса</span>
+                                            </li>
+                                            <li>
+                                                <span>Ссылка на оплату:</span>
+                                                <span><a href="#">Открыть</a></span>
+                                            </li>
+                                        </ul>
+                                        <ul class="info_tr_col">
+                                            <li>
+                                                <span>Запрошенная сумма:</span>
+                                                <span>256,00 USDT</span>
+                                            </li>
+                                            <li>
+                                                <span>Сумма:</span>
+                                                <span>256,00 USDT</span>
+                                            </li>
+                                            <li>
+                                                <span>Зачислено:</span>
+                                                <span>256,00 USDT</span>
+                                            </li>
+                                            <li>
+                                                <span>Комиссия сервиса:</span>
+                                                <span>2,00 USDT (0,8%)</span>
+                                            </li>
+                                            <li>
+                                                <span>Processing fee:</span>
+                                                <span>0,23 USDT (0,1%)</spa>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table_tbody_item">
+                                    <div class="table_tbody_top">
+                                        <div class="table_td table_status"><span style="background: #FF5F5F;"></span>
+                                            Не оплачен
+                                        </div>
+                                        <div class="table_td table_date">12:21:50 • 25 авг 2022</div>
+                                        <div class="table_td table_id">15228759</div>
+                                        <div class="table_td table_shop" style="font-weight: 600;">CoinPayments</div>
+                                        <div class="table_td table_sum">8256</div>
+                                        <div class="table_td table_arrow">
+                                            <div class="info_open"></div>
+                                        </div>
+                                    </div>
+                                    <div class="table_tbody_bottom">
+                                        <ul class="info_tr_col">
+                                            <li>
+                                                <span>Merchant ID:</span>
+                                                <span>15954 (crm.botpay.me)</span>
+                                            </li>
+                                            <li>
+                                                <span>Способ оплаты:</span>
+                                                <span>TRON_TRC20 USDT</span>
+                                            </li>
+                                            <li>
+                                                <span>Номер заказа:</span>
+                                                <span>3_1652102602</span>
+                                            </li>
+                                            <li>
+                                                <span>Комментарий:</span>
+                                                <span>Пополнение баланса</span>
+                                            </li>
+                                            <li>
+                                                <span>Ссылка на оплату:</span>
+                                                <span><a href="#">Открыть</a></span>
+                                            </li>
+                                        </ul>
+                                        <ul class="info_tr_col">
+                                            <li>
+                                                <span>Запрошенная сумма:</span>
+                                                <span>256,00 USDT</span>
+                                            </li>
+                                            <li>
+                                                <span>Сумма:</span>
+                                                <span>256,00 USDT</span>
+                                            </li>
+                                            <li>
+                                                <span>Зачислено:</span>
+                                                <span>256,00 USDT</span>
+                                            </li>
+                                            <li>
+                                                <span>Комиссия сервиса:</span>
+                                                <span>2,00 USDT (0,8%)</span>
+                                            </li>
+                                            <li>
+                                                <span>Processing fee:</span>
+                                                <span>0,23 USDT (0,1%)</spa>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="table_tbody_item">
+                                    <div class="table_missing">Больше поступлений нет</div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

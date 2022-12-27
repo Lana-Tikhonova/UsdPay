@@ -1,7 +1,17 @@
 $(document).ready(function () {
-    var orderSelect = $('.language select').select2({
+    $('.language select').select2({
         minimumResultsForSearch: Infinity,
         dropdownParent: $('.language'),
+    });
+
+    $('.select_add').select2({
+        minimumResultsForSearch: Infinity,
+        theme: 'stylization',
+    });
+    // $('.table_tbody_bottom').slideToggle(0);
+    $('.info_open').on('click', function () {
+        $(this).parents('.table_tbody_item').toggleClass('active');
+        $(this).parents('.table_tbody_item').find('.table_tbody_bottom').slideToggle();
     });
 
     const shopSlider = new Swiper('.shop_slider', {
@@ -32,6 +42,25 @@ $(document).ready(function () {
             },
         },
     });
+    const shopSliderTwo = new Swiper('.shop_list_slider', {
+        slidesPerView: 'auto',
+        spaceBetween: 24,
+        speed: 600,
+        watchOverflow: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        grabCursor: true,
+        navigation: {
+            nextEl: '.shop_slider_arrows_next',
+            prevEl: '.shop_slider_arrows_prev',
+        },
+        on: {
+            transitionEnd(slider) {
+                slider.isEnd ? slider.el.classList.add('end') : slider.el.classList.remove('end');
+            },
+        }
+    });
+
     // Получить кол-во дней в месяце
     function dayQuantity() {
         var today = new Date();
@@ -117,6 +146,88 @@ $(document).ready(function () {
 
     var chart = new ApexCharts(document.querySelector("#chart"), options);
     chart.render();
-    
+
+    // var optionsTwo = {
+    //     series: [50, 25, 25],
+    //     chart: {
+    //         type: 'donut',
+    //     },
+    //     legend: {
+    //         position: 'bottom',
+    //     },
+    //     responsive: [{
+    //         breakpoint: 480,
+    //         options: {
+    //             chart: {
+    //                 width: 200
+    //             },
+    //             legend: {
+    //                 position: 'bottom'
+    //             }
+    //         }
+    //     }]
+    // };
+
+    // var pie = new ApexCharts(document.querySelector("#pie"), optionsTwo);
+    // pie.render();
+
+    const slider = document.querySelector('.receipts_quantity_list');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        slider.classList.add('active');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
+    slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
+    slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 3; //scroll-fast
+        slider.scrollLeft = scrollLeft - walk;
+    });
+
+    const datapiskers = document.querySelectorAll('.date_input_input');
+    datapiskers.forEach(datapisker => {
+        const picker = new easepick.create({
+            element: datapisker,
+            css: [
+                "/templates/src/vendors/easepick/index.css",
+                "/templates/src/vendors/easepick/customize_sample.css",
+            ],
+            setup(picker) {
+                picker.on('select', (e) => {
+                    this.element.parentNode.classList.add('completed')
+                });
+            },
+            lang: 'ru-US',
+            format: "DD MM YYYY",
+            zIndex: 10,
+            grid: 2,
+            calendars: 2,
+            RangePlugin: {
+                delimiter: "  —  "
+            },
+            locale: {
+                previousMonth: '<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 8.5L1.5 5L4.5 1.5" stroke="#B9B9B9" stroke-width="1.5" stroke-linecap="round"/></svg>',
+                nextMonth: '<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 8.5L4.5 5L1.5 1.5" stroke="#B9B9B9" stroke-width="1.5" stroke-linecap="round"/></svg>',
+            },
+            plugins: [
+                "RangePlugin"
+            ],
+        });
+    })
+
 
 });
