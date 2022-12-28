@@ -50,88 +50,92 @@
                 </div>
             </div>
             <div class="row header_row_bottom">
-                <div class="wallet_card -balans">
-                    <div class="wallet_card_top">
-                        <div class="wallet_card_title">Баланс</div>
-                        <button class="profit_hide">
-                            <svg>
-                                <use xlink:href="templates/assets/imgs/sprite.symbol.svg#eye_hide">
+                <div class="wallet_card_wrapper">
+                    <div class="wallet_card -balans">
+                        <div class="wallet_card_top">
+                            <div class="wallet_card_title">Баланс</div>
+                            <button class="profit_hide">
+                                <svg>
+                                    <use xlink:href="templates/assets/imgs/sprite.symbol.svg#eye_hide">
+                                    </use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="wallet_card_center">
+                            <svg class="wallet">
+                                <use xlink:href="templates/assets/imgs/sprite.symbol.svg#wallet">
                                 </use>
                             </svg>
-                        </button>
-                    </div>
-                    <div class="wallet_card_center">
-                        <svg class="wallet">
-                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#wallet">
-                            </use>
-                        </svg>
-                        <div class="wallet_card_balans">650,220<span>.85 USDT</span></div>
-                    </div>
-                    <div class="wallet_card_bottom">
-                        <div class="wallet_card_profit_percent">+2.5%</div>
-                        <div class="wallet_card_profit_price">+1,610.22 USDT</div>
-                        <div class="wallet_card_time">За сутки</div>
-                    </div>
-                </div>
-                <div class="wallet_card -shop">
-                    <div class="swiper shop_slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-
-                                <div class="wallet_card_top">
-                                    <div class="wallet_card_title">BotPay</div>
-                                </div>
-                                <div class="wallet_card_center">
-                                    <div class="wallet_card_balans -small">+5,220<span>.11 USDT</span></div>
-                                    <div class="wallet_card_time">За сутки</div>
-                                </div>
-                                <div class="wallet_card_bottom">
-                                    <a href="#" class="wallet_card_link">crm.botpay.me</a>
-                                    <div class="wallet_card_id">ID: 15954</div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="wallet_card_top">
-                                    <div class="wallet_card_title">PayBotPay</div>
-                                </div>
-                                <div class="wallet_card_center">
-                                    <div class="wallet_card_balans -small">+5,670<span>.11 USDT</span></div>
-                                    <div class="wallet_card_time">За сутки</div>
-                                </div>
-                                <div class="wallet_card_bottom">
-                                    <a href="#" class="wallet_card_link">crm.botpay.me</a>
-                                    <div class="wallet_card_id">ID: 15954</div>
-                                </div>
-                            </div>
+                            <div class="wallet_card_balans">650,220<span>.85 USDT</span></div>
                         </div>
-                        <div class="circle-pagination"></div>
+                        <div class="wallet_card_bottom">
+                            <div class="wallet_card_profit_percent">+2.5%</div>
+                            <div class="wallet_card_profit_price">+1,610.22 USDT</div>
+                            <div class="wallet_card_time">За сутки</div>
+                        </div>
+                    </div>
+                    <div class="wallet_card -shop">
+                        <div class="swiper shop_slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+
+                                    <div class="wallet_card_top">
+                                        <div class="wallet_card_title">BotPay</div>
+                                    </div>
+                                    <div class="wallet_card_center">
+                                        <div class="wallet_card_balans -small">+5,220<span>.11 USDT</span></div>
+                                        <div class="wallet_card_time">За сутки</div>
+                                    </div>
+                                    <div class="wallet_card_bottom">
+                                        <a href="#" class="wallet_card_link">crm.botpay.me</a>
+                                        <div class="wallet_card_id">ID: 15954</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="wallet_card_top">
+                                        <div class="wallet_card_title">PayBotPay</div>
+                                    </div>
+                                    <div class="wallet_card_center">
+                                        <div class="wallet_card_balans -small">+5,670<span>.11 USDT</span></div>
+                                        <div class="wallet_card_time">За сутки</div>
+                                    </div>
+                                    <div class="wallet_card_bottom">
+                                        <a href="#" class="wallet_card_link">crm.botpay.me</a>
+                                        <div class="wallet_card_id">ID: 15954</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="circle-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="chart_receipts_month">
+                        <div class="chart_receipts_title">Поступления за декабрь</div>
+                        <div id="chart"></div>
+                        <div class="chart_receipts_sum">24,440 <span>USDT</span></div>
                     </div>
                 </div>
-                <div class="chart_receipts_month">
-                    <div class="chart_receipts_title">Поступления за декабрь</div>
-                    <div id="chart"></div>
-                    <div class="chart_receipts_sum">24,440 <span>USDT</span></div>
+                <div class="header_btn_wrapper">
+                    <a href="#" class="header_btn">
+                        <span class="header_btn_icon">
+                            <svg class="plus">
+                                <use xlink:href="templates/assets/imgs/sprite.symbol.svg#plus">
+                                </use>
+                            </svg>
+                        </span>
+                        <span class="header_btn_title">Добавить
+                            магазин</span>
+                    </a>
+                    <a href="#" class="header_btn">
+                        <span class="header_btn_icon">
+                            <svg class="arrow_lenght_right">
+                                <use xlink:href="templates/assets/imgs/sprite.symbol.svg#arrow_lenght_right">
+                                </use>
+                            </svg>
+                        </span>
+                        <span class="header_btn_title">Вывести
+                            средства</span>
+                    </a>
                 </div>
-                <a href="#" class="header_btn">
-                    <span class="header_btn_icon">
-                        <svg class="plus">
-                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#plus">
-                            </use>
-                        </svg>
-                    </span>
-                    <span class="header_btn_title">Добавить
-                        магазин</span>
-                </a>
-                <a href="#" class="header_btn">
-                    <span class="header_btn_icon">
-                        <svg class="arrow_lenght_right">
-                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#arrow_lenght_right">
-                            </use>
-                        </svg>
-                    </span>
-                    <span class="header_btn_title">Вывести
-                        средства</span>
-                </a>
             </div>
         </div>
     </header>
@@ -300,26 +304,28 @@
                             </div>
                         </div>
                         <div class="receipts_block">
-                            <div class="shop_list_slider_wrapper">
-                                <div class="swiper shop_list_slider">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <a href="#" class="shop_item active"> BotPay</a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#" class="shop_item">PayKassa</a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#" class="shop_item">CoinPayments</a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#" class="shop_item"> BotPay</a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#" class="shop_item">PayKassa</a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#" class="shop_item">CoinPayments</a>
+                            <div class="shop_list_slider_block">
+                                <div class="shop_list_slider_wrapper">
+                                    <div class="swiper shop_list_slider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <a href="#" class="shop_item active"> BotPay</a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="#" class="shop_item">PayKassa</a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="#" class="shop_item">CoinPayments</a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="#" class="shop_item"> BotPay</a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="#" class="shop_item">PayKassa</a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="#" class="shop_item">CoinPayments</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -327,6 +333,15 @@
                                     <div class="swiper-button-prev shop_slider_arrows_prev"></div>
                                     <div class="swiper-button-next shop_slider_arrows_next"></div>
                                 </div>
+                            </div>
+                            <div class="receipts_link">
+                                <a href="#">crm.botpay.me</a>
+                                <span class="receipts_link_id">ID: 15954</span>
+                            </div>
+                            <div class="data_absence">
+                                <span>К сожалению, пока нет данных по статистике магазина BotPay</span>
+                                <a href="#" class="btn btn_icon">
+                                    Страница магазина</a>
                             </div>
 
                             <div class="receipts_statistics">
@@ -339,6 +354,7 @@
                                     <div class="receipts_quantity_diagrams">
 
                                     </div>
+
                                     <div class="receipts_quantity_list_wrapper">
                                         <div class="receipts_quantity_list">
                                             <div class="receipts_quantity_item"><span

@@ -199,7 +199,16 @@ $(document).ready(function () {
     });
 
     const datapiskers = document.querySelectorAll('.date_input_input');
+
+
+
     datapiskers.forEach(datapisker => {
+        let datapickerGrid;
+        if (window.innerWidth <= 768) {
+            datapickerGrid = 1;
+        } else {
+            datapickerGrid = 2;
+        }
         const picker = new easepick.create({
             element: datapisker,
             css: [
@@ -214,8 +223,8 @@ $(document).ready(function () {
             lang: 'ru-US',
             format: "DD MM YYYY",
             zIndex: 10,
-            grid: 2,
-            calendars: 2,
+            grid: datapickerGrid,
+            calendars: datapickerGrid,
             RangePlugin: {
                 delimiter: "  —  "
             },
