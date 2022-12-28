@@ -203,8 +203,8 @@ $(document).ready(function () {
         const picker = new easepick.create({
             element: datapisker,
             css: [
-                "/templates/src/vendors/easepick/index.css",
-                "/templates/src/vendors/easepick/customize_sample.css",
+                "templates/src/vendors/easepick/index.css",
+                "templates/src/vendors/easepick/customize_sample.css",
             ],
             setup(picker) {
                 picker.on('select', (e) => {
