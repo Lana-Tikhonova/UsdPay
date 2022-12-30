@@ -15,9 +15,9 @@ $(document).ready(function () {
     });
 
     const shopSlider = new Swiper('.shop_slider', {
-        // autoplay: {
-        // 	delay: 3000,
-        // },
+        autoplay: {
+            delay: 3000,
+        },
         slidesPerView: 1,
         spaceBetween: 20,
         speed: 600,
@@ -147,29 +147,6 @@ $(document).ready(function () {
     var chart = new ApexCharts(document.querySelector("#chart"), options);
     chart.render();
 
-    // var optionsTwo = {
-    //     series: [50, 25, 25],
-    //     chart: {
-    //         type: 'donut',
-    //     },
-    //     legend: {
-    //         position: 'bottom',
-    //     },
-    //     responsive: [{
-    //         breakpoint: 480,
-    //         options: {
-    //             chart: {
-    //                 width: 200
-    //             },
-    //             legend: {
-    //                 position: 'bottom'
-    //             }
-    //         }
-    //     }]
-    // };
-
-    // var pie = new ApexCharts(document.querySelector("#pie"), optionsTwo);
-    // pie.render();
 
     const slider = document.querySelector('.receipts_quantity_list');
     let isDown = false;
@@ -237,6 +214,38 @@ $(document).ready(function () {
             ],
         });
     })
+    let swiperWalletItem = $('.swiper_wallet');
+
+    var swiperWallet = new Swiper(".swiper_wallet", {
+        slidesPerView: "auto",
+        spaceBetween: 16,
+        watchSlidesProgress: true,
+        mousewheelControl: true,
+        watchOverflow: true,
+        watchSlidesVisibility: true,
+        nested: true,
+        freeMode: true,
+        breakpoints: {
+            680: {
+                spaceBetween: 24,
+            },
+        },
+    });
+
+    if (swiperWalletItem) {
+        function swiperWalletFunc() {
+            if ($(window).width() <= 680) {
+                swiperWallet.enable();
+            } else {
+                swiperWallet.disable();
+            }
+        }
+        swiperWalletFunc();
+
+        $(window).on('resize', function () {
+            swiperWalletFunc();
+        });
+    }
 
 
 });

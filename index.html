@@ -51,61 +51,71 @@
             </div>
             <div class="row header_row_bottom">
                 <div class="wallet_card_wrapper">
-                    <div class="wallet_card -balans">
-                        <div class="wallet_card_top">
-                            <div class="wallet_card_title">Баланс</div>
-                            <button class="profit_hide">
-                                <svg>
-                                    <use xlink:href="templates/assets/imgs/sprite.symbol.svg#eye_hide">
-                                    </use>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="wallet_card_center">
-                            <svg class="wallet">
-                                <use xlink:href="templates/assets/imgs/sprite.symbol.svg#wallet">
-                                </use>
-                            </svg>
-                            <div class="wallet_card_balans">650,220<span>.85 USDT</span></div>
-                        </div>
-                        <div class="wallet_card_bottom">
-                            <div class="wallet_card_profit_percent">+2.5%</div>
-                            <div class="wallet_card_profit_price">+1,610.22 USDT</div>
-                            <div class="wallet_card_time">За сутки</div>
-                        </div>
-                    </div>
-                    <div class="wallet_card -shop">
-                        <div class="swiper shop_slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-
+                    <div class="swiper swiper_wallet">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slide_wallet">
+                                <div class="wallet_card -balans">
                                     <div class="wallet_card_top">
-                                        <div class="wallet_card_title">BotPay</div>
+                                        <div class="wallet_card_title">Баланс</div>
+                                        <button class="profit_hide">
+                                            <svg>
+                                                <use xlink:href="templates/assets/imgs/sprite.symbol.svg#eye_hide">
+                                                </use>
+                                            </svg>
+                                        </button>
                                     </div>
                                     <div class="wallet_card_center">
-                                        <div class="wallet_card_balans -small">+5,220<span>.11 USDT</span></div>
-                                        <div class="wallet_card_time">За сутки</div>
+                                        <svg class="wallet">
+                                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#wallet">
+                                            </use>
+                                        </svg>
+                                        <div class="wallet_card_balans">650,220<span>.85 USDT</span></div>
                                     </div>
                                     <div class="wallet_card_bottom">
-                                        <a href="#" class="wallet_card_link">crm.botpay.me</a>
-                                        <div class="wallet_card_id">ID: 15954</div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="wallet_card_top">
-                                        <div class="wallet_card_title">PayBotPay</div>
-                                    </div>
-                                    <div class="wallet_card_center">
-                                        <div class="wallet_card_balans -small">+5,670<span>.11 USDT</span></div>
+                                        <div class="wallet_card_profit_percent">+2.5%</div>
+                                        <div class="wallet_card_profit_price">+1,610.22 USDT</div>
                                         <div class="wallet_card_time">За сутки</div>
-                                    </div>
-                                    <div class="wallet_card_bottom">
-                                        <a href="#" class="wallet_card_link">crm.botpay.me</a>
-                                        <div class="wallet_card_id">ID: 15954</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="circle-pagination"></div>
+                            <div class="swiper-slide slide_wallet">
+                                <div class="wallet_card -shop">
+                                    <div class="swiper shop_slider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+
+                                                <div class="wallet_card_top">
+                                                    <div class="wallet_card_title">BotPay</div>
+                                                </div>
+                                                <div class="wallet_card_center">
+                                                    <div class="wallet_card_balans -small">+5,220<span>.11 USDT</span>
+                                                    </div>
+                                                    <div class="wallet_card_time">За сутки</div>
+                                                </div>
+                                                <div class="wallet_card_bottom">
+                                                    <a href="#" class="wallet_card_link">crm.botpay.me</a>
+                                                    <div class="wallet_card_id">ID: 15954</div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="wallet_card_top">
+                                                    <div class="wallet_card_title">PayBotPay</div>
+                                                </div>
+                                                <div class="wallet_card_center">
+                                                    <div class="wallet_card_balans -small">+5,670<span>.11 USDT</span>
+                                                    </div>
+                                                    <div class="wallet_card_time">За сутки</div>
+                                                </div>
+                                                <div class="wallet_card_bottom">
+                                                    <a href="#" class="wallet_card_link">crm.botpay.me</a>
+                                                    <div class="wallet_card_id">ID: 15954</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="circle-pagination"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="chart_receipts_month">
@@ -422,73 +432,31 @@
                             <div class="table_tbody">
                                 <div class="table_tbody_item">
                                     <div class="table_tbody_top">
-                                        <div class="table_td table_status"><span style="background: #00CA8B;"></span>
-                                            Подтвержден</div>
-                                        <div class="table_td table_date">12:21:50 • 25 авг 2022</div>
-                                        <div class="table_td table_id">15228759</div>
-                                        <div class="table_td table_shop" style="font-weight: 600;">BotPay</div>
-                                        <div class="table_td table_sum">86.50</div>
-                                        <div class="table_td table_arrow">
-                                            <div class="info_open"></div>
+                                        <div class="table_td table_status">
+                                            <span class="table_td_title">Статус</span>
+                                            <div>
+                                                <span style="background: #00CA8B;" class="circle"></span>
+                                                Подтвержден
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="table_tbody_bottom">
-                                        <ul class="info_tr_col">
-                                            <li>
-                                                <span>Merchant ID:</span>
-                                                <span>15954 (crm.botpay.me)</span>
-                                            </li>
-                                            <li>
-                                                <span>Способ оплаты:</span>
-                                                <span>TRON_TRC20 USDT</span>
-                                            </li>
-                                            <li>
-                                                <span>Номер заказа:</span>
-                                                <span>3_1652102602</span>
-                                            </li>
-                                            <li>
-                                                <span>Комментарий:</span>
-                                                <span>Пополнение баланса</span>
-                                            </li>
-                                            <li>
-                                                <span>Ссылка на оплату:</span>
-                                                <span><a href="#">Открыть</a></span>
-                                            </li>
-                                        </ul>
-                                        <ul class="info_tr_col">
-                                            <li>
-                                                <span>Запрошенная сумма:</span>
-                                                <span>256,00 USDT</span>
-                                            </li>
-                                            <li>
-                                                <span>Сумма:</span>
-                                                <span>256,00 USDT</span>
-                                            </li>
-                                            <li>
-                                                <span>Зачислено:</span>
-                                                <span>256,00 USDT</span>
-                                            </li>
-                                            <li>
-                                                <span>Комиссия сервиса:</span>
-                                                <span>2,00 USDT (0,8%)</span>
-                                            </li>
-                                            <li>
-                                                <span>Processing fee:</span>
-                                                <span>0,23 USDT (0,1%)</spa>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="table_tbody_item">
-                                    <div class="table_tbody_top">
-                                        <div class="table_td table_status"><span style="background: #FF5F5F;"></span>
-                                            Не оплачен
+                                        <div class="table_td table_date">
+                                            <span class="table_td_title">Дата</span>
+                                            12:21:50 • 25 авг 2022
                                         </div>
-                                        <div class="table_td table_date">12:21:50 • 25 авг 2022</div>
-                                        <div class="table_td table_id">15228759</div>
-                                        <div class="table_td table_shop" style="font-weight: 600;">CoinPayments</div>
-                                        <div class="table_td table_sum">8256</div>
+                                        <div class="table_td table_id">
+                                            <span class="table_td_title">Invoice ID</span>
+                                            15228759
+                                        </div>
+                                        <div class="table_td table_shop" style="font-weight: 600;">
+                                            <span class="table_td_title">Магазин</span>
+                                            BotPay
+                                        </div>
+                                        <div class="table_td table_sum">
+                                            <span class="table_td_title">Сумма, USDT</span>
+                                            86.50
+                                        </div>
                                         <div class="table_td table_arrow">
+                                            <span class="table_td_title">Подробности</span>
                                             <div class="info_open"></div>
                                         </div>
                                     </div>
