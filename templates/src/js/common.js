@@ -247,5 +247,34 @@ $(document).ready(function () {
         });
     }
 
+    // Радиальные графики
+    const ctxTotal = document.getElementById('total-chart').getContext('2d');
+    ctxTotal.canvas.parentNode.style.height = '120px';
+    ctxTotal.canvas.parentNode.style.width = '120px';
+    const data = {
+        labels: [
 
+        ],
+        datasets: [{
+            /*label: 'My First Dataset',*/
+            data: [50, 25, 25],
+            borderWidth: [4, 1, 1],
+            borderColor: ['#00CA8B','#FFA800', '#5F95FF'],
+            borderRadius: -2,
+            backgroundColor: [
+                '#00CA8B',
+                '#FFA800',
+                '#5F95FF'
+            ],
+            hoverOffset: 4
+        }]
+    };
+
+    new Chart(ctxTotal, {
+        type: 'doughnut',
+        data: data,
+        options: {
+            cutout: 45,
+        }
+    });
 });

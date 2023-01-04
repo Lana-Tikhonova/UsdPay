@@ -357,7 +357,7 @@
                             <div class="receipts_statistics">
                                 <div class="receipts_fraction">
                                     <div class="receipts_statistics_title">Доля</div>
-                                    <!-- <div id="pie"></div> -->
+                                    <div class="total-chart__wrapper"><canvas id="total-chart" width="120" height="120"></canvas></div>
                                 </div>
                                 <div class="receipts_quantity">
                                     <div class="receipts_statistics_title">Количество всех сделок</div>
@@ -367,8 +367,9 @@
 
                                     <div class="receipts_quantity_list_wrapper">
                                         <div class="receipts_quantity_list">
-                                            <div class="receipts_quantity_item"><span
-                                                    style="background: #00CA8B"></span>BotPay</div>
+                                            <div class="receipts_quantity_item">
+                                                <span style="background: #00CA8B"></span>BotPay
+                                            </div>
                                             <div class="receipts_quantity_item"><span
                                                     style="background: #FFA800"></span>PayKassa</div>
                                             <div class="receipts_quantity_item"><span
@@ -522,6 +523,7 @@
     <footer>
 
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="templates/assets/js/bundle.min.js?v=1"></script>
 </body>
 

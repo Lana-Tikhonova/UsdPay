@@ -1296,6 +1296,7 @@ a {
 // }
 .receipts_quantity_list_wrapper {
 	border-top: 1px solid #E7EDEB;
+	overflow: hidden;
 }
 
 .receipts_quantity_list {
@@ -1609,6 +1610,10 @@ main {
 	margin-left: 16px;
 	display: inline-block;
 }
+.total-chart__wrapper {
+	margin: 0 auto;
+}
+//Breakpoints
 
 @media screen and (max-width:1300px) {
 	.content_left {
@@ -1902,6 +1907,16 @@ main {
 			margin-left: 8px;
 		}
 	}
+
+	.swiper-slide-next {
+		display: none;
+	}
+	.slide_wallet {
+		width: 100%;
+	}
+	.header_btn_wrapper {
+		justify-content: space-between;
+	}
 }
 
 @media screen and (max-width:576px) {
@@ -1929,4 +1944,59 @@ main {
 		width: 100%;
 		align-items: flex-start;
 	}
+
+	.header_btn {
+		min-width: auto;
+	}
+
+	.header_btn_title {
+		font-size: 11px;
+	}
+
+	.receipts_statistics {
+		flex-direction: column;
+	}
+
+	.receipts_fraction,
+	.receipts_quantity {
+		width: 100%;
+	}
+
+	.statistics_list {
+		flex-direction: column;
+	}
+
+	.statistics_item {
+		width: 100%;
+	}
+
+	.date_selection {
+		justify-content: space-between;
+	}
+
+	.date_selection_item {
+		margin-right: 2px;
+	}
+
+	.title_wrap {
+		align-items: start;
+		flex-direction: column;
+	}
+
+	.select_wrapper {
+		margin-top: 16px;
+	}
+
+	.table_tbody_bottom {
+		flex-direction: column-reverse;
+	}
+	.info_tr_col {
+		width: 100%;
+	}
+
+	@media (max-width: 360px) {
+	.header_btn_title {
+
+	}
+}
 }
