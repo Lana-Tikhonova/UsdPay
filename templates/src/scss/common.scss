@@ -1287,15 +1287,14 @@ a {
 	font-size: 15px;
 	line-height: 18px;
 	text-align: center;
-	margin-bottom: 24px;
 	color: #222222;
+	margin-bottom: 20px;
 }
 
 // #pie {
 // 	height: 100%;
 // }
 .receipts_quantity_list_wrapper {
-	border-top: 1px solid #E7EDEB;
 	overflow: hidden;
 }
 
@@ -1324,10 +1323,10 @@ a {
 }
 
 .receipts_quantity_item {
+
 	font-weight: 600;
 	font-size: 13px;
 	line-height: 16px;
-	padding: 18px 20px 16px;
 	display: flex;
 	align-items: center;
 
@@ -1612,7 +1611,72 @@ main {
 }
 .total-chart__wrapper {
 	margin: 0 auto;
+
+	position: relative;
 }
+
+//doughnut
+.doughnut {
+	display: flex;
+	flex-direction: column;
+}
+
+.doughnut__chart {
+	position: relative;
+	margin: 0 22px 22px;
+}
+
+.doughnut__footer {
+	padding-top: 18px;
+	padding-bottom: 16px;
+	border-top: 1px solid #E7EDEB;
+	width: 100%;
+	text-align: center;
+}
+
+.doughnut__label {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 5px;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.doughnut__label p {
+	margin: 0;
+}
+
+.doughnut__value {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 18px;
+	color: #222222;
+}
+
+.doughnut__text {
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 130%;
+	color: #222222;
+}
+
+.doughnut__top {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 130%;
+	color: #96A2AE;
+
+}
+
+
+
 //Breakpoints
 
 @media screen and (max-width:1300px) {

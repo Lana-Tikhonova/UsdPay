@@ -247,34 +247,146 @@ $(document).ready(function () {
         });
     }
 
-    // Радиальные графики
-    const ctxTotal = document.getElementById('total-chart').getContext('2d');
-    ctxTotal.canvas.parentNode.style.height = '120px';
-    ctxTotal.canvas.parentNode.style.width = '120px';
-    const data = {
-        labels: [
+    // Круговые графики
 
-        ],
-        datasets: [{
-            /*label: 'My First Dataset',*/
-            data: [50, 25, 25],
-            borderWidth: [4, 1, 1],
-            borderColor: ['#00CA8B','#FFA800', '#5F95FF'],
-            borderRadius: -2,
-            backgroundColor: [
-                '#00CA8B',
-                '#FFA800',
-                '#5F95FF'
-            ],
-            hoverOffset: 4
-        }]
-    };
-
-    new Chart(ctxTotal, {
-        type: 'doughnut',
-        data: data,
-        options: {
-            cutout: 45,
+    function countElementArray(count) {
+        const array = [4];
+        for (let i = 0; i < count - 1; i++) {
+            array.push(1);
         }
-    });
+        console.log(array);
+        return array;
+    }
+    //Total
+    function doughnutMainChartCreate(id, name, values, share, colors, text, topText) {
+        const ctxTotal = document.getElementById(id).getContext('2d');
+        ctxTotal.canvas.parentNode.style.height = '120px';
+        ctxTotal.canvas.parentNode.style.width = '120px';
+        let borderWidth = countElementArray(values.length);
+        const data = {
+            labels: [
+
+            ],
+            datasets: [{
+                /*label: 'My First Dataset',*/
+                data: values,
+                borderWidth: borderWidth,
+                borderColor: colors,
+                backgroundColor: colors,
+                hoverOffset: 4,
+                offset: 5
+            }]
+        };
+
+        new Chart(ctxTotal, {
+            type: 'doughnut',
+            data: data,
+            options: {
+                cutout: 45,
+            }
+        });
+        share = share + '%';
+        doughnutChartLabelCreate (id, share, text, topText);
+    }
+    doughnutMainChartCreate('total-chart', 'BotPay', [50, 25, 25, 15, 17], 50, ['#00CA8B','#FFA800', '#5F95FF', '#5F9566', '#5F9500'], 'BotPay', '325,110');
+
+    // function create doughnut chart
+    function doughnutChartNodeCreate( id, name, value, color, width = 80, height = 80) {
+
+        let div = document.createElement('div');
+        div.classList.add("receipts_quantity_item", "doughnut");
+        div.innerHTML = `
+            <div class="doughnut__chart" data-id=${id}>
+                <canvas id=${id} width=${width} height=${height}></canvas>
+            </div>
+            <div class="doughnut__footer"><span style="background: ${color}"></span>${name}</div>
+        `;
+
+        let node = document.querySelector('#doughnut-charts');
+        node.append(div);
+
+        const ctx = document.getElementById(id).getContext('2d');
+        ctx.canvas.parentNode.style.height = `${height}px`;
+        ctx.canvas.parentNode.style.width = `${width}px`;
+        const data = {
+            datasets: [{
+                data: [value, 100 - value],
+                borderWidth: 0,
+                backgroundColor: [
+                    `${color}`,
+                    '#E7EDEB'
+                ],
+                hoverOffset: 4
+            }]
+        };
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: data,
+            options: {
+                cutout: 30,
+            }
+        });
+        doughnutChartLabelCreate (id, value, text = 'оплат')
+    }
+
+    // function create label in center doughnut chart
+    function doughnutChartLabelCreate (id, value, text = 'оплат', topText='') {
+        let div = document.createElement('div');
+        let display = (topText === '')? 'display: none': 'display: block';
+        div.classList.add("doughnut__label");
+        div.innerHTML = `
+            <p class="doughnut__top" style=${display}>${topText}</p>
+            <p class='doughnut__value'>${value}</p>
+            <p class='doughnut__text'>${text}</p>`;
+
+        let node = document.querySelector(`[data-id=${id}]`);
+        node.append(div);
+    }
+
+    // function create doughnut charts
+    function doughnutChartsListCreate(charts) {
+        let chart;
+        for ( let i = 0; i < charts.length; i++ ) {
+            chart = charts[i];
+            doughnutChartNodeCreate(chart.id, chart.name, chart.value, chart.color )
+        }
+    }
+
+   //
+    const charts = [
+        {
+            id:'BotPay',
+            name: 'botPay',
+            value: 60,
+            color: '#00CA8B'
+        },
+        {
+            id:'PayKassa',
+            name: 'PayKassa',
+            value: 20,
+            color: '#FFA800'
+        },
+        {
+            id:'CoinPayments',
+            name: 'CoinPayments',
+            value: 25,
+            color: '#5F95FF'
+        },
+        {
+            id:'Leprosorium',
+            name: 'Leprosorium',
+            value: 25,
+            color: '#AF5FFF'
+        },
+        {
+            id:'Medium',
+            name: 'Medium',
+            value: 35,
+            color: '#FC5FFF'
+        },
+
+    ];
+
+    doughnutChartsListCreate(charts);
+
 });

@@ -357,7 +357,9 @@
                             <div class="receipts_statistics">
                                 <div class="receipts_fraction">
                                     <div class="receipts_statistics_title">Доля</div>
-                                    <div class="total-chart__wrapper"><canvas id="total-chart" width="120" height="120"></canvas></div>
+                                    <div class="total-chart__wrapper" data-id="total-chart">
+                                        <canvas id="total-chart" width="120" height="120"></canvas>
+                                    </div>
                                 </div>
                                 <div class="receipts_quantity">
                                     <div class="receipts_statistics_title">Количество всех сделок</div>
@@ -366,21 +368,7 @@
                                     </div>
 
                                     <div class="receipts_quantity_list_wrapper">
-                                        <div class="receipts_quantity_list">
-                                            <div class="receipts_quantity_item">
-                                                <span style="background: #00CA8B"></span>BotPay
-                                            </div>
-                                            <div class="receipts_quantity_item"><span
-                                                    style="background: #FFA800"></span>PayKassa</div>
-                                            <div class="receipts_quantity_item"><span
-                                                    style="background: #5F95FF"></span>CoinPayments</div>
-                                            <div class="receipts_quantity_item"><span
-                                                    style="background: #00CA8B"></span>BotPay</div>
-                                            <div class="receipts_quantity_item"><span
-                                                    style="background: #FFA800"></span>PayKassa</div>
-                                            <div class="receipts_quantity_item"><span
-                                                    style="background: #5F95FF"></span>CoinPayments</div>
-                                        </div>
+                                        <div class="receipts_quantity_list" id="doughnut-charts"></div>
                                     </div>
                                 </div>
                             </div>
@@ -503,7 +491,7 @@
                                             </li>
                                             <li>
                                                 <span>Processing fee:</span>
-                                                <span>0,23 USDT (0,1%)</spa>
+                                                <span>0,23 USDT (0,1%)</span>
                                             </li>
                                         </ul>
                                     </div>
