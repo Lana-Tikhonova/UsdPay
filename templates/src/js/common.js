@@ -43,7 +43,7 @@ $(document).ready(function () {
         },
     });
     const shopSliderTwo = new Swiper('.shop_list_slider', {
-        slidesPerView: 'auto',
+        /*slidesPerView: 'auto',
         spaceBetween: 24,
         speed: 600,
         watchOverflow: true,
@@ -53,6 +53,20 @@ $(document).ready(function () {
         navigation: {
             nextEl: '.shop_slider_arrows_next',
             prevEl: '.shop_slider_arrows_prev',
+        },
+        pagination: {
+            type: 'bullets',
+            clickable: true,
+        },*/
+        slidesPerView: 1,
+        spaceBetween: 10,
+        simulateTouch: true,
+        touchRatio: 2,
+        centeredSlides: true,
+        clickable: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
         },
         on: {
             transitionEnd(slider) {
@@ -247,17 +261,22 @@ $(document).ready(function () {
         });
     }
 
-    // Круговые графики
 
+    /***********************************************************/
+    /********************Doughnut chart*************************/
+   /************************************************************/
     function countElementArray(count) {
         const array = [4];
         for (let i = 0; i < count - 1; i++) {
             array.push(1);
         }
-        console.log(array);
         return array;
     }
+
+
     //Total
+
+
     function doughnutMainChartCreate(id, name, values, share, colors, text, topText) {
         const ctxTotal = document.getElementById(id).getContext('2d');
         ctxTotal.canvas.parentNode.style.height = '120px';
@@ -290,8 +309,11 @@ $(document).ready(function () {
     }
     doughnutMainChartCreate('total-chart', 'BotPay', [50, 25, 25, 15, 17], 50, ['#00CA8B','#FFA800', '#5F95FF', '#5F9566', '#5F9500'], 'BotPay', '325,110');
 
+
     // function create doughnut chart
-    function doughnutChartNodeCreate( id, name, value, color, width = 80, height = 80) {
+
+
+    function doughnutChartNodeCreate( id, name, value, color, paymentsNumber, width = 80, height = 80) {
 
         let div = document.createElement('div');
         div.classList.add("receipts_quantity_item", "doughnut");
@@ -326,29 +348,36 @@ $(document).ready(function () {
                 cutout: 30,
             }
         });
-        doughnutChartLabelCreate (id, value, text = 'оплат')
+        doughnutChartLabelCreate (id, paymentsNumber, text = 'оплат')
     }
 
+
     // function create label in center doughnut chart
-    function doughnutChartLabelCreate (id, value, text = 'оплат', topText='') {
+
+
+    function doughnutChartLabelCreate (id, centerText= 0, bottomText = 'оплат', topText='') {
         let div = document.createElement('div');
         let display = (topText === '')? 'display: none': 'display: block';
+
         div.classList.add("doughnut__label");
         div.innerHTML = `
             <p class="doughnut__top" style=${display}>${topText}</p>
-            <p class='doughnut__value'>${value}</p>
-            <p class='doughnut__text'>${text}</p>`;
+            <p class='doughnut__value'>${centerText}</p>
+            <p class='doughnut__text'>${bottomText}</p>`;
 
         let node = document.querySelector(`[data-id=${id}]`);
         node.append(div);
     }
 
+
     // function create doughnut charts
+
+
     function doughnutChartsListCreate(charts) {
         let chart;
         for ( let i = 0; i < charts.length; i++ ) {
             chart = charts[i];
-            doughnutChartNodeCreate(chart.id, chart.name, chart.value, chart.color )
+            doughnutChartNodeCreate(chart.id, chart.name, chart.value, chart.color, chart.paymentsNumber )
         }
     }
 
@@ -358,12 +387,14 @@ $(document).ready(function () {
             id:'BotPay',
             name: 'botPay',
             value: 60,
+            paymentsNumber: 1030,
             color: '#00CA8B'
         },
         {
             id:'PayKassa',
             name: 'PayKassa',
             value: 20,
+            paymentsNumber: 230,
             color: '#FFA800'
         },
         {
@@ -376,12 +407,14 @@ $(document).ready(function () {
             id:'Leprosorium',
             name: 'Leprosorium',
             value: 25,
+            paymentsNumber: 30,
             color: '#AF5FFF'
         },
         {
             id:'Medium',
             name: 'Medium',
             value: 35,
+            paymentsNumber: 103,
             color: '#FC5FFF'
         },
 
@@ -389,4 +422,111 @@ $(document).ready(function () {
 
     doughnutChartsListCreate(charts);
 
+    // Tabs
+    const tabs = document.querySelectorAll('.tabs__btn');
+    const tabsContent = document.querySelectorAll('.tabs__body');
+
+    if (tabsContent.length > 0 || tabs.length > 0) {
+
+        function hideTabContent() {
+            tabsContent.forEach(item => {
+                item.classList.remove('active');
+            });
+
+            tabs.forEach(item => {
+                item.classList.remove('active');
+            });
+        }
+
+        function showTabContent(i = 0) {
+            tabsContent[i].classList.add('active');
+            tabs[i].classList.add('active');
+        }
+
+        hideTabContent();
+        showTabContent();
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                hideTabContent();
+                showTabContent(index);
+            });
+        });
+    }
+
+    // function get tab index
+    function tabIndex() {
+        for(let i = 0; i < tabs.length; i++) {
+            if(tabs[i].classList.contains('active')) {
+                return i;
+            }
+        }
+    }
+
+    //function change tab index
+    function changeIndex(item) {
+        let index = tabIndex();
+        if(item === '+' && index < tabs.length - 1) {
+            hideTabContent();
+            showTabContent(++index);
+        }
+        if(item === '-' && index > 0) {
+            hideTabContent();
+            showTabContent(--index);
+        }
+    }
+
+    //Arrow button in tabs
+    function arrowButtonTabs() {
+        const arrowRight = document.querySelector('#arrow-right');
+        const arrowLeft = document.querySelector('#arrow-left');
+
+        arrowRight.addEventListener('click', function () {
+            changeIndex('+');
+        });
+        arrowLeft.addEventListener('click', function () {
+            changeIndex('-');
+        });
+    }
+
+    arrowButtonTabs();
+
+    //function remove inactive class
+    function removeInactiveClass() {
+        const arrowsBtn = document.querySelectorAll('.tabs__arrow');
+
+        arrowsBtn.forEach(arrow => {
+            if(arrow.classList.contains('tabs__arrow--inactive')){
+                arrow.classList.remove('tabs__arrow--inactive');
+            }
+        })
+    }
+
+    // function add inactive class
+    function addInactiveClass(index) {
+        const arrowRight = document.querySelector('#arrow-right');
+        const arrowLeft = document.querySelector('#arrow-left');
+
+        if(index === 0) {
+            arrowLeft.classList.add('tabs__arrow--inactive');
+        }
+        if(index === tabs.length - 1) {
+            arrowRight.classList.add('tabs__arrow--inactive');
+        }
+    }
+
+    addInactiveClass(tabIndex());
+
+    // function follow the inactive arrows
+    function followArrow() {
+        const tabNavigation = document.querySelector('.tabs__wrapper');
+
+        if(tabNavigation) {
+            tabNavigation.addEventListener('click', function(){
+                removeInactiveClass();
+                addInactiveClass(tabIndex());
+            });
+        }
+    }
+    followArrow();
 });

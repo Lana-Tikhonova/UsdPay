@@ -19,7 +19,7 @@ const config = {
 				'templates/src/vendors/select2/select2.full.min.js',
 				'templates/src/vendors/apexcharts/apexcharts.min.js',
 				'templates/src/vendors/easepick/easepick.umd.min.js',
-				'templates/src/vendors/swiper/swiper-bundle.min.js',
+				'templates/src/vendors/swiper/swiper---bundle.min.js',
 				'templates/src/js/common.js'
 			],
 			scss: [
@@ -57,7 +57,7 @@ gulp.task('js', function () {
 	return gulp
 		.src(config.paths.entry.js)
 		.pipe(concat('bundle.min.js'))
-		.pipe(uglify())
+		/*.pipe(uglify())*/
 		.pipe(gulp.dest(config.paths.output.js))
 		.pipe(browserSync.stream())
 })

@@ -289,10 +289,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="content_card ">
+                    <!--<div class="content_card ">
                         <div class="title_wrap">
                             <h2 class="title_arrow">Статистика поступлений</h2>
                         </div>
+
                         <div class="data_absence">
                             <span>К сожалению, пока нет данных по статистике</span>
                             <a href="#" class="btn btn_icon">
@@ -302,7 +303,7 @@
                                 </svg>
                                 Добавить магазин </a>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="content_card">
                         <div class="title_wrap">
                             <h2 class="title_arrow">Статистика поступлений</h2>
@@ -314,15 +315,33 @@
                             </div>
                         </div>
                         <div class="receipts_block">
-                            <div class="shop_list_slider_block">
+                           <!-- <div class="shop_list_slider_block">
                                 <div class="shop_list_slider_wrapper">
                                     <div class="swiper shop_list_slider">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
                                                 <a href="#" class="shop_item active"> BotPay</a>
+                                                <div class="data_absence">
+                                                    <span>К сожалению, пока нет данных по статистике</span>
+                                                    <a href="#" class="btn btn_icon">
+                                                        <svg class="menu_icon">
+                                                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#add_plus">
+                                                            </use>
+                                                        </svg>
+                                                        Добавить магазин </a>
+                                                </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <a href="#" class="shop_item">PayKassa</a>
+                                                <div class="data_absence">
+                                                    <span>К сожалению, пока нет данных по статистике</span>
+                                                    <a href="#" class="btn btn_icon">
+                                                        <svg class="menu_icon">
+                                                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#add_plus">
+                                                            </use>
+                                                        </svg>
+                                                        Добавить магазин </a>
+                                                </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <a href="#" class="shop_item">CoinPayments</a>
@@ -339,6 +358,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="swiper-pagination"></div>
                                 <div class="shop_slider_arrows">
                                     <div class="swiper-button-prev shop_slider_arrows_prev"></div>
                                     <div class="swiper-button-next shop_slider_arrows_next"></div>
@@ -352,8 +372,66 @@
                                 <span>К сожалению, пока нет данных по статистике магазина BotPay</span>
                                 <a href="#" class="btn btn_icon">
                                     Страница магазина</a>
-                            </div>
+                            </div>-->
+                            <div class="tabs">
+                                <div class="tabs__wrapper">
+                                    <nav class="tabs__navigation">
+                                        <button class="tabs__btn active" type="button">BotPay</button>
+                                        <button class="tabs__btn" type="button">PayKassa</button>
+                                        <button class="tabs__btn" type="button">CoinPayments</button>
+                                    </nav>
+                                    <nav class="tabs__arrows">
+                                        <button class="tabs__arrow" id="arrow-left">
+                                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="#B9B9B9" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.5 8.5L1.5 5L4.5 1.5" stroke-width="1.5" stroke-linecap="round"/>
+                                            </svg>
+                                        </button>
+                                        <button class="tabs__arrow" id="arrow-right">
+                                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="#B9B9B9" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.5 8.5L4.5 5L1.5 1.5" stroke-width="1.5" stroke-linecap="round"/>
+                                            </svg>
+                                        </button>
 
+                                    </nav>
+                                </div>
+
+
+                                <div class="tabs__content">
+                                    <div class="tabs__body active">
+                                        <div class="tabs__information">
+                                            <b>crm.botpay.me</b>
+                                            <span>ID: 15954</span>
+                                        </div>
+                                        <div class="data_absence">
+                                            <span>К сожалению, пока нет данных по статистике магазина BotPay</span>
+                                            <a href="#" class="btn btn_icon">
+                                                Страница магазина</a>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__body">
+                                        <div class="tabs__information">
+                                            <b>crm.paykassa.me</b>
+                                            <span>ID: 15954</span>
+                                        </div>
+                                        <div class="data_absence">
+                                            <span>К сожалению, пока нет данных по статистике магазина BotPay</span>
+                                            <a href="#" class="btn btn_icon">
+                                                Страница магазина</a>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__body">
+                                        <div class="tabs__information">
+                                            <b>crm.coinpayments.me</b>
+                                            <span>ID: 15954</span>
+                                        </div>
+                                        <div class="data_absence">
+                                            <span>К сожалению, пока нет данных по статистике магазина BotPay</span>
+                                            <a href="#" class="btn btn_icon">
+                                                Страница магазина</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="receipts_statistics">
                                 <div class="receipts_fraction">
                                     <div class="receipts_statistics_title">Доля</div>
@@ -512,7 +590,7 @@
 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="templates/assets/js/bundle.min.js?v=1"></script>
+    <script src="templates/assets/js/bundle.min.js"></script>
 </body>
 
 </html>
