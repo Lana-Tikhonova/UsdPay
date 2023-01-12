@@ -522,6 +522,7 @@ a {
 		flex-direction: column;
 		justify-content: space-between;
 		padding: 23px 32px 24px;
+		border-radius: 15px;
 	}
 }
 
@@ -2086,6 +2087,10 @@ main {
 			&.arrow {
 				display: none;
 			}
+
+			&.shop {
+				max-width: 100%;
+			}
 		}
 	}
 
@@ -2354,6 +2359,10 @@ main {
 	.title_wrap {
 		align-items: start;
 		flex-direction: column;
+
+		h2 {
+			margin-bottom: 16px;
+		}
 	}
 
 	.info_tr_col {
@@ -2368,8 +2377,6 @@ main {
 		padding: 16px;
 		margin-bottom: 16px;
 	}
-
-	.title_wrap h2 {}
 
 	h2 {
 		font-size: 15px;
