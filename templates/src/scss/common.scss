@@ -113,9 +113,9 @@ a {
 	padding: 0 16px;
 }
 
-@media screen and (min-width:576px) {
+@media screen and (min-width:681px) {
 	.container {
-		padding: 0 20px;
+		padding: 0 32px;
 	}
 }
 
@@ -171,8 +171,6 @@ a {
 .header_row_top {
 	align-items: center;
 	margin-bottom: 31px;
-	position: relative;
-	z-index: 201;
 }
 
 .header_btn_wrapper {
@@ -266,16 +264,16 @@ a {
 .header {
 	padding-top: 24px;
 	padding-bottom: 40px;
+}
 
-	.logo {
-		height: 40px;
-		margin-left: 12px;
+.logo {
+	height: 40px;
+	margin-left: 12px;
 
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
-		}
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
 	}
 }
 
@@ -2031,7 +2029,12 @@ main {
 		margin-left: 0;
 		width: 100%;
 		margin-bottom: 0;
+	}
 
+	.logo {
+		margin-left: 0;
+		height: 36px;
+		width: 117px;
 	}
 }
 
@@ -2299,11 +2302,12 @@ main {
 @media screen and (max-width:576px) {
 	.header {
 		padding-top: 20px;
+	}
 
-		.logo {
-			height: 32px;
-			margin-left: 0;
-		}
+	.logo {
+		width: 104px;
+		height: 32px;
+		margin-left: 0;
 	}
 
 	.date_selection {
@@ -2494,7 +2498,7 @@ main {
 	top: 0;
 	z-index: 199;
 	display: none;
-	padding-top: 146px;
+	padding-top: 24px;
 	padding-bottom: 100px;
 
 	&.active {
@@ -2539,11 +2543,21 @@ main {
 		margin-right: 5px;
 		background: transparent;
 	}
+
+	.header_row_top {
+		margin-bottom: 0;
+		padding-bottom: 78px;
+	}
+
+	.container {
+		height: 100%;
+	}
 }
 
 .mobile_menu_block {
 	overflow: auto;
-	height: 100%;
+	height: calc(100% - 114px);
+	padding-bottom: 30px;
 }
 
 .mobile_menu_bottom {
@@ -2587,11 +2601,19 @@ body {
 	}
 
 	.mobile_menu {
-		padding-top: 96px;
+		padding-top: 20px;
 	}
 
 	.functional_menu_list_desktop {
 		justify-content: space-between;
+	}
+
+	.mobile_menu .header_row_top {
+		padding-bottom: 43px;
+	}
+
+	.mobile_menu_block {
+		height: calc(100% - 43px);
 	}
 
 	.functional_menu ul li {

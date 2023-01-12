@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="description" content="UsdPay" />
     <meta name="keywords" content="UsdPay" />
     <title>UsdPay</title>
@@ -41,7 +41,7 @@
             <div class="row header_row_top">
                 <div class="logo"><img src="templates/assets/imgs/logo.png" alt=""></div>
                 <div class="language">
-                    <select name="language" id="#">
+                    <select name="language" class="language_select">
                         <option selected value="Ru">Ru</option>
                         <option value="En">En</option>
                     </select>
@@ -280,17 +280,45 @@
         </ul>
     </div>
     <div class="mobile_menu">
-        <div class="mobile_menu_block">
-            <a href="#" class="header_profile_name">hello@konstantinopolsky.com</a>
-            <ul class="functional_menu_list_mobile"></ul>
-            <ul>
-                <li><a href="#">Тарифы</a></li>
-                <li><a href="#">Разработчикам</a></li>
-                <li><a href="#">FAQ</a></li>
-            </ul>
-            <div class="mobile_menu_bottom">
-                <a href="#">Пользовательское соглашение</a>
-                <a href="#">Политика конфиденциальности</a>
+        <div class="container">
+            <div class="row header_row_top">
+                <div class="logo"><img src="templates/assets/imgs/logo.png" alt=""></div>
+                <div class="language">
+                    <select name="language" class="language_select">
+                        <option selected value="Ru">Ru</option>
+                        <option value="En">En</option>
+                    </select>
+                </div>
+                <nav class="header_menu">
+                    <ul>
+                        <li><a href="#" class="active">Мой аккаунт</a></li>
+                        <li><a href="#">Тарифы</a></li>
+                        <li><a href="#">Разработчикам</a></li>
+                        <li><a href="#">Поддержка</a></li>
+                    </ul>
+                </nav>
+                <div class="header_profile">
+                    <a href="#" class="name">hello@konstantinopolsky.com</a>
+                    <a href="#" class="exit">
+                        <svg>
+                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#exit">
+                            </use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="mobile_menu_block">
+                <a href="#" class="header_profile_name">hello@konstantinopolsky.com</a>
+                <ul class="functional_menu_list_mobile"></ul>
+                <ul>
+                    <li><a href="#">Тарифы</a></li>
+                    <li><a href="#">Разработчикам</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <div class="mobile_menu_bottom">
+                    <a href="#">Пользовательское соглашение</a>
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
             </div>
         </div>
     </div>

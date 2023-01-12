@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    $('.language select').select2({
+    $('.language_select').select2({
         minimumResultsForSearch: Infinity,
-        dropdownParent: $('.language'),
+        // dropdownParent: $('.language'),
     });
 
     $('.select_add').select2({
