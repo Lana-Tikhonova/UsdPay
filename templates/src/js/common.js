@@ -8,12 +8,18 @@ $(document).ready(function () {
         minimumResultsForSearch: Infinity,
         theme: 'stylization',
     });
-    // $('.table_tbody_bottom').slideToggle(0);
+
     $('.info_open').on('click', function () {
-        $(this).parents('.table_tbody_item').toggleClass('active');
-        $(this).parents('.table_tbody_item').find('.table_tbody_bottom').slideToggle();
+        $(this).parents('.tr_show').toggleClass('active');
+        $(this).parents('.tr_show').next('.tr_hide').find('.table_tbody_bottom').slideToggle();
     });
 
+
+    $('.info_open_mobile').on('click', function () {
+        $(this).parents('.tr_hide').find('.table_tbody_bottom').slideToggle();
+        $(this).parents('.tr_hide').prev('.tr_show').toggleClass('active');
+        $(this).toggleClass('active');
+    });
     const shopSlider = new Swiper('.shop_slider', {
         autoplay: {
             delay: 3000,
@@ -264,7 +270,7 @@ $(document).ready(function () {
 
     /***********************************************************/
     /********************Doughnut chart*************************/
-   /************************************************************/
+    /************************************************************/
     function countElementArray(count) {
         const array = [4];
         for (let i = 0; i < count - 1; i++) {
@@ -305,15 +311,15 @@ $(document).ready(function () {
             }
         });
         share = share + '%';
-        doughnutChartLabelCreate (id, share, text, topText);
+        doughnutChartLabelCreate(id, share, text, topText);
     }
-    doughnutMainChartCreate('total-chart', 'BotPay', [50, 25, 25, 15, 17], 50, ['#00CA8B','#FFA800', '#5F95FF', '#5F9566', '#5F9500'], 'BotPay', '325,110');
+    doughnutMainChartCreate('total-chart', 'BotPay', [50, 25, 25, 15, 17], 50, ['#00CA8B', '#FFA800', '#5F95FF', '#5F9566', '#5F9500'], 'BotPay', '325,110');
 
 
     // function create doughnut chart
 
 
-    function doughnutChartNodeCreate( id, name, value, color, paymentsNumber, width = 80, height = 80) {
+    function doughnutChartNodeCreate(id, name, value, color, paymentsNumber, width = 90, height = 90) {
 
         let div = document.createElement('div');
         div.classList.add("receipts_quantity_item", "doughnut");
@@ -333,7 +339,7 @@ $(document).ready(function () {
         const data = {
             datasets: [{
                 data: [value, 100 - value],
-                borderWidth: 0,
+                borderWidth: 3,
                 backgroundColor: [
                     `${color}`,
                     '#E7EDEB'
@@ -348,16 +354,16 @@ $(document).ready(function () {
                 cutout: 30,
             }
         });
-        doughnutChartLabelCreate (id, paymentsNumber, text = 'оплат')
+        doughnutChartLabelCreate(id, paymentsNumber, text = 'оплат')
     }
 
 
     // function create label in center doughnut chart
 
 
-    function doughnutChartLabelCreate (id, centerText= 0, bottomText = 'оплат', topText='') {
+    function doughnutChartLabelCreate(id, centerText = 0, bottomText = 'оплат', topText = '') {
         let div = document.createElement('div');
-        let display = (topText === '')? 'display: none': 'display: block';
+        let display = (topText === '') ? 'display: none' : 'display: block';
 
         div.classList.add("doughnut__label");
         div.innerHTML = `
@@ -375,43 +381,42 @@ $(document).ready(function () {
 
     function doughnutChartsListCreate(charts) {
         let chart;
-        for ( let i = 0; i < charts.length; i++ ) {
+        for (let i = 0; i < charts.length; i++) {
             chart = charts[i];
-            doughnutChartNodeCreate(chart.id, chart.name, chart.value, chart.color, chart.paymentsNumber )
+            doughnutChartNodeCreate(chart.id, chart.name, chart.value, chart.color, chart.paymentsNumber)
         }
     }
 
-   //
-    const charts = [
-        {
-            id:'BotPay',
+    //
+    const charts = [{
+            id: 'BotPay',
             name: 'botPay',
             value: 60,
             paymentsNumber: 1030,
             color: '#00CA8B'
         },
         {
-            id:'PayKassa',
+            id: 'PayKassa',
             name: 'PayKassa',
             value: 20,
             paymentsNumber: 230,
             color: '#FFA800'
         },
         {
-            id:'CoinPayments',
+            id: 'CoinPayments',
             name: 'CoinPayments',
             value: 25,
             color: '#5F95FF'
         },
         {
-            id:'Leprosorium',
+            id: 'Leprosorium',
             name: 'Leprosorium',
             value: 25,
             paymentsNumber: 30,
             color: '#AF5FFF'
         },
         {
-            id:'Medium',
+            id: 'Medium',
             name: 'Medium',
             value: 35,
             paymentsNumber: 103,
@@ -456,8 +461,8 @@ $(document).ready(function () {
 
     // function get tab index
     function tabIndex() {
-        for(let i = 0; i < tabs.length; i++) {
-            if(tabs[i].classList.contains('active')) {
+        for (let i = 0; i < tabs.length; i++) {
+            if (tabs[i].classList.contains('active')) {
                 return i;
             }
         }
@@ -466,11 +471,11 @@ $(document).ready(function () {
     //function change tab index
     function changeIndex(item) {
         let index = tabIndex();
-        if(item === '+' && index < tabs.length - 1) {
+        if (item === '+' && index < tabs.length - 1) {
             hideTabContent();
             showTabContent(++index);
         }
-        if(item === '-' && index > 0) {
+        if (item === '-' && index > 0) {
             hideTabContent();
             showTabContent(--index);
         }
@@ -496,7 +501,7 @@ $(document).ready(function () {
         const arrowsBtn = document.querySelectorAll('.tabs__arrow');
 
         arrowsBtn.forEach(arrow => {
-            if(arrow.classList.contains('tabs__arrow--inactive')){
+            if (arrow.classList.contains('tabs__arrow--inactive')) {
                 arrow.classList.remove('tabs__arrow--inactive');
             }
         })
@@ -507,10 +512,10 @@ $(document).ready(function () {
         const arrowRight = document.querySelector('#arrow-right');
         const arrowLeft = document.querySelector('#arrow-left');
 
-        if(index === 0) {
+        if (index === 0) {
             arrowLeft.classList.add('tabs__arrow--inactive');
         }
-        if(index === tabs.length - 1) {
+        if (index === tabs.length - 1) {
             arrowRight.classList.add('tabs__arrow--inactive');
         }
     }
@@ -521,8 +526,8 @@ $(document).ready(function () {
     function followArrow() {
         const tabNavigation = document.querySelector('.tabs__wrapper');
 
-        if(tabNavigation) {
-            tabNavigation.addEventListener('click', function(){
+        if (tabNavigation) {
+            tabNavigation.addEventListener('click', function () {
                 removeInactiveClass();
                 addInactiveClass(tabIndex());
             });

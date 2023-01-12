@@ -24,7 +24,7 @@
     <header class="header">
         <div class="container">
             <div class="row header_row_top">
-                <div class="logo"><img src="templates/assets/imgs/logo.svg" alt=""></div>
+                <div class="logo"><img src="templates/assets/imgs/logo.png" alt=""></div>
                 <div class="language">
                     <select name="language" id="#">
                         <option selected value="Ru">Ru</option>
@@ -315,7 +315,7 @@
                             </div>
                         </div>
                         <div class="receipts_block">
-                           <!-- <div class="shop_list_slider_block">
+                            <!-- <div class="shop_list_slider_block">
                                 <div class="shop_list_slider_wrapper">
                                     <div class="swiper shop_list_slider">
                                         <div class="swiper-wrapper">
@@ -382,13 +382,17 @@
                                     </nav>
                                     <nav class="tabs__arrows">
                                         <button class="tabs__arrow" id="arrow-left">
-                                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="#B9B9B9" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M4.5 8.5L1.5 5L4.5 1.5" stroke-width="1.5" stroke-linecap="round"/>
+                                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="#B9B9B9"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.5 8.5L1.5 5L4.5 1.5" stroke-width="1.5"
+                                                    stroke-linecap="round" />
                                             </svg>
                                         </button>
                                         <button class="tabs__arrow" id="arrow-right">
-                                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="#B9B9B9" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1.5 8.5L4.5 5L1.5 1.5" stroke-width="1.5" stroke-linecap="round"/>
+                                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="#B9B9B9"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.5 8.5L4.5 5L1.5 1.5" stroke-width="1.5"
+                                                    stroke-linecap="round" />
                                             </svg>
                                         </button>
 
@@ -486,101 +490,194 @@
                                 </select>
                             </div>
                         </div>
-
-                        <div class="table">
-                            <div class="table_thead">
-                                <div class="table_th table_status">Статус</div>
-                                <div class="table_th table_date">Дата</div>
-                                <div class="table_th table_id">Invoice ID</div>
-                                <div class="table_th table_shop">Магазин</div>
-                                <div class="table_th table_sum">Сумма, USDT</div>
-                                <div class="table_th table_arrow"></div>
-                            </div>
-                            <div class="table_tbody">
-                                <div class="table_tbody_item">
-                                    <div class="table_tbody_top">
-                                        <div class="table_td table_status">
-                                            <span class="table_td_title">Статус</span>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Статус</th>
+                                    <th>Дата</th>
+                                    <th>Invoice ID</th>
+                                    <th>Магазин</th>
+                                    <th>Сумма, USDT</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr_show">
+                                    <td class="status">
+                                        <span class="table_td_title">Статус</span>
+                                        <div>
+                                            <span style="background: #00CA8B;" class="circle"></span>
+                                            Подтвержден
+                                        </div>
+                                    </td>
+                                    <td class="date">
+                                        <span class="table_td_title">Дата</span>
+                                        12:21:50 • 25 авг 2022
+                                    </td>
+                                    <td class="id">
+                                        <span class="table_td_title">Invoice ID</span>
+                                        15228759
+                                    </td>
+                                    <td class="shop">
+                                        <span class="table_td_title">Магазин</span>
+                                        BotPay
+                                    </td>
+                                    <td class="sum">
+                                        <span class="table_td_title">Сумма, USDT</span>
+                                        86.50
+                                    </td>
+                                    <td class="arrow">
+                                        <div class="info_open"></div>
+                                    </td>
+                                </tr>
+                                <tr class="tr_hide">
+                                    <td colspan="6">
+                                        <div class="table_tbody_bottom">
+                                            <ul class="info_tr_col">
+                                                <li>
+                                                    <span>Merchant ID:</span>
+                                                    <span>15954 (crm.botpay.me)</span>
+                                                </li>
+                                                <li>
+                                                    <span>Способ оплаты:</span>
+                                                    <span>TRON_TRC20 USDT</span>
+                                                </li>
+                                                <li>
+                                                    <span>Номер заказа:</span>
+                                                    <span>3_1652102602</span>
+                                                </li>
+                                                <li>
+                                                    <span>Комментарий:</span>
+                                                    <span>Пополнение баланса</span>
+                                                </li>
+                                                <li>
+                                                    <span>Ссылка на оплату:</span>
+                                                    <span><a href="#">Открыть</a></span>
+                                                </li>
+                                            </ul>
+                                            <ul class="info_tr_col">
+                                                <li>
+                                                    <span>Запрошенная сумма:</span>
+                                                    <span>256,00 USDT</span>
+                                                </li>
+                                                <li>
+                                                    <span>Сумма:</span>
+                                                    <span>256,00 USDT</span>
+                                                </li>
+                                                <li>
+                                                    <span>Зачислено:</span>
+                                                    <span>256,00 USDT</span>
+                                                </li>
+                                                <li>
+                                                    <span>Комиссия сервиса:</span>
+                                                    <span>2,00 USDT (0,8%)</span>
+                                                </li>
+                                                <li>
+                                                    <span>Processing fee:</span>
+                                                    <span>0,23 USDT (0,1%)</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="info_open_mobile">
                                             <div>
-                                                <span style="background: #00CA8B;" class="circle"></span>
-                                                Подтвержден
+                                                <span>Подробности</span>
+                                                <span>Скрыть подробности</span>
                                             </div>
+                                            <div class="info_open_mobile_arrow"></div>
                                         </div>
-                                        <div class="table_td table_date">
-                                            <span class="table_td_title">Дата</span>
-                                            12:21:50 • 25 авг 2022
-                                        </div>
-                                        <div class="table_td table_id">
-                                            <span class="table_td_title">Invoice ID</span>
-                                            15228759
-                                        </div>
-                                        <div class="table_td table_shop" style="font-weight: 600;">
-                                            <span class="table_td_title">Магазин</span>
-                                            BotPay
-                                        </div>
-                                        <div class="table_td table_sum">
-                                            <span class="table_td_title">Сумма, USDT</span>
-                                            86.50
-                                        </div>
-                                        <div class="table_td table_arrow">
-                                            <span class="table_td_title">Подробности</span>
-                                            <div class="info_open"></div>
-                                        </div>
-                                    </div>
-                                    <div class="table_tbody_bottom">
-                                        <ul class="info_tr_col">
-                                            <li>
-                                                <span>Merchant ID:</span>
-                                                <span>15954 (crm.botpay.me)</span>
-                                            </li>
-                                            <li>
-                                                <span>Способ оплаты:</span>
-                                                <span>TRON_TRC20 USDT</span>
-                                            </li>
-                                            <li>
-                                                <span>Номер заказа:</span>
-                                                <span>3_1652102602</span>
-                                            </li>
-                                            <li>
-                                                <span>Комментарий:</span>
-                                                <span>Пополнение баланса</span>
-                                            </li>
-                                            <li>
-                                                <span>Ссылка на оплату:</span>
-                                                <span><a href="#">Открыть</a></span>
-                                            </li>
-                                        </ul>
-                                        <ul class="info_tr_col">
-                                            <li>
-                                                <span>Запрошенная сумма:</span>
-                                                <span>256,00 USDT</span>
-                                            </li>
-                                            <li>
-                                                <span>Сумма:</span>
-                                                <span>256,00 USDT</span>
-                                            </li>
-                                            <li>
-                                                <span>Зачислено:</span>
-                                                <span>256,00 USDT</span>
-                                            </li>
-                                            <li>
-                                                <span>Комиссия сервиса:</span>
-                                                <span>2,00 USDT (0,8%)</span>
-                                            </li>
-                                            <li>
-                                                <span>Processing fee:</span>
-                                                <span>0,23 USDT (0,1%)</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                    </td>
+                                </tr>
 
-                                <div class="table_tbody_item">
-                                    <div class="table_missing">Больше поступлений нет</div>
-                                </div>
-                            </div>
+                                <tr class="tr_show">
+                                    <td class="status">
+                                        <span class="table_td_title">Статус</span>
+                                        <div>
+                                            <span style="background: #00CA8B;" class="circle"></span>
+                                            Подтвержден
+                                        </div>
+                                    </td>
+                                    <td class="date">
+                                        <span class="table_td_title">Дата</span>
+                                        12:21:50 • 25 авг 2022
+                                    </td>
+                                    <td class="id">
+                                        <span class="table_td_title">Invoice ID</span>
+                                        15228759
+                                    </td>
+                                    <td class="shop">
+                                        <span class="table_td_title">Магазин</span>
+                                        BotPay
+                                    </td>
+                                    <td class="sum">
+                                        <span class="table_td_title">Сумма, USDT</span>
+                                        86.50
+                                    </td>
+                                    <td class="arrow">
+                                        <div class="info_open"></div>
+                                    </td>
+                                </tr>
+                                <tr class="tr_hide">
+                                    <td colspan="6">
+                                        <div class="table_tbody_bottom">
+                                            <ul class="info_tr_col">
+                                                <li>
+                                                    <span>Merchant ID:</span>
+                                                    <span>15954 (crm.botpay.me)</span>
+                                                </li>
+                                                <li>
+                                                    <span>Способ оплаты:</span>
+                                                    <span>TRON_TRC20 USDT</span>
+                                                </li>
+                                                <li>
+                                                    <span>Номер заказа:</span>
+                                                    <span>3_1652102602</span>
+                                                </li>
+                                                <li>
+                                                    <span>Комментарий:</span>
+                                                    <span>Пополнение баланса</span>
+                                                </li>
+                                                <li>
+                                                    <span>Ссылка на оплату:</span>
+                                                    <span><a href="#">Открыть</a></span>
+                                                </li>
+                                            </ul>
+                                            <ul class="info_tr_col">
+                                                <li>
+                                                    <span>Запрошенная сумма:</span>
+                                                    <span>256,00 USDT</span>
+                                                </li>
+                                                <li>
+                                                    <span>Сумма:</span>
+                                                    <span>256,00 USDT</span>
+                                                </li>
+                                                <li>
+                                                    <span>Зачислено:</span>
+                                                    <span>256,00 USDT</span>
+                                                </li>
+                                                <li>
+                                                    <span>Комиссия сервиса:</span>
+                                                    <span>2,00 USDT (0,8%)</span>
+                                                </li>
+                                                <li>
+                                                    <span>Processing fee:</span>
+                                                    <span>0,23 USDT (0,1%)</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="info_open_mobile">
+                                            <div>
+                                                <span>Подробности</span>
+                                                <span>Скрыть подробности</span>
+                                            </div>
+                                            <div class="info_open_mobile_arrow"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="table_missing">
+                            Больше поступлений нет
                         </div>
-
                     </div>
                 </div>
             </div>
