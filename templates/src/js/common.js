@@ -66,8 +66,22 @@ $(document).ready(function () {
                 type: 'bullets',
                 clickable: true,
             },
+            on: {
+                transitionEnd(slider) {
+                    slider.isEnd ? slider.el.classList.add('end') : slider.el.classList.remove('end');
+                },
+                click(slider, event) {
+                    // Кнопка с категорией - clickedSlide
+                    const clickedSlide = event.target.closest('.shop_list_slider .swiper-slide');
+                    if (clickedSlide) {
+                        document.querySelector('.shop_list_slider .swiper-slide.active').classList.remove('active');
+                        clickedSlide.classList.add('active');
+                        const slideIndex = slider.slides.indexOf(clickedSlide);
+                        slider.slideTo(slideIndex, 800);
+                    }
+                }
+            }
         });
-        shopSliderTwo.slideTo($('.shop_list_slider .swiper-slide.active').index(), 1000, false);
 
         //tabs
         const tabsItem = $('.tabs_content .tabs_item');
