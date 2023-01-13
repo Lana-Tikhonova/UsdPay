@@ -525,11 +525,7 @@
                                             <a href="#">crm.botpay.me</a>
                                             <span class="receipts_link_id">ID: 15954</span>
                                         </div>
-                                        <div class="data_absence">
-                                            <span>К сожалению, пока нет данных по статистике магазина BotPay</span>
-                                            <a href="#" class="btn btn_icon">
-                                                Страница магазина</a>
-                                        </div>
+                                        <canvas id="ctx" width="750" height="250"></canvas>
                                     </div>
                                     <div class="tabs_item" id="tab-2">
                                         <div class="receipts_link">
@@ -537,13 +533,9 @@
                                             <span class="receipts_link_id">ID: 15954</span>
                                         </div>
                                         <div class="data_absence">
-                                            <span>К сожалению, пока нет данных по статистике</span>
+                                            <span>К сожалению, пока нет данных по статистике магазина BotPay</span>
                                             <a href="#" class="btn btn_icon">
-                                                <svg class="menu_icon">
-                                                    <use xlink:href="templates/assets/imgs/sprite.symbol.svg#add_plus">
-                                                    </use>
-                                                </svg>
-                                                Добавить магазин </a>
+                                                Страница магазина</a>
                                         </div>
                                     </div>
                                     <div class="tabs_item" id="tab-3">
@@ -568,10 +560,6 @@
                                 </div>
                                 <div class="receipts_quantity">
                                     <div class="receipts_statistics_title">Количество всех сделок</div>
-                                    <div class="receipts_quantity_diagrams">
-
-                                    </div>
-
                                     <div class="receipts_quantity_list_wrapper">
                                         <div class="receipts_quantity_list" id="doughnut-charts"></div>
                                     </div>
@@ -809,7 +797,9 @@
     <footer>
 
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <!-- <script src="templates/src/vendors/chart/Chart.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
     <script src="templates/assets/js/bundle.min.js"></script>
 </body>
 

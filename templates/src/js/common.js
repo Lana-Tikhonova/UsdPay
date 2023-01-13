@@ -1,25 +1,29 @@
 $(document).ready(function () {
+    //select language
     $('.language_select').select2({
         minimumResultsForSearch: Infinity,
         // dropdownParent: $('.language'),
     });
 
+    //all select
     $('.select_add').select2({
         minimumResultsForSearch: Infinity,
         theme: 'stylization',
     });
 
+    //открытие данных в таблице
     $('.info_open').on('click', function () {
         $(this).parents('.tr_show').toggleClass('active');
         $(this).parents('.tr_show').next('.tr_hide').find('.table_tbody_bottom').slideToggle();
     });
-
 
     $('.info_open_mobile').on('click', function () {
         $(this).parents('.tr_hide').find('.table_tbody_bottom').slideToggle();
         $(this).parents('.tr_hide').prev('.tr_show').toggleClass('active');
         $(this).toggleClass('active');
     });
+
+    //слайдер магазинов в header
     const shopSlider = new Swiper('.shop_slider', {
         autoplay: {
             delay: 3000,
@@ -48,6 +52,8 @@ $(document).ready(function () {
             },
         },
     });
+
+    //слайдер магазинов 
     const shopSliderTwoItem = document.querySelector(".shop_list_slider");
     if (shopSliderTwoItem) {
         const shopSliderTwo = new Swiper('.shop_list_slider', {
@@ -67,11 +73,12 @@ $(document).ready(function () {
                 clickable: true,
             },
             on: {
+                //убираем after
                 transitionEnd(slider) {
                     slider.isEnd ? slider.el.classList.add('end') : slider.el.classList.remove('end');
                 },
+                //долистываем до активного слайдера
                 click(slider, event) {
-                    // Кнопка с категорией - clickedSlide
                     const clickedSlide = event.target.closest('.shop_list_slider .swiper-slide');
                     if (clickedSlide) {
                         document.querySelector('.shop_list_slider .swiper-slide.active').classList.remove('active');
@@ -87,7 +94,7 @@ $(document).ready(function () {
         const tabsItem = $('.tabs_content .tabs_item');
         tabsItem.hide().filter(':first').show();
 
-        // Клики по вкладкам.
+        // Клики по вкладкам
         $('.tabs_nav_item').click(function (e) {
             e.preventDefault();
             tabsItem.hide();
@@ -181,10 +188,11 @@ $(document).ready(function () {
         }
     };
 
+    //столбчатая диаграмма
     var chart = new ApexCharts(document.querySelector("#chart"), options);
     chart.render();
 
-
+    //листаем мышкой круговые диаграммы
     const slider = document.querySelector('.receipts_quantity_list');
     let isDown = false;
     let startX;
@@ -212,9 +220,8 @@ $(document).ready(function () {
         slider.scrollLeft = scrollLeft - walk;
     });
 
+    //календарь
     const datapiskers = document.querySelectorAll('.date_input_input');
-
-
 
     datapiskers.forEach(datapisker => {
         let datapickerGrid;
@@ -251,6 +258,8 @@ $(document).ready(function () {
             ],
         });
     })
+
+    //слайдер в header, активируется на мобилке
     let swiperWalletItem = $('.swiper_wallet');
 
     var swiperWallet = new Swiper(".swiper_wallet", {
@@ -296,9 +305,7 @@ $(document).ready(function () {
         return array;
     }
 
-
     //Total
-
 
     function doughnutMainChartCreate(id, name, values, share, colors, text, topText) {
         const ctxTotal = document.getElementById(id).getContext('2d');
@@ -324,7 +331,7 @@ $(document).ready(function () {
             type: 'doughnut',
             data: data,
             options: {
-                cutout: 45,
+                cutoutPercentage: 85
             }
         });
         share = share + '%';
@@ -334,8 +341,6 @@ $(document).ready(function () {
 
 
     // function create doughnut chart
-
-
     function doughnutChartNodeCreate(id, name, value, color, paymentsNumber, width = 90, height = 90) {
 
         let div = document.createElement('div');
@@ -356,7 +361,7 @@ $(document).ready(function () {
         const data = {
             datasets: [{
                 data: [value, 100 - value],
-                borderWidth: 3,
+                borderWidth: 4,
                 backgroundColor: [
                     `${color}`,
                     '#E7EDEB'
@@ -368,7 +373,7 @@ $(document).ready(function () {
             type: 'doughnut',
             data: data,
             options: {
-                cutout: 30,
+                cutoutPercentage: 75
             }
         });
         doughnutChartLabelCreate(id, paymentsNumber, text = 'оплат')
@@ -376,8 +381,6 @@ $(document).ready(function () {
 
 
     // function create label in center doughnut chart
-
-
     function doughnutChartLabelCreate(id, centerText = 0, bottomText = 'оплат', topText = '') {
         let div = document.createElement('div');
         let display = (topText === '') ? 'display: none' : 'display: block';
@@ -394,8 +397,6 @@ $(document).ready(function () {
 
 
     // function create doughnut charts
-
-
     function doughnutChartsListCreate(charts) {
         let chart;
         for (let i = 0; i < charts.length; i++) {
@@ -470,17 +471,192 @@ $(document).ready(function () {
         } else {}
     }
 
+    $(window).on('resize', function () {
+        responseMenu();
+    }).trigger('resize');
+
+    //открытие меню
     $('.menu_open').on('click', function () {
         $('.mobile_menu').toggleClass('active');
         $(this).toggleClass('active');
         $('body').toggleClass('locked');
     });
 
-    $(window).on('resize', function () {
-        responseMenu();
-    }).trigger('resize');
-
+    //закрытие банера
     $('.baner_close').on('click', function () {
         $(this).parents('.baner').hide();
+    });
+
+    //линейный график
+
+    // const DATA_COUNT = 12;
+    // const labels = [];
+    // for (let i = 0; i < DATA_COUNT; ++i) {
+    //     labels.push(i.toString());
+    // }
+    // const datapoints = [0, 20, 20, 60, 60, 120, NaN, 180, 120, 125, 105, 110, 170];
+    // const data = {
+    //     labels: labels,
+    //     datasets: [{
+    //         label: 'Cubic interpolation (monotone)',
+    //         data: datapoints,
+    //         borderColor: 'rgba(0, 119, 204, 0.3)',
+    //         fill: false,
+    //         cubicInterpolationMode: 'monotone',
+    //         tension: 0.4
+    //     }, {
+    //         label: 'Cubic interpolation',
+    //         data: datapoints,
+    //         borderColor: 'rgba(0, 119, 204, 0.3)',
+    //         fill: false,
+    //         tension: 0.4
+    //     }, {
+    //         label: 'Linear interpolation (default)',
+    //         data: datapoints,
+    //         borderColor: 'rgba(0, 119, 204, 0.3)',
+    //         fill: false
+    //     }]
+    // };
+    // const footer = (tooltipItems) => {
+    //     let sum = 0;
+
+    //     tooltipItems.forEach(function (tooltipItem) {
+    //         sum += tooltipItem.parsed.y;
+    //     });
+    //     return 'Sum: ' + sum;
+    // };
+    // new Chart(document.getElementById("line-chart"), {
+    //     type: 'line',
+    //     data: data,
+    //     options: {
+    //         responsive: true,
+    //         plugins: {
+    //             title: {
+    //                 display: true,
+    //                 text: 'Chart.js Line Chart - Cubic interpolation mode'
+    //             },
+    //             plugins: {
+    //                 tooltip: {
+    //                     callbacks: {
+    //                         footer: footer,
+    //                     }
+    //                 }
+    //             }
+    //         },
+    //         interaction: {
+    //             intersect: false,
+    //         },
+    //         scales: {
+    //             x: {
+    //                 display: true,
+    //                 title: {
+    //                     display: true
+    //                 }
+    //             },
+    //             y: {
+    //                 display: true,
+    //                 title: {
+    //                     display: true,
+    //                     text: 'Value'
+    //                 },
+    //                 suggestedMin: -10,
+    //                 suggestedMax: 200
+    //             }
+    //         }
+    //     },
+    // });
+
+    // Chart.defaults.LineWithLine = Chart.defaults.line;
+    // Chart.controllers.LineWithLine = Chart.controllers.line.extend({
+    //     draw: function (ease) {
+    //         Chart.controllers.line.prototype.draw.call(this, ease);
+
+    //         if (this.chart.tooltip._active && this.chart.tooltip._active.length) {
+    //             var activePoint = this.chart.tooltip._active[0],
+    //                 ctx = this.chart.ctx,
+    //                 x = activePoint.tooltipPosition().x,
+    //                 topY = this.chart.scales['y-axis-0'].top,
+    //                 bottomY = this.chart.scales['y-axis-0'].bottom;
+
+    //             // draw line
+    //             ctx.save();
+    //             ctx.beginPath();
+    //             ctx.moveTo(x, topY);
+    //             ctx.lineTo(x, bottomY);
+    //             ctx.lineWidth = 2;
+    //             ctx.strokeStyle = '#07C';
+    //             ctx.stroke();
+    //             ctx.restore();
+    //         }
+    //     }
+    // });
+
+    // var chart = new Chart(ctx, {
+    //     type: 'LineWithLine',
+    //     data: {
+    //         labels: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+    //         datasets: [{
+    //             label: 'Statistics',
+    //             data: [3, 1, 2, 5, 4, 7, 6],
+    //             backgroundColor: 'rgba(0, 119, 204, 0.8)',
+    //             borderColor: 'rgba(0, 119, 204, 0.3)',
+    //             pointRadius: .5,
+    //             pointHitRadius: 16,
+    //             fill: false
+    //         }]
+    //     },
+    //     options: {
+    //         tooltips: {
+    //             intersect: false
+    //         },
+    //         scales: {
+    //             yAxes: [{
+    //                 ticks: {
+    //                     beginAtZero: true
+    //                 }
+    //             }]
+    //         }
+    //     }
+    // });
+
+
+    const chartJS = new Chart(document.getElementById('ctx'), {
+        type: 'line',
+        data: {
+            labels: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+            datasets: [{
+                label: 'Statistics',
+                data: [17, 14, 13, 12, 9, 25, 28, 37, 39, 37, 26, 10, ],
+                backgroundColor: 'rgba(0, 119, 204, 0.8)',
+                borderColor: 'rgba(0, 119, 204, 0.3)',
+                pointRadius: .5,
+                pointHitRadius: 16,
+                fill: false
+            }]
+        },
+        options: {
+            // responsive: false,
+            legend: {
+                display: false
+            },
+            tooltips: {
+                mode: "index",
+                intersect: false,
+                callbacks: {
+                    label(tooltipItem, data) {
+                        let label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                        if (label) {
+                            label += ': ';
+                        }
+                        return label + Math.round(tooltipItem.yLabel) + "%";
+                    }
+                }
+            },
+            hover: {
+                mode: "index",
+                intersect: false,
+            },
+        }
     });
 });
