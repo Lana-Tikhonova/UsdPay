@@ -1201,8 +1201,7 @@ a {
 }
 
 .shop_slider_arrows {
-	position: absolute;
-	right: 20px;
+	position: relative;
 	flex: 0 0 auto;
 	display: inline-flex;
 	align-items: center;
@@ -1216,7 +1215,7 @@ a {
 }
 
 .shop_list_slider_block {
-	position: relative;
+	// position: relative;
 	border-bottom: 1px solid #E7EDEB;
 	height: 49px;
 	margin-bottom: 12px;
@@ -1225,7 +1224,7 @@ a {
 
 .shop_list_slider_wrapper {
 	overflow: hidden;
-	width: 100%;
+	width: calc(100% - 70px);
 	display: inline-block;
 }
 
@@ -1252,6 +1251,11 @@ a {
 
 	.swiper-slide {
 		width: auto !important;
+
+		&.active .shop_item {
+			color: #222222;
+			border-bottom-color: #17BD90;
+		}
 	}
 }
 
@@ -1263,11 +1267,6 @@ a {
 	color: #C4C4C4;
 	display: inline-flex;
 	border-bottom: 3px solid transparent;
-
-	&.active {
-		color: #222222;
-		border-bottom-color: #17BD90;
-	}
 }
 
 .receipts_statistics {
@@ -1686,7 +1685,6 @@ main {
 
 .data_absence {
 	display: flex;
-	/*display: flex;*/
 	background: #FFFFFF;
 	border: 1px dashed #E7EDEB;
 	border-radius: 15px;
@@ -2661,7 +2659,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	margin-left: 26px;
-
+	cursor: pointer;
 	flex: 0 0 auto;
 
 	svg {
