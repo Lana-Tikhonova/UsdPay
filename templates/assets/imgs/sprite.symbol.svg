@@ -6,10 +6,10 @@
         <path d="M9 6L9 3" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
     </symbol>
     <symbol viewBox="0 0 12 12" id="arrow_right" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4.5 9.5L7.5 6L4.5 2.5" stroke="#B9B9B9" stroke-width="1.5" stroke-linecap="round" />
+        <path d="M4.5 9.5L7.5 6L4.5 2.5" stroke-width="1.5" stroke-linecap="round" />
     </symbol>
     <symbol viewBox="0 0 12 12" id="arrow_left" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7.5 9.5L4.5 6L7.5 2.5" stroke="#B9B9B9" stroke-width="1.5" stroke-linecap="round" />
+        <path d="M7.5 9.5L4.5 6L7.5 2.5" stroke-width="1.5" stroke-linecap="round" />
     </symbol>
     <symbol viewBox="0 0 12 12" id="arrow_top" xmlns="http://www.w3.org/2000/svg">
         <path d="M9.5 7.5L6 4.5L2.5 7.5" stroke="#B9B9B9" stroke-width="1.5" stroke-linecap="round" />
@@ -204,4 +204,35 @@
         <path d="M16.25 11.875C17.2855 11.875 18.125 11.0355 18.125 10C18.125 8.96447 17.2855 8.125 16.25 8.125C15.2145 8.125 14.375 8.96447 14.375 10C14.375 11.0355 15.2145 11.875 16.25 11.875Z" stroke="#00402C" stroke-width="1.5" stroke-miterlimit="10"/>
     </symbol>
 
+    <symbol viewBox="0 0 24 24" id="shops_receipts" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19 12.5V19.4656C19 20.2959 18.0466 20.7645 17.3892 20.2574L16.0584 19.2307C15.7236 18.9725 15.2625 18.9527 14.9068 19.1813L13.0815 20.3547C12.4227 20.7783 11.5773 20.7783 10.9185 20.3547L9.0932 19.1813C8.73751 18.9527 8.27644 18.9725 7.94164 19.2307L6.6108 20.2574C5.95338 20.7645 5 20.2959 5 19.4656V3.5H12" stroke="#222222" stroke-width="1.5"/>
+        <path d="M9 9.5H12" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3.6001 3.5H12.0001" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M18.6001 1.19995L18.6001 7.19995" stroke="#222222" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M21.6001 4.19995L15.6001 4.19995" stroke="#222222" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M19 18.9884L19 10.5884" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 13.5H12" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 9.5H15.5" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 13.5H15.5" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="shops_settings" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.08168 13.9445C2.55298 12.9941 2.28862 12.5188 2.28862 12C2.28862 11.4812 2.55298 11.0059 3.08169 10.0555L4.43094 7.63L5.85685 5.24876C6.4156 4.31567 6.69498 3.84912 7.14431 3.5897C7.59364 3.33028 8.13737 3.3216 9.22483 3.30426L12 3.26L14.7752 3.30426C15.8626 3.3216 16.4064 3.33028 16.8557 3.5897C17.305 3.84912 17.5844 4.31567 18.1431 5.24876L19.5691 7.63L20.9183 10.0555C21.447 11.0059 21.7114 11.4812 21.7114 12C21.7114 12.5188 21.447 12.9941 20.9183 13.9445L19.5691 16.37L18.1431 18.7512C17.5844 19.6843 17.305 20.1509 16.8557 20.4103C16.4064 20.6697 15.8626 20.6784 14.7752 20.6957L12 20.74L9.22483 20.6957C8.13737 20.6784 7.59364 20.6697 7.14431 20.4103C6.69498 20.1509 6.4156 19.6843 5.85685 18.7512L4.43094 16.37L3.08168 13.9445Z" stroke="#222222" stroke-width="1.5"/>
+        <circle cx="12" cy="12" r="3" stroke="#222222" stroke-width="1.5"/>
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="shops_commission" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="4" width="14" height="17" rx="2" stroke="#222222" stroke-width="1.5"/>
+        <path d="M9 9H15" stroke="#222222" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M9 13H15" stroke="#222222" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M9 17H13" stroke="#222222" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="shops_delete" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.05063 8.73418C4.20573 7.60763 5.00954 6 6.41772 6H17.5823C18.9905 6 19.7943 7.60763 18.9494 8.73418V8.73418C18.3331 9.55584 18 10.5552 18 11.5823V18C18 20.2091 16.2091 22 14 22H10C7.79086 22 6 20.2091 6 18V11.5823C6 10.5552 5.66688 9.55584 5.05063 8.73418V8.73418Z" stroke="#222222" stroke-width="1.5"/>
+        <path d="M14 17L14 11" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 17L10 11" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16 6L15.4558 4.36754C15.1836 3.55086 14.4193 3 13.5585 3H10.4415C9.58066 3 8.81638 3.55086 8.54415 4.36754L8 6" stroke="#222222" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+   <symbol viewBox="0 0 16 16" id="search" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="7.33332" cy="7.33333" rx="5.33333" ry="5.33333" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11 11.3053L14.3333 14.6387" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
 </svg>

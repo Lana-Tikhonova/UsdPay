@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="UsdPay" />
+    <meta name="keywords" content="UsdPay" />
+    <title>UsdPay</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- шрифты -->
+    <link rel="preload" href="templates/assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" href="templates/assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" href="templates/assets/fonts/Montserrat-Bold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="templates/assets/css/bundle.min.css?v=1">
+</head>
+
+<body>
+    <div class="baner">
+        <div class="container">
+            <div class="baner_text">
+                Приглашайте новых клиентов <span>USDPAY</span> по реферальной системе и <span>получай постоянный 5% с
+                    комиссия от их оборота</span>
+            </div>
+            <a href="#" class="btn">Подробнее</a>
+            <div class="baner_close">
+                <svg>
+                    <use xlink:href="templates/assets/imgs/sprite.symbol.svg#close">
+                    </use>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container">
+            <div class="row header_row_top">
+                <div class="logo"><img src="templates/assets/imgs/logo.png" alt=""></div>
+                <div class="language">
+                    <select name="language" class="language_select">
+                        <option selected value="Ru">Ru</option>
+                        <option value="En">En</option>
+                    </select>
+                </div>
+                <nav class="header_menu">
+                    <ul>
+                        <li><a href="#" class="active">Мой аккаунт</a></li>
+                        <li><a href="#">Тарифы</a></li>
+                        <li><a href="#">Разработчикам</a></li>
+                        <li><a href="#">Поддержка</a></li>
+                    </ul>
+                </nav>
+                <div class="header_profile">
+                    <a href="#" class="name">hello@konstantinopolsky.com</a>
+                    <a href="#" class="exit">
+                        <svg>
+                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#exit">
+                            </use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="row header_row_bottom">
+                <div class="wallet_card_wrapper">
+                    <div class="swiper swiper_wallet">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slide_wallet">
+                                <div class="wallet_card -balans">
+                                    <div class="wallet_card_top">
+                                        <div class="wallet_card_title">Баланс</div>
+                                        <button class="profit_hide">
+                                            <svg>
+                                                <use xlink:href="templates/assets/imgs/sprite.symbol.svg#eye_hide">
+                                                </use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="wallet_card_center">
+                                        <svg class="wallet">
+                                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#wallet">
+                                            </use>
+                                        </svg>
+                                        <div class="wallet_card_balans">650,220<span>.85 USDT</span></div>
+                                    </div>
+                                    <div class="wallet_card_bottom">
+                                        <div class="wallet_card_profit_percent">+2.5%</div>
+                                        <div class="wallet_card_profit_price">+1,610.22 USDT</div>
+                                        <div class="wallet_card_time">За сутки</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide_wallet">
+                                <div class="wallet_card -shop">
+                                    <div class="swiper shop_slider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+
+                                                <div class="wallet_card_top">
+                                                    <div class="wallet_card_title">BotPay</div>
+                                                </div>
+                                                <div class="wallet_card_center">
+                                                    <div class="wallet_card_balans -small">+5,220<span>.11 USDT</span>
+                                                    </div>
+                                                    <div class="wallet_card_time">За сутки</div>
+                                                </div>
+                                                <div class="wallet_card_bottom">
+                                                    <a href="#" class="wallet_card_link">crm.botpay.me</a>
+                                                    <div class="wallet_card_id">ID: 15954</div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="wallet_card_top">
+                                                    <div class="wallet_card_title">PayBotPay</div>
+                                                </div>
+                                                <div class="wallet_card_center">
+                                                    <div class="wallet_card_balans -small">+5,670<span>.11 USDT</span>
+                                                    </div>
+                                                    <div class="wallet_card_time">За сутки</div>
+                                                </div>
+                                                <div class="wallet_card_bottom">
+                                                    <a href="#" class="wallet_card_link">crm.botpay.me</a>
+                                                    <div class="wallet_card_id">ID: 15954</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="circle-pagination"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart_receipts_month">
+                        <div class="chart_receipts_title">Поступления за декабрь</div>
+                        <div id="chart"></div>
+                        <div class="chart_receipts_sum">24,440 <span>USDT</span></div>
+                    </div>
+                </div>
+                <div class="header_btn_wrapper">
+                    <a href="#" class="header_btn">
+                        <span class="header_btn_icon">
+                            <svg class="plus">
+                                <use xlink:href="templates/assets/imgs/sprite.symbol.svg#plus">
+                                </use>
+                            </svg>
+                        </span>
+                        <span class="header_btn_title">Добавить
+                            магазин</span>
+                    </a>
+                    <a href="#" class="header_btn">
+                        <span class="header_btn_icon">
+                            <svg class="arrow_lenght_right">
+                                <use xlink:href="templates/assets/imgs/sprite.symbol.svg#arrow_lenght_right">
+                                </use>
+                            </svg>
+                        </span>
+                        <span class="header_btn_title">Вывести
+                            средства</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="functional_menu">
+        <ul class="functional_menu_list_desktop">
+            <li style="order:1;" class="functional_menu_item_dd">
+                <button class="functional_menu_link menu_open">
+                    <span class="functional_menu_icon">
+                        <svg>
+                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#all">
+                            </use>
+                        </svg>
+                    </span>
+                    Ещё
+                </button>
+                <!-- <ul class="functional_menu_list_mobile"></ul> -->
+            </li>
+            <li class="functional_menu_item">
+                <a href="#" class="functional_menu_link">
+                    <span class="functional_menu_icon">
+                        <svg>
+                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#category">
+                            </use>
+                        </svg>
+                    </span>
+                    <span class="functional_menu_text"> Обзор</span>
+                </a>
+            </li>
+            <li class="functional_menu_item">
+                <a href="#" class="functional_menu_link active">
+                    <span class="functional_menu_icon">
+                        <svg>
+                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#store">
+                            </use>
+                        </svg>
+                    </span>
+                    <span class="functional_menu_text">Магазины</span>
+                </a>
+            </li>
+            <li class="functional_menu_item">
+                <a href="#" class="functional_menu_link">
+                    <span class="functional_menu_icon">
+                        <svg>
+                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#receipts">
+                            </use>
+                        </svg>
+                    </span>
+                    <span class="functional_menu_text"> Поступления</span>
+                </a>
+            </li>
+            <li class="functional_menu_item">
+                <a href="#" class="functional_menu_link">
+                    <span class="functional_menu_icon">
+                        <svg>
+                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#payments">
+                            </use>
+                        </svg>
+                    </span>
+                    <span class="functional_menu_text">Выплаты</span>
+                </a>
+            </li>
+            <li class="functional_menu_item">
+                <a href="#" class="functional_menu_link">
+                    <span class="functional_menu_icon">
+                        <svg>
+                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#partners">
+                            </use>
+                        </svg>
+                    </span>
+                    <span class="functional_menu_text">Партнёры</span>
+                </a>
+            </li>
+            <li class="functional_menu_item">
+                <a href="#" class="functional_menu_link">
+                    <span class="functional_menu_icon">
+                        <svg>
+                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#settings">
+                            </use>
+                        </svg>
+                    </span>
+                    <span>Настройки</span>
+                </a>
+            </li>
+            <li class="functional_menu_item">
+                <a href="#" class="functional_menu_link">
+                    <span class="functional_menu_icon">
+                        <svg>
+                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#api">
+                            </use>
+                        </svg>
+                    </span>
+                    <span class="functional_menu_text">API</span>
+                </a>
+            </li>
+            <li class="functional_menu_item">
+                <a href="#" class="functional_menu_link">
+                    <span class="functional_menu_icon">
+                        <svg>
+                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#safety">
+                            </use>
+                        </svg>
+                    </span>
+                    <span class="functional_menu_text">Безопасность</span>
+                </a>
+            </li>
+            <li class="functional_menu_item">
+                <a href="#" class="functional_menu_link">
+                    <span class="functional_menu_icon">
+                        <svg>
+                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#support">
+                            </use>
+                        </svg>
+                    </span>
+                    <span class="functional_menu_text"> Поддержка</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="mobile_menu">
+        <div class="container">
+            <div class="row header_row_top">
+                <div class="logo"><img src="templates/assets/imgs/logo.png" alt=""></div>
+                <div class="language">
+                    <select name="language" class="language_select">
+                        <option selected value="Ru">Ru</option>
+                        <option value="En">En</option>
+                    </select>
+                </div>
+                <nav class="header_menu">
+                    <ul>
+                        <li><a href="#" class="active">Мой аккаунт</a></li>
+                        <li><a href="#">Тарифы</a></li>
+                        <li><a href="#">Разработчикам</a></li>
+                        <li><a href="#">Поддержка</a></li>
+                    </ul>
+                </nav>
+                <div class="header_profile">
+                    <a href="#" class="name">hello@konstantinopolsky.com</a>
+                    <a href="#" class="exit">
+                        <svg>
+                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#exit">
+                            </use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="mobile_menu_block">
+                <a href="#" class="header_profile_name">hello@konstantinopolsky.com</a>
+                <ul class="functional_menu_list_mobile"></ul>
+                <ul>
+                    <li><a href="#">Тарифы</a></li>
+                    <li><a href="#">Разработчикам</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <div class="mobile_menu_bottom">
+                    <a href="#">Пользовательское соглашение</a>
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="container">
+            <div class="content">
+                <div class="content_left">
+                    <div class="menu">
+                        <ul class="menu_list">
+                            <li class="menu_item">
+                                <a href="#" class="menu_item_link">
+                                    <svg class="menu_icon">
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#category">
+                                        </use>
+                                    </svg>
+                                    Обзор
+                                </a>
+                            </li>
+                            <li class="menu_item active">
+                                <a href="#" class="menu_item_link">
+                                    <svg class="menu_icon">
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#store">
+                                        </use>
+                                    </svg>
+                                    Магазины
+                                    <span class="number">2</span>
+                                </a>
+                                <a href="#" class="menu_icon_add">
+                                    <svg>
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#plus">
+                                        </use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="#" class="menu_item_link">
+                                    <svg class="menu_icon">
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#receipts">
+                                        </use>
+                                    </svg>
+                                    Поступления
+                                    <span class="number_new">1</span>
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="#" class="menu_item_link">
+                                    <svg class="menu_icon">
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#payments">
+                                        </use>
+                                    </svg>
+                                    Выплаты
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="#" class="menu_item_link">
+                                    <svg class="menu_icon">
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#partners">
+                                        </use>
+                                    </svg>
+                                    Партнёры
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu_list">
+                            <li class="menu_item">
+                                <a href="#" class="menu_item_link">
+                                    <svg class="menu_icon">
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#settings">
+                                        </use>
+                                    </svg>
+                                    Настройки
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="#" class="menu_item_link">
+                                    <svg class="menu_icon">
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#api">
+                                        </use>
+                                    </svg>
+                                    API
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="#" class="menu_item_link">
+                                    <svg class="menu_icon">
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#safety">
+                                        </use>
+                                    </svg>
+                                    Безопасность
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="#" class="menu_item_link">
+                                    <svg class="menu_icon">
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#support">
+                                        </use>
+                                    </svg>
+                                    FAQ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content_right">
+                    <a href="#" class="back">
+                        <svg>
+                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#arrow_left">
+                            </use>
+                        </svg>К списку магазинов
+                    </a>
+                    <div class="content_shops">
+                        <div class="content_shops_head">
+                            <div class="title_wrap">
+                                <h2 class="">BotPay</h2>
+                                <div class="receipts_link">
+                                    <a href="#">crm.botpay.me</a>
+                                    <span class="receipts_link_id">ID: 15954</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content_shops_body">
+                            <div class="shops_settings">
+                                <a href="#" class="shops_settings_item active">
+                                    <svg>
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#shops_receipts">
+                                        </use>
+                                    </svg>
+                                    Поступления
+                                </a>
+                                <a href="#" class="shops_settings_item">
+                                    <svg>
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#shops_settings">
+                                        </use>
+                                    </svg>
+                                    Настройки
+                                    магазина
+                                </a>
+                                <a href="#" class="shops_settings_item">
+                                    <svg>
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#shops_commission">
+                                        </use>
+                                    </svg>
+                                    Комиссия и условия
+                                </a>
+                                <a href="#" class="shops_settings_item">
+                                    <svg>
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#shops_delete">
+                                        </use>
+                                    </svg>
+                                    Удалить магазин
+                                </a>
+                            </div>
+                        </div>
+                        <div class="content_shops_footer">
+
+                            <div class="content_card">
+                                <h2>Поступления</h2>
+                                <div class="date_selection">
+                                    <label class="date_selection_item">
+                                        <input name="date_selectionTwo" type="radio" value="" checked="">
+                                        <span class="date_selection_text">24 часа</span>
+                                    </label>
+                                    <label class="date_selection_item">
+                                        <input name="date_selectionTwo" type="radio" value="">
+                                        <span class="date_selection_text">7 дней</span>
+                                    </label>
+                                    <label class="date_selection_item">
+                                        <input name="date_selectionTwo" type="radio" value="">
+                                        <span class="date_selection_text">30 дней</span>
+                                    </label>
+                                    <label class="date_selection_item">
+                                        <input name="date_selectionTwo" type="radio" value="">
+                                        <span class="date_selection_text">90 дней</span>
+                                    </label>
+                                    <script
+                                        src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.0/dist/index.umd.min.js">
+                                    </script>
+                                    <div class="date_input date_selection_item">
+                                        <input type="text" class="date_input_input"
+                                            placeholder="ДД.ММ.ГГГГ — ДД.ММ.ГГГГ" readonly=""><span
+                                            class="easepick-wrapper"
+                                            style="position: absolute; pointer-events: none;"></span>
+                                    </div>
+                                    <div class="date_selection_block">
+                                        <div class="search">
+                                            <svg>
+                                                <use xlink:href="templates/assets/imgs/sprite.symbol.svg#search">
+                                                </use>
+                                            </svg>
+                                            <input type="text" placeholder="Поиск">
+                                        </div>
+
+                                        <div class="select_wrapper">
+                                            <select name="" class="select_add">
+                                                <option selected value="Сначала последние">Сначала последние</option>
+                                                <option value="Сначала последние">Сначала последние</option>
+                                            </select>
+                                        </div>
+                                        <div class="select_wrapper">
+                                            <select name="" class="select_add">
+                                                <option selected value="Все статусы">Все статусы</option>
+                                                <option value="Не все статусы">Не все статусы</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Статус</th>
+                                            <th>Дата</th>
+                                            <th>Invoice ID</th>
+                                            <th>Сумма, USDT</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="tr_show">
+                                            <td class="status">
+                                                <span class="table_td_title">Статус</span>
+                                                <div>
+                                                    <span style="background: #00CA8B;" class="circle"></span>
+                                                    Подтвержден
+                                                </div>
+                                            </td>
+                                            <td class="date">
+                                                <span class="table_td_title">Дата</span>
+                                                12:21:50 • 25 авг 2022
+                                            </td>
+                                            <td class="id">
+                                                <span class="table_td_title">Invoice ID</span>
+                                                15228759
+                                            </td>
+                                            <td class="sum">
+                                                <span class="table_td_title">Сумма, USDT</span>
+                                                86.50
+                                            </td>
+                                            <td class="arrow">
+                                                <div class="info_open"></div>
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_hide">
+                                            <td colspan="6">
+                                                <div class="table_tbody_bottom">
+                                                    <ul class="info_tr_col">
+                                                        <li>
+                                                            <span>Merchant ID:</span>
+                                                            <span>15954 (crm.botpay.me)</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Способ оплаты:</span>
+                                                            <span>TRON_TRC20 USDT</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Номер заказа:</span>
+                                                            <span>3_1652102602</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Комментарий:</span>
+                                                            <span>Пополнение баланса</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Ссылка на оплату:</span>
+                                                            <span><a href="#">Открыть</a></span>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="info_tr_col">
+                                                        <li>
+                                                            <span>Запрошенная сумма:</span>
+                                                            <span>256,00 USDT</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Сумма:</span>
+                                                            <span>256,00 USDT</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Зачислено:</span>
+                                                            <span>256,00 USDT</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Комиссия сервиса:</span>
+                                                            <span>2,00 USDT (0,8%)</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Processing fee:</span>
+                                                            <span>0,23 USDT (0,1%)</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="info_open_mobile">
+                                                    <div>
+                                                        <span>Подробности</span>
+                                                        <span>Скрыть подробности</span>
+                                                    </div>
+                                                    <div class="info_open_mobile_arrow"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="tr_show">
+                                            <td class="status">
+                                                <span class="table_td_title">Статус</span>
+                                                <div>
+                                                    <span style="background: #00CA8B;" class="circle"></span>
+                                                    Подтвержден
+                                                </div>
+                                            </td>
+                                            <td class="date">
+                                                <span class="table_td_title">Дата</span>
+                                                12:21:50 • 25 авг 2022
+                                            </td>
+                                            <td class="id">
+                                                <span class="table_td_title">Invoice ID</span>
+                                                15228759
+                                            </td>
+                                            <td class="sum">
+                                                <span class="table_td_title">Сумма, USDT</span>
+                                                86.50
+                                            </td>
+                                            <td class="arrow">
+                                                <div class="info_open"></div>
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_hide">
+                                            <td colspan="6">
+                                                <div class="table_tbody_bottom">
+                                                    <ul class="info_tr_col">
+                                                        <li>
+                                                            <span>Merchant ID:</span>
+                                                            <span>15954 (crm.botpay.me)</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Способ оплаты:</span>
+                                                            <span>TRON_TRC20 USDT</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Номер заказа:</span>
+                                                            <span>3_1652102602</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Комментарий:</span>
+                                                            <span>Пополнение баланса</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Ссылка на оплату:</span>
+                                                            <span><a href="#">Открыть</a></span>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="info_tr_col">
+                                                        <li>
+                                                            <span>Запрошенная сумма:</span>
+                                                            <span>256,00 USDT</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Сумма:</span>
+                                                            <span>256,00 USDT</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Зачислено:</span>
+                                                            <span>256,00 USDT</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Комиссия сервиса:</span>
+                                                            <span>2,00 USDT (0,8%)</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Processing fee:</span>
+                                                            <span>0,23 USDT (0,1%)</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="info_open_mobile">
+                                                    <div>
+                                                        <span>Подробности</span>
+                                                        <span>Скрыть подробности</span>
+                                                    </div>
+                                                    <div class="info_open_mobile_arrow"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="table_missing">
+                                    Больше поступлений нет
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <!-- <script src="templates/src/vendors/chart/Chart.min.js"></script> -->
+    <script src="templates/src/vendors/ch/echarts.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="templates/assets/js/bundle.min.js"></script>
+</body>
+
+</html>
