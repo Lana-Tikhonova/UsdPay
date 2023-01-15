@@ -115,8 +115,9 @@ a {
 
 input,
 textarea,
-select {
-	font-family: "Montserrat";
+select,
+button {
+	font-family: "Montserrat", sans-serif;
 }
 
 @media screen and (min-width:681px) {
@@ -165,24 +166,32 @@ select {
 
 //form
 .form_btn {
-	margin-top: 50px;
 	background: #F9F9F9;
 	border-radius: 0px 0px 15px 15px;
 	padding: 20px 48px;
-	margin: 0 -48px -32px;
+	margin: 50px -48px -32px;
+}
+
+.form_button {
+	display: flex;
+	align-items: center;
+}
+
+@media screen and (max-width:800px) {
+	.form_button {
+		height: auto;
+	}
 }
 
 @media screen and (max-width:576px) {
 	.form_btn {
-		margin-top: 30px;
 		padding: 20px 24px;
-		margin: 0 -24px -24px;
+		margin: 30 -24px -24px;
 
 		.btn {
 			width: 100%;
 		}
 	}
-
 }
 
 .form-select {
@@ -199,6 +208,7 @@ select {
 		line-height: 130%;
 		top: 6px;
 		left: 18px;
+		width: calc(100% - 50px);
 	}
 
 	select {
@@ -217,7 +227,8 @@ select {
 .form-group {
 	height: 48px;
 	background: transparent;
-	margin-bottom: 20px;
+	margin-bottom: 25px;
+	position: relative;
 
 	&.error {
 		.form__label {
@@ -226,6 +237,25 @@ select {
 
 		.form__label_text {
 			opacity: 1;
+		}
+	}
+
+	&.success {
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 16px;
+			right: 16px;
+			width: 16px;
+			height: 16px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.5 4.5L6.5 11.5L3 8' stroke='%23129B75' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+		}
+
+		.form-control {
+			padding-right: 35px;
 		}
 	}
 }
@@ -242,7 +272,7 @@ select {
 	border: 2px solid #E7EDEB;
 	border-radius: 10px;
 	display: block;
-	margin-bottom: 4px;
+	margin-bottom: 3px;
 
 	&:focus-within {
 		border-bottom-color: #E7EDEB;
@@ -325,7 +355,7 @@ select {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	max-width: 100%;
+	width: calc(100% - 32px);
 }
 
 textarea.form-control {
@@ -342,6 +372,15 @@ textarea.form-control {
 .form-group_wrapper {
 	padding-left: 12px;
 	padding-right: 12px;
+}
+
+.form-group_message {
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 130%;
+	text-align: right;
+	color: #B9B9B9;
+	text-align: right;
 }
 
 .row {
@@ -3345,14 +3384,31 @@ body {
 	width: 33.33%;
 }
 
+.width_50 {
+	width: 50%;
+}
+
 .width_66 {
 	width: 66.66%
 }
 
+.getNewPass {
+	background: transparent;
+	border: none;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 130%;
+	color: #129B75;
+	cursor: pointer;
+}
 
 @media screen and (max-width:800px) {
 	.form-group_wrapper.width_33 {
 		width: 50%
+	}
+
+	.form-group_wrapper.width_50 {
+		width: 100%;
 	}
 
 	.form-group_wrapper.width_66 {

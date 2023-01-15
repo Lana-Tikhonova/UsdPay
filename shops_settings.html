@@ -502,9 +502,9 @@
                                                 </div>
                                             </div>
                                             <div class="form-group_wrapper width_33">
-                                                <div class="form-group form_input">
+                                                <!--  класс success для галочки -->
+                                                <div class="form-group form_input success">
                                                     <div class="form__label">
-                                                        <!-- placeholder должен быть с пробелом, текст в него не вставлять, он должен быть в form__label_text -->
                                                         <input name="" placeholder=" " value="crm.botpay.me"
                                                             class="form-control" disabled="disabled" />
                                                         <span class="form__label_text">Домен магазина</span>
@@ -514,7 +514,6 @@
                                             <div class="form-group_wrapper width_33">
                                                 <div class="form-group form_input">
                                                     <div class="form__label">
-                                                        <!-- placeholder должен быть с пробелом, текст в него не вставлять, он должен быть в form__label_text -->
                                                         <input name="" placeholder=" " value="" class="form-control" />
                                                         <span class="form__label_text">E-mail для связи</span>
                                                     </div>
@@ -523,7 +522,6 @@
                                             <div class="form-group_wrapper width_66">
                                                 <div class="form-group form_input">
                                                     <div class="form__label">
-                                                        <!-- placeholder должен быть с пробелом, текст в него не вставлять, он должен быть в form__label_text -->
                                                         <input name="" placeholder=" " value="BotPay"
                                                             class="form-control" />
                                                         <span class="form__label_text">Название магазина</span>
@@ -549,10 +547,87 @@
                                         </div>
                                     </div>
                                     <div class="tabs_content_item" id="tabs-2">
-                                        cvbcvb
+                                        <div class="form_list">
+                                            <div class="form-group_wrapper width_50">
+                                                <div class="form-group form_input success">
+                                                    <div class="form__label">
+                                                        <input name="" placeholder=" " value="https://crm.botpay.me"
+                                                            class="form-control" disabled="disabled" />
+                                                        <span class="form__label_text">URL магазина</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group_wrapper width_100">
+                                                <div class="form-group form_input">
+                                                    <div class="form__label">
+                                                        <input name="" placeholder=" "
+                                                            value="https://crm.botpay.me/api/payments/paykassa/"
+                                                            class="form-control" />
+                                                        <span class="form__label_text">URL уведомлений об оплате инвойса
+                                                            [sci_confirm_order]</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group_wrapper width_100">
+                                                <div class="form-group form_input">
+                                                    <div class="form__label">
+                                                        <input name="" placeholder=" "
+                                                            value="https://crm.botpay.me/api/payments/paykassa/"
+                                                            class="form-control" />
+                                                        <span class="form__label_text">URL страницы с сообщением об
+                                                            успешной оплате [redirect]</span>
+                                                    </div>
+                                                    <div class="form-group_message">Необязательное</div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group_wrapper width_33">
+                                                <div class="form-select">
+                                                    <select name="" class="select_shop">
+                                                        <option selected value="Нет">Нет
+                                                        </option>
+                                                        <option value="Да">Да</option>
+                                                    </select>
+                                                    <span class="form__label_text">Принимать любую сумму</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group_wrapper width_33">
+                                                <div class="form-select">
+                                                    <select name="" class="select_shop">
+                                                        <option selected value="Включить">Включить
+                                                        </option>
+                                                        <option value="Включить">Включить</option>
+                                                    </select>
+                                                    <span class="form__label_text">Включить тестовый режим
+                                                        SCI/API</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_btn">
+                                            <a href="#" class="btn">Сохранить</a>
+                                        </div>
                                     </div>
                                     <div class="tabs_content_item" id="tabs-3">
-                                        ,jkkk
+                                        <div class="form_list">
+                                            <div class="form-group_wrapper width_50">
+                                                <div class="form-group form_input">
+                                                    <div class="form__label">
+                                                        <input name="" placeholder=" " value=""
+                                                            class="form-control generate" data-size="15"
+                                                            data-character-set="a-z,A-Z,0-9,#" id="#gr_1" />
+                                                        <span class="form__label_text">Пароль магазина</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group_wrapper width_50">
+                                                <div class="form-group form_button">
+                                                    <button type="button" class="getNewPass"
+                                                        data-generate="#gr_1">Сгенерировать</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_btn">
+                                            <a href="#" class="btn">Сохранить</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
