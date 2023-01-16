@@ -3098,6 +3098,8 @@ body {
 	background: #222222;
 	padding: 12px 0;
 	color: #fff;
+	font-size: 12px;
+	line-height: 17px;
 
 	.container {
 		display: flex;
@@ -3147,10 +3149,16 @@ body {
 	}
 }
 
+@media only screen and (max-device-width: 992px) {
+	.baner_text {
+		-webkit-text-size-adjust: 100%
+	}
+}
+
 @media screen and (max-width:992px) {
 	.baner_text {
-		font-size: 12px !important;
-		line-height: 17px !important;
+		font-size: 12px;
+		line-height: 17px;
 		max-height: 34px;
 	}
 

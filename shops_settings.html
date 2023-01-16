@@ -463,7 +463,7 @@
                                     </svg>
                                     Комиссия и условия
                                 </a>
-                                <a href="#" class="shops_settings_item">
+                                <a href="#" data-open-modal="remove-magazin" class="shops_settings_item">
                                     <svg>
                                         <use xlink:href="templates/assets/imgs/sprite.symbol.svg#shops_delete">
                                         </use>
@@ -637,9 +637,28 @@
             </div>
         </div>
     </main>
-    <footer>
-
-    </footer>
+    <div class="modal" data-modal="remove-magazin">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="close" data-modal-close>
+                    <svg>
+                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#close">
+                        </use>
+                    </svg>
+                </button>
+                <div class="modal_title">Вы уверены, что хотите удалить магазин?</div>
+                <div class="modal_text">
+                    После удаления, магазин будет отправлен в архив. Данные для экспорта будут доступны
+                    <b>до 11.01.2022.</b>
+                </div>
+                <div class="modal_btns">
+                    <button class="btn btn_dark">Удалить</button>
+                    <button data-modal-close class="btn btn_white">Отмена</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal_bg"></div>
+    </div>
     <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
     <!-- <script src="templates/src/vendors/chart/Chart.min.js"></script> -->
     <script src="templates/src/vendors/ch/echarts.min.js"></script>
