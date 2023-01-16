@@ -1817,6 +1817,7 @@ textarea.form-control {
 
 	tr {
 		position: relative;
+		display: table-row;
 
 		&:after {
 			content: "";
@@ -3120,6 +3121,8 @@ body {
 @media screen and (max-width:992px) {
 	.baner_text {
 		font-size: 12px;
+		line-height: 17px;
+		max-height: 34px;
 	}
 
 	.baner_close {
