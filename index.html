@@ -17,7 +17,7 @@
     <link rel="preload" href="templates/assets/fonts/Montserrat-Bold.woff2" as="font" type="font/woff2"
         crossorigin="anonymous">
 
-    <link rel="stylesheet" href="templates/assets/css/bundle.min.css?v=3">
+    <link rel="stylesheet" href="templates/assets/css/bundle.min.css?v=4">
 </head>
 
 <body>
@@ -73,8 +73,12 @@
                                     <div class="wallet_card_top">
                                         <div class="wallet_card_title">Баланс</div>
                                         <button class="profit_hide">
-                                            <svg>
+                                            <svg class="eye_hide">
                                                 <use xlink:href="templates/assets/imgs/sprite.symbol.svg#eye_hide">
+                                                </use>
+                                            </svg>
+                                            <svg class="eye_show">
+                                                <use xlink:href="templates/assets/imgs/sprite.symbol.svg#eye_show">
                                                 </use>
                                             </svg>
                                         </button>
@@ -84,7 +88,10 @@
                                             <use xlink:href="templates/assets/imgs/sprite.symbol.svg#wallet">
                                             </use>
                                         </svg>
-                                        <div class="wallet_card_balans">650,220<span>.85 USDT</span></div>
+                                        <div class="wallet_card_balans">
+                                            <div class="number">650,220.85</div>
+                                            <span> USDT</span>
+                                        </div>
                                     </div>
                                     <div class="wallet_card_bottom">
                                         <div class="wallet_card_profit_percent">+2.5%</div>
@@ -843,14 +850,20 @@
             </div>
         </div>
     </main>
-    <footer>
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+            Highcharts has extensive support for time series, and will adapt
+            intelligently to the input data. Click and drag in the chart to zoom in
+            and inspect the data.
+        </p>
+    </figure>
 
-    </footer>
     <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
     <!-- <script src="templates/src/vendors/chart/Chart.min.js"></script> -->
     <script src="templates/src/vendors/ch/echarts.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-    <script src="templates/assets/js/bundle.min.js?v=2"></script>
+    <script src="templates/assets/js/bundle.min.js?v=3"></script>
 </body>
 
 </html>

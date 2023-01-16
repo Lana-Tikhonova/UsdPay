@@ -16,6 +16,7 @@ $(document).ready(function () {
         minimumResultsForSearch: Infinity,
         theme: 'shop',
     });
+    // modals
     const body = document.querySelector('body');
     document.addEventListener('click', (e) => {
         const target = e.target;
@@ -36,6 +37,25 @@ $(document).ready(function () {
             body.classList.remove('locked');
         }
     });
+
+    $('.profit_hide').on("click", function () {
+        $(this).toggleClass('active')
+        let hideElem = $(this).parents('.wallet_card').find('.wallet_card_balans .number');
+        var hideElemText = hideElem.text();
+        console.log(hideElemText);
+        if (!hideElemText.indexOf("*")) {
+            hideElem.text(hideElem.attr("data-text"));
+            hideElem.removeClass('active');
+            return;
+        }
+        var starText = "";
+        for (let i = 0; i < hideElemText.length; i++) starText += "*";
+        hideElem
+            .attr("data-text", hideElemText)
+            .addClass('active')
+            .text(starText);
+    });
+
 
     // Generate a password string
     function randString(id) {
@@ -67,7 +87,7 @@ $(document).ready(function () {
 
 
     // Create a new password
-    $(".getNewPass").click(function () {
+    $(".getNewPass").on("click", function () {
         var field = $(`.form-control[id="${$(this).attr('data-generate')}"`);
         field.val(randString(field));
     });
@@ -732,9 +752,33 @@ $(document).ready(function () {
                 }]
             },
             options: {
+
                 // responsive: false,
                 legend: {
                     display: false
+                },
+                scales: {
+
+                    yAxes: [{
+                        ticks: {
+                            fontColor: '#C4C4C4',
+                            fontFamily: 'Montserrat',
+                            fontSize: 12,
+                            callback: function (value, index, values) {
+                                return value + 'K';
+                            }
+                        }
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            fontColor: '#C4C4C4',
+                            fontFamily: 'Montserrat',
+                            fontSize: 12,
+                            // callback: function (value, index, values) {
+                            //     return value + 'K';
+                            // }
+                        }
+                    }]
                 },
                 tooltips: {
                     mode: "index",
