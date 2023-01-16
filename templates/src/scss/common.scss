@@ -1237,7 +1237,7 @@ textarea.form-control {
 }
 
 .date_input_input {
-	min-width: 160px;
+	min-width: 166px;
 	max-width: 180px;
 	text-align: center;
 	height: 28px;
@@ -1254,28 +1254,28 @@ textarea.form-control {
 
 	&::-webkit-input-placeholder {
 		font-weight: 600;
-		font-size: 11px;
+		font-size: 10px;
 		line-height: 130%;
 		color: #C4C4C4;
 	}
 
 	&::-moz-placeholder {
 		font-weight: 600;
-		font-size: 11px;
+		font-size: 10px;
 		line-height: 130%;
 		color: #C4C4C4;
 	}
 
 	&:-moz-placeholder {
 		font-weight: 600;
-		font-size: 11px;
+		font-size: 10px;
 		line-height: 130%;
 		color: #C4C4C4;
 	}
 
 	&:-ms-input-placeholder {
 		font-weight: 600;
-		font-size: 11px;
+		font-size: 10px;
 		line-height: 130%;
 		color: #C4C4C4;
 	}
@@ -1292,6 +1292,8 @@ textarea.form-control {
 		.date_input_input {
 			background: #222222;
 			color: #fff;
+			border-color: #222222;
+
 		}
 	}
 }
@@ -3147,8 +3149,8 @@ body {
 
 @media screen and (max-width:992px) {
 	.baner_text {
-		font-size: 12px;
-		line-height: 17px;
+		font-size: 12px !important;
+		line-height: 17px !important;
 		max-height: 34px;
 	}
 
