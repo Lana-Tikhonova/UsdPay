@@ -1819,25 +1819,21 @@ textarea.form-control {
 		position: relative;
 		display: table-row;
 
-		&:after {
-			content: "";
-			display: block;
-			position: absolute;
-			left: 32px;
-			bottom: 0;
-			width: calc(100% - 64px);
-			height: 1px;
-			background: #f4f4f4;
-		}
+		// &:after {
+		// 	content: "";
+		// 	display: block;
+		// 	position: absolute;
+		// 	left: 32px;
+		// 	bottom: 0;
+		// 	width: calc(100% - 64px);
+		// 	height: 1px;
+		// 	background: #f4f4f4;
+		// }
 	}
 
-	th {
-		font-weight: 600;
-		font-size: 11px;
-		line-height: 130%;
-		padding: 10px 10px;
-		color: #0C1135;
-		text-align: left;
+	th,
+	td {
+		height: 1px;
 
 		&:first-child {
 			padding-left: 32px;
@@ -1845,6 +1841,23 @@ textarea.form-control {
 
 		&:last-child {
 			padding-right: 32px;
+		}
+
+		&>div {
+			border-bottom: 1px solid #f4f4f4;
+			height: 100%;
+		}
+	}
+
+	th {
+		font-weight: 600;
+		font-size: 11px;
+		line-height: 130%;
+		color: #0C1135;
+		text-align: left;
+
+		&>div {
+			padding: 10px 10px;
 		}
 	}
 
@@ -1853,19 +1866,14 @@ textarea.form-control {
 		font-size: 12px;
 		line-height: 15px;
 		color: #222222;
-		padding: 12px 10px;
-
-		&:first-child {
-			padding-left: 32px;
-		}
-
-		&:last-child {
-			padding-right: 32px;
-		}
 
 		&.arrow {
 			width: 24px;
 
+		}
+
+		&>div {
+			padding: 12px 10px;
 		}
 
 		// &.sum {
@@ -1921,6 +1929,11 @@ textarea.form-control {
 
 		td {
 			padding: 0 !important;
+		}
+
+		td>div {
+			padding: 0;
+			border: none;
 		}
 	}
 
@@ -2510,10 +2523,15 @@ main {
 
 			td {
 				display: block;
+
+				&>div {
+					display: block;
+				}
 			}
 		}
 
 		td {
+			height: auto;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -2530,6 +2548,15 @@ main {
 
 			&.shop {
 				max-width: 100%;
+			}
+
+			&>div {
+				padding: 0;
+				border: none;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
 			}
 		}
 	}
