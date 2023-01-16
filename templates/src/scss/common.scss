@@ -215,7 +215,7 @@ button {
 @media screen and (max-width:576px) {
 	.form_btn {
 		padding: 20px 24px;
-		margin: 30 -24px -24px;
+		margin: 30px -24px -24px;
 
 		.btn {
 			width: 100%;
@@ -3452,9 +3452,14 @@ body {
 	line-height: 130%;
 	color: #129B75;
 	cursor: pointer;
+	padding: 0;
 }
 
 @media screen and (max-width:800px) {
+	.getNewPass {
+		margin-top: -10px;
+	}
+
 	.form-group_wrapper.width_33 {
 		width: 50%
 	}
