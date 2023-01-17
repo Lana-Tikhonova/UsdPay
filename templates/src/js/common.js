@@ -828,6 +828,7 @@ $(document).ready(function () {
 
     chartLine.render();
 
+    //скрыть/показать пароль
     $('.password-checkbox').on('click', function () {
         let passwordInput = $(this).parents('.form__label').find('.form-control')
         if ($(this).is(':checked')) {
@@ -837,5 +838,15 @@ $(document).ready(function () {
             passwordInput.attr('type', 'password');
             $(this).parent().removeClass('active');
         }
+    });
+
+    //копирование в буфер
+    $('.shop_ip_item_btn').on('click', function () {
+        let copyText = $(this).parent().find('.shop_ip_item_text').text();
+        var $tmp = $("<textarea>");
+        $("body").append($tmp);
+        $tmp.val(copyText).select();
+        document.execCommand("copy");
+        $tmp.remove();
     });
 });

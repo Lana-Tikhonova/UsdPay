@@ -256,5 +256,10 @@
         <ellipse cx="7.33332" cy="7.33333" rx="5.33333" ry="5.33333" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M11 11.3053L14.3333 14.6387" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
+   <symbol viewBox="0 0 16 16" id="copy" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3.33331" y="2" width="6.66667" height="9.33333" rx="3" stroke="#129B75" stroke-width="1.5"/>
+        <path d="M11.6667 4.93427C12.2645 5.28007 12.6667 5.92642 12.6667 6.6667V12C12.6667 13.1046 11.7712 14 10.6667 14H8.00001C7.25973 14 6.61339 13.5978 6.26758 13" stroke="#129B75" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+
 
 </svg>
