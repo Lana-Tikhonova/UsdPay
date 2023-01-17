@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="UsdPay" />
+    <meta name="keywords" content="UsdPay" />
+    <title>UsdPay</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- шрифты -->
+    <link rel="preload" href="templates/assets/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" href="templates/assets/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" href="templates/assets/fonts/Montserrat-Bold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="templates/assets/css/bundle.min.css?v=5">
+</head>
+
+<body>
+    <div class="authentication_wrapper">
+        <div class="authentication_left">
+            <!-- <img src="/templates/assets/imgs/img-bg.svg" alt=""> -->
+        </div>
+        <div class="authentication_right">
+            <div class="authentication_head">
+                <a href="/" class="logo"><img src="templates/assets/imgs/logo.png" alt=""></a>
+                <div class="language">
+                    <select name="language" class="language_select">
+                        <option selected value="Ru">Ru</option>
+                        <option value="En">En</option>
+                    </select>
+                </div>
+            </div>
+            <div class="authentication_body">
+                <div class="authentication_block">
+                    <div class="authentication_title">
+                        Регистрация
+                    </div>
+                    <div class="authentication_text"><b>USDPAY</b> – простой способ принимать онлайн-платежи в
+                        криптовалюте.</div>
+                    <form action="#">
+                        <div class="form-group form_input">
+                            <div class="form__label">
+                                <input name="" placeholder=" " value="konstanin.ivanov@gmail.com" class="form-control">
+                                <span class="form__label_text">Электронная почта</span>
+                            </div>
+                        </div>
+                        <div class="form-group form_input">
+                            <div class="form__label form__label_password">
+                                <input name="" placeholder=" " value="dfhscdfhdfhdfh" type="password"
+                                    autocomplete="new-password" class="form-control">
+                                <span class="form__label_text">Пароль</span>
+                                <label class="password_show">
+                                    <input type="checkbox" class="password-checkbox">
+                                    <span>
+                                        <svg class="eye_show">
+                                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#eye_show_grey">
+                                            </use>
+                                        </svg>
+                                        <svg class="eye_hide">
+                                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#eye_hide_grey">
+                                            </use>
+                                        </svg>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="checkbox form-checkbox">
+                            <label class="checkbox_inline">
+                                <input id="privacy" type="checkbox">
+                                <span class="signature">
+                                    Я согласен с условиями <a href="#">пользовательского соглашения</a> и<a
+                                        href="#"> политикой конфиденциальности</a>
+                                </span>
+                            </label>
+                        </div>
+                        <button class="btn">Продолжить</button>
+                        <a href="#" class="authentication_link authentication_link_btn">Есть аккаунт</a>
+                    </form>
+                </div>
+            </div>
+            <div class="authentication_footer">
+                <a href="#">Пользовательское соглашение</a>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="templates/assets/js/bundle.min.js?v=4"></script>
+</body>
+
+</html>
