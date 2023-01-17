@@ -17,7 +17,7 @@
     <link rel="preload" href="templates/assets/fonts/Montserrat-Bold.woff2" as="font" type="font/woff2"
         crossorigin="anonymous">
 
-    <link rel="stylesheet" href="templates/assets/css/bundle.min.css?v=4">
+    <link rel="stylesheet" href="templates/assets/css/bundle.min.css?v=5">
 </head>
 
 <body>
@@ -538,9 +538,9 @@
                                             <a href="#">crm.botpay.me</a>
                                             <span class="receipts_link_id">ID: 15954</span>
                                         </div>
-                                        <canvas id="ctx" width="750" height="250"></canvas>
-                                        <!-- <div id="line"></div> -->
-                                        <!-- <div id="main" style="width: 600px;height:400px;"></div> -->
+                                        <div class="chart_time_wrapper">
+                                            <div id="chart_time"></div>
+                                        </div>
                                     </div>
                                     <div class="tabs_slide_item" id="tabSlide-2">
                                         <div class="receipts_link">
@@ -859,9 +859,6 @@
         </p>
     </figure>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
-    <!-- <script src="templates/src/vendors/chart/Chart.min.js"></script> -->
-    <script src="templates/src/vendors/ch/echarts.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
     <script src="templates/assets/js/bundle.min.js?v=3"></script>
 </body>

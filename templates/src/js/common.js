@@ -243,7 +243,7 @@ $(document).ready(function () {
             enabled: false
         },
         series: [{
-            name: '$',
+            name: '',
             data: dayData
         }],
         xaxis: {
@@ -603,374 +603,228 @@ $(document).ready(function () {
         });
 
     //линейный график
-
-    // const DATA_COUNT = 12;
-    // const labels = [];
-    // for (let i = 0; i < DATA_COUNT; ++i) {
-    //     labels.push(i.toString());
-    // }
-    // const datapoints = [0, 20, 20, 60, 60, 120, NaN, 180, 120, 125, 105, 110, 170];
-    // const data = {
-    //     labels: labels,
-    //     datasets: [{
-    //         label: 'Cubic interpolation (monotone)',
-    //         data: datapoints,
-    //         borderColor: 'rgba(0, 119, 204, 0.3)',
-    //         fill: false,
-    //         cubicInterpolationMode: 'monotone',
-    //         tension: 0.4
-    //     }, {
-    //         label: 'Cubic interpolation',
-    //         data: datapoints,
-    //         borderColor: 'rgba(0, 119, 204, 0.3)',
-    //         fill: false,
-    //         tension: 0.4
-    //     }, {
-    //         label: 'Linear interpolation (default)',
-    //         data: datapoints,
-    //         borderColor: 'rgba(0, 119, 204, 0.3)',
-    //         fill: false
-    //     }]
-    // };
-    // const footer = (tooltipItems) => {
-    //     let sum = 0;
-
-    //     tooltipItems.forEach(function (tooltipItem) {
-    //         sum += tooltipItem.parsed.y;
-    //     });
-    //     return 'Sum: ' + sum;
-    // };
-    // new Chart(document.getElementById("line-chart"), {
-    //     type: 'line',
-    //     data: data,
-    //     options: {
-    //         responsive: true,
-    //         plugins: {
-    //             title: {
-    //                 display: true,
-    //                 text: 'Chart.js Line Chart - Cubic interpolation mode'
-    //             },
-    //             plugins: {
-    //                 tooltip: {
-    //                     callbacks: {
-    //                         footer: footer,
-    //                     }
-    //                 }
-    //             }
-    //         },
-    //         interaction: {
-    //             intersect: false,
-    //         },
-    //         scales: {
-    //             x: {
-    //                 display: true,
-    //                 title: {
-    //                     display: true
-    //                 }
-    //             },
-    //             y: {
-    //                 display: true,
-    //                 title: {
-    //                     display: true,
-    //                     text: 'Value'
-    //                 },
-    //                 suggestedMin: -10,
-    //                 suggestedMax: 200
-    //             }
-    //         }
-    //     },
-    // });
-
-    // Chart.defaults.LineWithLine = Chart.defaults.line;
-    // Chart.controllers.LineWithLine = Chart.controllers.line.extend({
-    //     draw: function (ease) {
-    //         Chart.controllers.line.prototype.draw.call(this, ease);
-
-    //         if (this.chart.tooltip._active && this.chart.tooltip._active.length) {
-    //             var activePoint = this.chart.tooltip._active[0],
-    //                 ctx = this.chart.ctx,
-    //                 x = activePoint.tooltipPosition().x,
-    //                 topY = this.chart.scales['y-axis-0'].top,
-    //                 bottomY = this.chart.scales['y-axis-0'].bottom;
-
-    //             // draw line
-    //             ctx.save();
-    //             ctx.beginPath();
-    //             ctx.moveTo(x, topY);
-    //             ctx.lineTo(x, bottomY);
-    //             ctx.lineWidth = 2;
-    //             ctx.strokeStyle = '#07C';
-    //             ctx.stroke();
-    //             ctx.restore();
-    //         }
-    //     }
-    // });
-
-    // var chart = new Chart(ctx, {
-    //     type: 'LineWithLine',
-    //     data: {
-    //         labels: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
-    //         datasets: [{
-    //             label: 'Statistics',
-    //             data: [3, 1, 2, 5, 4, 7, 6],
-    //             backgroundColor: 'rgba(0, 119, 204, 0.8)',
-    //             borderColor: 'rgba(0, 119, 204, 0.3)',
-    //             pointRadius: .5,
-    //             pointHitRadius: 16,
-    //             fill: false
-    //         }]
-    //     },
-    //     options: {
-    //         tooltips: {
-    //             intersect: false
-    //         },
-    //         scales: {
-    //             yAxes: [{
-    //                 ticks: {
-    //                     beginAtZero: true
-    //                 }
-    //             }]
-    //         }
-    //     }
-    // });
-
-    let ctxchartJS = document.getElementById('ctx')
-    if (ctxchartJS) {
-        const chartJS = new Chart(document.getElementById('ctx'), {
-            type: 'line',
-            data: {
-                labels: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
-                datasets: [{
-                    // label: 'Statistics',
-                    data: [17, 14, 13, 12, 9, 25, 28, 37, 39, 37, 26, 10, ],
-                    backgroundColor: '#00CA8B',
-                    borderColor: '#00CA8B',
-                    pointRadius: .5,
-                    pointHitRadius: 16,
-                    borderWidth: 2,
-                    fill: false
-                }]
-            },
-            options: {
-
-                // responsive: false,
-                legend: {
-                    display: false
-                },
-                scales: {
-
-                    yAxes: [{
-                        ticks: {
-                            fontColor: '#C4C4C4',
-                            fontFamily: 'Montserrat',
-                            fontSize: 12,
-                            callback: function (value, index, values) {
-                                return value + 'K';
-                            }
-                        }
-                    }],
-                    xAxes: [{
-                        ticks: {
-                            fontColor: '#C4C4C4',
-                            fontFamily: 'Montserrat',
-                            fontSize: 12,
-                            // callback: function (value, index, values) {
-                            //     return value + 'K';
-                            // }
-                        }
-                    }]
-                },
-                tooltips: {
-                    mode: "index",
-                    intersect: false,
-                    // backgroundColor:'#ffffff',
-                    // titleColor:'#000000',
-                    // bodyColor:'#000000',
-                    // footerColor:'#000000',
-                    // boxWidth:30,
-                    padding: '8',
-                    callbacks: {
-                        label(tooltipItem, data) {
-                            let label = data.datasets[tooltipItem.datasetIndex].label || '';
-
-                            if (label) {
-                                label += ': ';
-                            }
-                            return label + Math.round(tooltipItem.yLabel) + " USDT";
-                        }
-                    }
-                },
-                hover: {
-                    mode: "index",
-                    intersect: false,
-                },
-            }
-        });
+    var series = {
+        "prices": [
+            10,
+            15,
+            17,
+            28,
+            49,
+            50,
+            69,
+            48,
+            37,
+            42,
+            256,
+            277,
+            388,
+            390,
+            837,
+            378,
+            388,
+            590,
+            605,
+            609
+        ],
+        "dates": [
+            "13 Nov 2022",
+            "14 Nov 2022",
+            "15 Nov 2022",
+            "16 Nov 2022",
+            "17 Nov 2022",
+            "20 Nov 2022",
+            "21 Nov 2022",
+            "22 Nov 2022",
+            "23 Nov 2022",
+            "24 Nov 2022",
+            "27 Nov 2022",
+            "28 Nov 2022",
+            "29 Nov 2022",
+            "30 Nov 2022",
+            "01 Dec 2022",
+            "04 Dec 2022",
+            "05 Dec 2022",
+            "06 Dec 2022",
+            "07 Dec 2022",
+            "08 Dec 2022"
+        ]
     }
 
-    // let dates = [80, 6, 0, 147, 367, 88, 73, 289, 457, 35, 35, 673, 135, 13];
+    var options = {
+        chart: {
+            locales: [{
+                "name": "ru",
+                "options": {
+                    "months": [
+                        "Январь",
+                        "Февраль",
+                        "Март",
+                        "Апрель",
+                        "Май",
+                        "Июнь",
+                        "Июль",
+                        "Август",
+                        "Сентябрь",
+                        "Октябрь",
+                        "Ноябрь",
+                        "Декабрь"
+                    ],
+                    "shortMonths": [
+                        "Янв",
+                        "Фев",
+                        "Мар",
+                        "Апр",
+                        "Май",
+                        "Июн",
+                        "Июл",
+                        "Авг",
+                        "Сен",
+                        "Окт",
+                        "Ноя",
+                        "Дек"
+                    ],
+                    "days": [
+                        "Воскресенье",
+                        "Понедельник",
+                        "Вторник",
+                        "Среда",
+                        "Четверг",
+                        "Пятница",
+                        "Суббота"
+                    ],
+                    "shortDays": ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+                    "toolbar": {
+                        "exportToSVG": "Сохранить SVG",
+                        "exportToPNG": "Сохранить PNG",
+                        "exportToCSV": "Сохранить CSV",
+                        "menu": "Меню",
+                        "selection": "Выбор",
+                        "selectionZoom": "Выбор с увеличением",
+                        "zoomIn": "Увеличить",
+                        "zoomOut": "Уменьшить",
+                        "pan": "Перемещение",
+                        "reset": "Сбросить увеличение"
+                    }
+                }
+            }],
+            defaultLocale: 'ru',
+            height: 240,
+            type: "area",
+            stacked: !0,
+            toolbar: {
+                show: !1
+            }
+        },
+        grid: {
+            show: true,
+            borderColor: '#E7EDEB',
+            strokeDashArray: 4,
+            yaxis: {
+                lines: {
+                    show: true,
+                }
+            },
+            xaxis: {
+                lines: {
+                    show: true,
+                }
+            }
+        },
+        dataLabels: {
+            enabled: false
+        },
+        colors: ["#17BD90"],
+        fill: {
+            colors: undefined,
+            opacity: 0,
+            type: 'solid',
+            gradient: {
+                shade: 'dark',
+                type: "horizontal",
+                shadeIntensity: 0.5,
+                gradientToColors: undefined,
+                inverseColors: true,
+                opacityFrom: 1,
+                opacityTo: 1,
+                stops: [0, 50, 100],
+                colorStops: []
+            },
+        },
+        stroke: {
+            curve: 'smooth',
+            width: 2,
+            dashArray: 0
+        },
+        series: [{
+            name: '',
+            data: series.prices
+        }],
+        labels: series.dates,
+        yaxis: [{
+            show: true,
+            labels: {
+                show: true,
+                minWidth: 0,
+                maxWidth: 160,
+                offsetX: 0,
+                offsetY: 0,
+                rotate: 0,
+                padding: 20,
+                style: {
+                    colors: ['#C4C4C4'],
+                    fontSize: "12px",
+                    fontFamily: '"Montserrat", sans-serif;',
+                },
+                // formatter: function (val, index) {
+                //     return val + 'K';
+                // }
+            },
+        }],
+        xaxis: {
+            type: "datetime",
+            labels: {
+                rotate: 0,
+                style: {
+                    colors: ['#C4C4C4'],
+                    fontSize: "12px",
+                },
+                formatter: function (val) {
+                    return new Date(val).toLocaleDateString('ru-RU', {
+                        month: 'short',
+                        day: 'numeric',
+                    });
+                }
+            },
+            tooltip: {
+                enabled: false,
+            }
+        },
+        tooltip: {
+            x: {
+                intersect: true,
+                style: {
+                    fontSize: '12px',
+                    fontFamily: undefined
+                },
+                fixed: {
+                    enabled: false,
+                    position: 'topRight',
+                    offsetX: 10,
+                    offsetY: 10,
+                },
 
-    // var optionsTwo = {
-    //     series: [{
-    //     name: 'XYZ MOTORS',
-    //     data: dates
-    //   }],
-    //     chart: {
-    //     type: 'area',
-    //     stacked: false,
-    //     height: 350,
-    //     zoom: {
-    //       type: 'x',
-    //       enabled: true,
-    //       autoScaleYaxis: true
-    //     },
-    //     toolbar: {
-    //       autoSelected: 'zoom'
-    //     }
-    //   },
-    //   dataLabels: {
-    //     enabled: false
-    //   },
-    //   markers: {
-    //     size: 0,
-    //   },
-    //   title: {
-    //     text: 'Stock Price Movement',
-    //     align: 'left'
-    //   },
-    //   fill: {
-    //     type: 'gradient',
-    //     gradient: {
-    //       shadeIntensity: 1,
-    //       inverseColors: false,
-    //       opacityFrom: 0.5,
-    //       opacityTo: 0,
-    //       stops: [0, 90, 100]
-    //     },
-    //   },
-    //   yaxis: {
-    //     labels: {
-    //       formatter: function (val) {
-    //         return (val / 1000000).toFixed(0);
-    //       },
-    //     },
-    //     title: {
-    //       text: 'Price'
-    //     },
-    //   },
-    //   xaxis: {
-    //     categories: day,
-    //         axisBorder: {
-    //             show: !1
-    //         },
-    //         axisTicks: {
-    //             show: !1
-    //         },
-    //         position: 'bottom',
-    //         labels: {
-    //             show: false,
-    //             style: {
-    //                 colors: [],
-    //                 fontSize: '0',
-    //             }
-    //         }
-    //   },
-    //   tooltip: {
-    //     shared: false,
-    //     y: {
-    //       formatter: function (val) {
-    //         return (val / 1000000).toFixed(0)
-    //       }
-    //     }
-    //   }
-    //   };
+                formatter: function (val) {
+                    return new Date(val).toLocaleDateString('ru-RU', {
+                        month: 'short',
+                        day: 'numeric',
+                        year: 'numeric',
+                    });
+                }
+            }
+        }
+    };
 
-    //   var chartTwo = new ApexCharts(document.querySelector("#line"), optionsTwo);
-    //   chartTwo.render();
+    var chart = new ApexCharts(document.querySelector("#chart_time"), options);
 
-    //     // Initialize the echarts instance based on the prepared dom
-    //     var myChart = echarts.init(document.getElementById('main'));
-
-    //     // Specify the configuration items and data for the chart
-    // const data = [["2000-06-05", 116], ["2000-06-06", 129], ["2000-06-07", 135], ["2000-06-08", 86], ["2000-06-09", 73], ["2000-06-10", 85], ["2000-06-11", 73], ["2000-06-12", 68], ["2000-06-13", 92], ["2000-06-14", 130], ["2000-06-15", 245], ["2000-06-16", 139], ["2000-06-17", 115], ["2000-06-18", 111], ["2000-06-19", 309], ["2000-06-20", 206], ["2000-06-21", 137], ["2000-06-22", 128], ["2000-06-23", 85], ["2000-06-24", 94], ["2000-06-25", 71], ["2000-06-26", 106], ["2000-06-27", 84], ["2000-06-28", 93], ["2000-06-29", 85], ["2000-06-30", 73], ["2000-07-01", 83], ["2000-07-02", 125], ["2000-07-03", 107], ["2000-07-04", 82], ["2000-07-05", 44], ["2000-07-06", 72], ["2000-07-07", 106], ["2000-07-08", 107], ["2000-07-09", 66], ["2000-07-10", 91], ["2000-07-11", 92], ["2000-07-12", 113], ["2000-07-13", 107], ["2000-07-14", 131], ["2000-07-15", 111], ["2000-07-16", 64], ["2000-07-17", 69], ["2000-07-18", 88], ["2000-07-19", 77], ["2000-07-20", 83], ["2000-07-21", 111], ["2000-07-22", 57], ["2000-07-23", 55], ["2000-07-24", 60]];
-    // const dateList = data.map(function (item) {
-    //   return item[0];
-    // });
-    // const valueList = data.map(function (item) {
-    //   return item[1];
-    // });
-    // option = {
-    //   // Make gradient line here
-    //   visualMap: [
-    //     {
-    //       show: false,
-    //       type: 'continuous',
-    //       seriesIndex: 0,
-    //       min: 0,
-    //       max: 400
-    //     },
-    //     {
-    //       show: false,
-    //       type: 'continuous',
-    //       seriesIndex: 1,
-    //       dimension: 0,
-    //       min: 0,
-    //       max: dateList.length - 1
-    //     }
-    //   ],
-    //   title: [
-    //     {
-    //       left: 'center',
-    //       text: 'Gradient along the y axis'
-    //     },
-    //     {
-    //       top: '55%',
-    //       left: 'center',
-    //       text: 'Gradient along the x axis'
-    //     }
-    //   ],
-    //   tooltip: {
-    //     trigger: 'axis'
-    //   },
-    //   xAxis: [
-    //     {
-    //       data: dateList
-    //     },
-    //     {
-    //       data: dateList,
-    //       gridIndex: 1
-    //     }
-    //   ],
-    //   yAxis: [
-    //     {},
-    //     {
-    //       gridIndex: 1
-    //     }
-    //   ],
-    //   grid: [
-    //     {
-    //       bottom: '60%'
-    //     },
-    //     {
-    //       top: '60%'
-    //     }
-    //   ],
-    //   series: [
-    //     {
-    //       type: 'line',
-    //       showSymbol: false,
-    //       smooth: true,
-    //       data: valueList
-    //     },
-    //     {
-    //       type: 'line',
-    //       showSymbol: false,
-    //       data: valueList,
-    //       xAxisIndex: 1,
-    //       yAxisIndex: 1
-    //     }
-    //   ]
-    // };
-    //     // Display the chart using the configuration items and data just specified.
-    //     myChart.setOption(option);
+    chart.render();
 });
