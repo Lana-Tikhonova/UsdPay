@@ -134,6 +134,18 @@ button {
 	font-family: "Montserrat", sans-serif;
 }
 
+.text_center {
+	text-align: center;
+}
+
+.text_left {
+	text-align: left;
+}
+
+.text_right {
+	text-align: right;
+}
+
 @media screen and (min-width:681px) {
 	.container {
 		padding: 0 32px;
@@ -175,7 +187,8 @@ button {
 	text-transform: inherit;
 	position: relative;
 
-	&.disabled {
+	&.disabled,
+	&:disabled {
 		opacity: 0.3;
 		pointer-events: none;
 	}
@@ -184,6 +197,11 @@ button {
 		background: $color_green02;
 	}
 
+}
+
+.btn_big {
+	padding: 18px 25px 19px;
+	font-size: 15px;
 }
 
 .btn_dark {
@@ -327,7 +345,11 @@ button {
 }
 
 .form_textarea {
-	height: 300px;
+	height: 80px;
+
+	textarea {
+		resize: none;
+	}
 }
 
 .form__label {
@@ -526,6 +548,64 @@ textarea.form-control {
 .checkbox_inline .signature a,
 .radio_inline .signature a {
 	color: #129B75;
+}
+
+.form-group~.form_alert {
+	margin-top: -14px;
+}
+
+.form_alert {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 140%;
+	position: relative;
+	color: #222222;
+	padding-left: 24px;
+	margin-bottom: 24px;
+
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 16px;
+		height: 16px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.60126 1.61038C8.20436 1.531 7.79566 1.531 7.39876 1.61038C6.51683 1.78676 5.75683 2.34153 5.32004 3.12774L1.1961 10.5508C0.958191 10.9791 0.833344 11.4609 0.833344 11.9508C0.833344 13.5428 2.12393 14.8334 3.71595 14.8334H12.2841C13.8761 14.8334 15.1667 13.5428 15.1667 11.9508C15.1667 11.4609 15.0418 10.9791 14.8039 10.5508L10.68 3.12775C10.2432 2.34153 9.48319 1.78676 8.60126 1.61038ZM8.00001 9.41673C7.5858 9.41673 7.25001 9.08094 7.25001 8.66673V6.00006C7.25001 5.58585 7.5858 5.25006 8.00001 5.25006C8.41422 5.25006 8.75001 5.58585 8.75001 6.00006V8.66673C8.75001 9.08094 8.41422 9.41673 8.00001 9.41673ZM8.75001 11.0001C8.75001 11.4143 8.41422 11.7501 8.00001 11.7501C7.5858 11.7501 7.25001 11.4143 7.25001 11.0001V10.6667C7.25001 10.2525 7.5858 9.91673 8.00001 9.91673C8.41422 9.91673 8.75001 10.2525 8.75001 10.6667V11.0001Z' fill='%23222222'/%3e%3c/svg%3e ");
+	}
+}
+
+.form_input_withdrawa {
+	.form__label_text {
+		color: #222222;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 130%;
+		top: 19px
+	}
+
+	.form-control {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 130%;
+		padding-top: 25px;
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 20px;
+		right: 15px;
+		width: 24px;
+		height: 24px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.01499 11.5682L5.66169 4.08349C5.67363 4.05829 5.69278 4.03699 5.71682 4.02218C5.74087 4.00736 5.76879 3.99967 5.79722 4.00001H18.2033C18.2316 3.99994 18.2593 4.00783 18.2831 4.02273C18.307 4.03764 18.3259 4.05893 18.3377 4.08407L21.9844 11.5687C21.9982 11.5966 22.0026 11.628 21.9969 11.6585C21.9912 11.6889 21.9756 11.7168 21.9525 11.738L12.1037 20.9591C12.0757 20.9853 12.0384 21 11.9997 21C11.9609 21 11.9237 20.9853 11.8957 20.9591L2.04681 11.7374C2.02372 11.7162 2.00817 11.6884 2.00244 11.6579C1.99672 11.6275 2.00112 11.596 2.01499 11.5682ZM12.0141 12.3633C12.829 12.3633 13.1944 12.342 13.2651 12.3368L13.2627 12.3362C15.7628 12.228 17.6277 11.8019 17.6277 11.293C17.6277 10.784 15.7622 10.3579 13.2627 10.2491V11.913C13.1926 11.9194 12.8031 11.951 12.0253 11.951C11.3772 11.951 10.9082 11.924 10.7444 11.9125V10.248C8.23959 10.3574 6.36998 10.7828 6.36998 11.293C6.36998 11.8031 8.23959 12.2291 10.7444 12.3368C10.9058 12.3443 11.366 12.3633 12.0141 12.3633ZM13.2651 10.0764V10.077L13.2645 10.0764C13.2647 10.0764 13.2649 10.0764 13.2651 10.0764ZM13.2651 8.58753V10.0764C16.0948 10.2043 18.221 10.7524 18.221 11.4093C18.221 12.0662 16.0928 12.6143 13.2645 12.7415V17.5162H10.7438V12.7433C7.90903 12.6154 5.77722 12.0673 5.77722 11.4098C5.77722 10.7523 7.90903 10.2036 10.7438 10.0764V8.58753H7.25617V6.31622H16.7533V8.58753H13.2651Z' fill='%2300CA8B'/%3e%3c/svg%3e ");
+	}
 }
 
 .row {
@@ -2137,6 +2217,10 @@ textarea.form-control {
 			text-overflow: ellipsis;
 			max-width: 150px;
 		}
+
+		&.recipient {
+			width: 250px;
+		}
 	}
 
 	.tr_show {
@@ -2747,6 +2831,10 @@ main {
 			background: #FFFFFF;
 			display: flex;
 			flex-direction: column;
+			padding: 16px 12px 0;
+			border: 1px solid #F4F4F4;
+			border-radius: 10px;
+			margin-bottom: 12px;
 
 			&:after {
 				display: none;
@@ -2755,8 +2843,7 @@ main {
 
 		.tr_show {
 			border-radius: 10px 10px 0 0;
-			padding: 16px 12px 0;
-			border: 1px solid #F4F4F4;
+			margin-bottom: 0;
 
 			&.active {
 				box-shadow: none;
@@ -2764,7 +2851,9 @@ main {
 		}
 
 		.tr_hide {
-			margin-bottom: 12px;
+			border: none;
+			padding: 0;
+			margin-bottom: 0;
 
 			td {
 				display: block;
@@ -2782,10 +2871,7 @@ main {
 			align-items: center;
 			padding: 0 !important;
 			width: 100%;
-
-			&:not(:last-child) {
-				margin-bottom: 12px;
-			}
+			margin-bottom: 12px;
 
 			&.arrow {
 				display: none;
@@ -2793,6 +2879,11 @@ main {
 
 			&.shop {
 				max-width: 100%;
+			}
+
+			&.recipient {
+				width: 100%;
+				order: 1;
 			}
 
 			&>div {
@@ -3016,6 +3107,10 @@ main {
 
 	.date_selection {
 		margin-bottom: 10px;
+	}
+
+	.recipient_block {
+		width: 110px;
 	}
 
 	.header_btn_wrapper {
@@ -3913,13 +4008,16 @@ body {
 	position: relative;
 	padding: 40px 48px 32px;
 	margin: auto;
+
+	&.-big_modal {
+		max-width: 400px;
+	}
 }
 
 .modal_title {
 	font-weight: 600;
 	font-size: 17px;
 	line-height: 130%;
-	text-align: center;
 	margin-bottom: 16px;
 	color: #222222;
 }
@@ -3928,8 +4026,17 @@ body {
 	font-weight: 400;
 	font-size: 13px;
 	line-height: 160%;
-	text-align: center;
 	margin-bottom: 20px;
+	word-break: break-word;
+}
+
+.modal_text_bottom {
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 160%;
+	border-top: 1px solid #E7EDEB;
+	padding-top: 9px;
+	color: #999999;
 }
 
 .modal_btns {
@@ -4498,5 +4605,143 @@ body {
 .authentication_page {
 	.select2-container--default .select2-dropdown {
 		background: #fff;
+	}
+}
+
+.recipient_block {
+	border: 2px solid #F4F4F4;
+	border-radius: 10px;
+	padding: 4px 4px 4px 8px;
+	display: flex;
+	align-items: center;
+	width: 200px;
+	flex: 0 0 auto;
+}
+
+.recipient_block_text {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 140%;
+	color: #222222;
+}
+
+.recipient_block_btn {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+
+	svg {
+		width: 20px;
+		height: 20px;
+		fill: none;
+	}
+
+}
+
+.comment_block {
+	background: #F9F9F9;
+	border-radius: 10px;
+	width: 28px;
+	height: 28px;
+	flex: 0 0 auto;
+	margin-left: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+
+	svg {
+		width: 20px;
+		height: 20px;
+		fill: none;
+	}
+}
+
+.table_recipient {
+	display: flex;
+	align-items: center;
+}
+
+.withdrawal_block {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.withdrawal_block_left {
+	width: calc(100% - 305px);
+	padding-right: 52px;
+
+	.list {
+		display: none;
+	}
+}
+
+.withdrawal_block_right {
+	width: 305px;
+
+}
+
+.list {
+	margin-bottom: 25px;
+
+	li {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		font-size: 12px;
+		line-height: 140%;
+
+		&:not(:last-of-type) {
+			margin-bottom: 10px;
+		}
+
+		span {
+			display: inline-block;
+
+			&:first-of-type {
+				color: #999999;
+				padding-right: 15px;
+			}
+
+			&:last-of-type {
+				max-width: 150px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+		}
+	}
+}
+
+@media screen and (max-width:1200px) {
+	.withdrawal_block_left {
+		width: calc(100% - 250px);
+	}
+
+	.withdrawal_block_right {
+		width: 250px;
+
+	}
+}
+
+@media screen and (max-width:992px) {
+	.withdrawal_block_left {
+		width: 100%;
+		padding-right: 0;
+
+		.list {
+			display: block;
+		}
+	}
+
+	.withdrawal_block_right {
+		width: 100%;
+
+		.list {
+			display: none;
+		}
 	}
 }

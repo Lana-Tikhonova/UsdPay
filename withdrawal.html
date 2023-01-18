@@ -17,29 +17,14 @@
     <link rel="preload" href="templates/assets/fonts/Montserrat-Bold.woff2" as="font" type="font/woff2"
         crossorigin="anonymous">
 
-    <link rel="stylesheet" href="templates/assets/css/bundle.min.css?v=4">
+    <link rel="stylesheet" href="templates/assets/css/bundle.min.css?v=7">
 </head>
 
 <body>
-    <div class="baner">
-        <div class="container">
-            <div class="baner_text">
-                Приглашайте новых клиентов <span>USDPAY</span> по реферальной системе и <span>получай постоянный 5% с
-                    комиссия от их оборота</span>
-            </div>
-            <a href="#" class="btn">Подробнее</a>
-            <div class="baner_close">
-                <svg>
-                    <use xlink:href="templates/assets/imgs/sprite.symbol.svg#close">
-                    </use>
-                </svg>
-            </div>
-        </div>
-    </div>
     <header class="header">
         <div class="container">
             <div class="row header_row_top">
-                <div class="logo"><img src="templates/assets/imgs/logo.png" alt=""></div>
+                <a href="/" class="logo"><img src="templates/assets/imgs/logo.png" alt=""></a>
                 <div class="language">
                     <select name="language" class="language_select">
                         <option selected value="Ru">Ru</option>
@@ -344,7 +329,7 @@
                                     Обзор
                                 </a>
                             </li>
-                            <li class="menu_item active">
+                            <li class="menu_item">
                                 <a href="#" class="menu_item_link">
                                     <svg class="menu_icon">
                                         <use xlink:href="templates/assets/imgs/sprite.symbol.svg#store">
@@ -370,7 +355,7 @@
                                     <span class="number_new">1</span>
                                 </a>
                             </li>
-                            <li class="menu_item">
+                            <li class="menu_item active">
                                 <a href="#" class="menu_item_link">
                                     <svg class="menu_icon">
                                         <use xlink:href="templates/assets/imgs/sprite.symbol.svg#payments">
@@ -430,84 +415,253 @@
                     </div>
                 </div>
                 <div class="content_right">
-                    <a href="#" class="back">
-                        <svg>
-                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#arrow_left">
-                            </use>
-                        </svg>К списку магазинов
-                    </a>
-                    <div class="content_shops">
-                        <div class="content_shops_head">
-                            <div class="title_wrap">
-                                <h2 class="">BotPay</h2>
-                                <div class="receipts_link">
-                                    <a href="#">crm.botpay.me</a>
-                                    <span class="receipts_link_id">ID: 15954</span>
-                                </div>
+                    <div class="content_card">
+                        <h2>Вывод средств</h2>
+                        <div class="withdrawal_block">
+                            <div class="withdrawal_block_left">
+                                <form action="#">
+                                    <div class="form-group form_input form_input_withdrawa">
+                                        <div class="form__label">
+                                            <input name="" placeholder=" " value="100,00" class="form-control" />
+                                            <span class="form__label_text">Сумма вывода</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form_input">
+                                        <div class="form__label">
+                                            <input name="" placeholder=" " value="TWyDRJNuaSBfFWcW5ho31Ao8FPaTHdnugN"
+                                                class="form-control" />
+                                            <span class="form__label_text">Кошелек/адрес получателя</span>
+                                        </div>
+                                    </div>
+                                    <div class="form_alert">
+                                        При выводе USDT, убедитесь, что вы указали кошелёк с сетью <b>TRC20</b>. Если у
+                                        кошелька будет неправильная сеть, то средства потеряются в криптомире!
+                                    </div>
+                                    <div class="form-group form_textarea">
+                                        <div class="form__label">
+                                            <textarea name="" id="#" placeholder=" " class="form-control" cols="30"
+                                                rows="10"></textarea>
+                                            <span class="form__label_text">Комментарий перевода</span>
+                                        </div>
+                                    </div>
+                                    <ul class="list">
+                                        <li>
+                                            <span>Платёжная система:</span>
+                                            <span>Tether</span>
+                                        </li>
+                                        <li>
+                                            <span>Валюта:</span>
+                                            <span>USDT</span>
+                                        </li>
+                                        <li>
+                                            <span>Сумма списания:</span>
+                                            <span>101</span>
+                                        </li>
+                                        <li>
+                                            <span>Получатель:
+                                                (кошелек/адрес)</span>
+                                            <span>TWyDRJNuaSBfFWcW5ho31Ao8FPaTHdnugN</span>
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn_big width_100" style="margin-top:15px">
+                                        Вывести 100,00 USDT
+                                    </button>
+                                </form>
                             </div>
-                        </div>
-                        <div class="content_shops_body">
-                            <div class="shops_settings">
-                                <a href="#" class="shops_settings_item">
-                                    <svg>
-                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#shops_receipts">
-                                        </use>
-                                    </svg>
-                                    Поступления
-                                </a>
-                                <a href="#" class="shops_settings_item">
-                                    <svg>
-                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#shops_settings">
-                                        </use>
-                                    </svg>
-                                    Настройки
-                                    магазина
-                                </a>
-                                <a href="#" class="shops_settings_item">
-                                    <svg>
-                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#shops_commission">
-                                        </use>
-                                    </svg>
-                                    Комиссия и условия
-                                </a>
-                                <a href="#" data-open-modal="remove-magazin" class="shops_settings_item">
-                                    <svg>
-                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#shops_delete">
-                                        </use>
-                                    </svg>
-                                    Удалить магазин
-                                </a>
+                            <div class="withdrawal_block_right">
+                                <ul class="list">
+                                    <li>
+                                        <span>Платёжная система:</span>
+                                        <span>Tether</span>
+                                    </li>
+                                    <li>
+                                        <span>Валюта:</span>
+                                        <span>USDT</span>
+                                    </li>
+                                    <li>
+                                        <span>Сумма списания:</span>
+                                        <span>101</span>
+                                    </li>
+                                    <li>
+                                        <span>Получатель:
+                                            (кошелек/адрес)</span>
+                                        <span>TWyDRJNuaSBfFWcW5ho31Ao8FPaTHdnugN</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+                    <div class="content_card">
+                        <h2>История выводов</h2>
+                        <div class="date_selection">
+                            <label class="date_selection_item">
+                                <input name="date_selectionTwo" type="radio" value="" checked="">
+                                <span class="date_selection_text">24 часа</span>
+                            </label>
+                            <label class="date_selection_item">
+                                <input name="date_selectionTwo" type="radio" value="">
+                                <span class="date_selection_text">7 дней</span>
+                            </label>
+                            <label class="date_selection_item">
+                                <input name="date_selectionTwo" type="radio" value="">
+                                <span class="date_selection_text">30 дней</span>
+                            </label>
+                            <label class="date_selection_item">
+                                <input name="date_selectionTwo" type="radio" value="">
+                                <span class="date_selection_text">90 дней</span>
+                            </label>
+                            <div class="date_input date_selection_item">
+                                <input type="text" class="date_input_input" placeholder="ДД.ММ.ГГГГ — ДД.ММ.ГГГГ"
+                                    readonly="">
+                                <span class="date_input_clear">
+                                    <svg>
+                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#clear">
+                                        </use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="date_selection_block">
+                                <div class="search date_selection_block_item">
+                                    <button class="search_btn">
+                                        <svg>
+                                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#search">
+                                            </use>
+                                        </svg>
+                                    </button>
+                                    <input type="text" placeholder="Поиск">
+                                </div>
+
+                                <div class="date_btn_wrapper date_selection_block_item">
+                                    <a href="#" class="date_btn">Выгрузить в .XLS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Обертки внурти td,th нужны для border-bottom -->
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div>Дата вывода</div>
+                                    </th>
+                                    <th>
+                                        <div>Invoice ID</div>
+                                    </th>
+                                    <th>
+                                        <div>Получатель</div>
+                                    </th>
+                                    <th>
+                                        <div class="text_right">Комиссия, USDT</div>
+                                    </th>
+                                    <th>
+                                        <div class="text_right">Сумма, USDT</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="date">
+                                        <div>
+                                            <span class="table_td_title">Дата</span>
+                                            12:21:50 • 25 авг 2022
+                                        </div>
+                                    </td>
+                                    <td class="id">
+                                        <div>
+                                            <span class="table_td_title">Invoice ID</span>
+                                            15228759
+                                        </div>
+                                    </td>
+                                    <td class="recipient">
+                                        <div>
+                                            <span class="table_td_title">Получатель</span>
+                                            <div class="table_recipient">
+                                                <div class="recipient_block">
+                                                    <div class="recipient_block_text">TWyDRJNuaSBfFWcW5ho31Ao8FPaTHdnugN
+                                                    </div>
+                                                    <div class="recipient_block_btn" data-open-modal="recipient_modal">
+                                                        <svg>
+                                                            <use
+                                                                xlink:href="templates/assets/imgs/sprite.symbol.svg#eye_show_green">
+                                                            </use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="comment_block" data-open-modal="table_comment">
+                                                    <svg>
+                                                        <use
+                                                            xlink:href="templates/assets/imgs/sprite.symbol.svg#comment">
+                                                        </use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="sum">
+                                        <div class="text_right">
+                                            <span class="table_td_title">Комиссия, USDT</span>
+                                            86.50
+                                        </div>
+                                    </td>
+                                    <td class="sum">
+                                        <div class="text_right">
+                                            <span class="table_td_title">Сумма, USDT</span>
+                                            100
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="table_missing">
+                            <img src="templates/assets/imgs/update.svg" alt=""> Ещё 10 из 1024
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </main>
-    <div class="modal" data-modal="remove-magazin">
+    <div class="modal" data-modal="table_comment">
         <div class="modal-dialog">
-            <div class="modal-content text_center">
+            <div class="modal-content text_left -big_modal">
                 <button type="button" class="close" data-modal-close>
                     <svg>
                         <use xlink:href="templates/assets/imgs/sprite.symbol.svg#close">
                         </use>
                     </svg>
                 </button>
-                <div class="modal_title">Вы уверены, что хотите удалить магазин?</div>
+                <div class="modal_title">Комментарий операции вывода</div>
                 <div class="modal_text">
-                    После удаления, магазин будет отправлен в архив. Данные для экспорта будут доступны
-                    <b>до 11.01.2022.</b>
+                    Перевод выручки за января 2022.
                 </div>
-                <div class="modal_btns">
-                    <button class="btn btn_dark">Удалить</button>
-                    <button data-modal-close class="btn btn_white">Отмена</button>
+                <div class="modal_text_bottom">
+                    Invoice ID 15228759
+                </div>
+            </div>
+        </div>
+        <div class="modal_bg"></div>
+    </div>
+    <div class="modal" data-modal="recipient_modal">
+        <div class="modal-dialog">
+            <div class="modal-content text_left -big_modal">
+                <button type="button" class="close" data-modal-close>
+                    <svg>
+                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#close">
+                        </use>
+                    </svg>
+                </button>
+                <div class="modal_title">Кошелёк получателя</div>
+                <div class="modal_text">
+                    TWyDRJNuaSBfFWcW5ho31Ao8FPaTHdnugN
+                </div>
+                <div class="modal_text_bottom">
+                    Invoice ID 15228759
                 </div>
             </div>
         </div>
         <div class="modal_bg"></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-    <script src="templates/assets/js/bundle.min.js?v=3"></script>
+    <script src="templates/assets/js/bundle.min.js?v=4"></script>
 </body>
 
 </html>
