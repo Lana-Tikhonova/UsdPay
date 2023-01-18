@@ -17,7 +17,7 @@
     <link rel="preload" href="templates/assets/fonts/Montserrat-Bold.woff2" as="font" type="font/woff2"
         crossorigin="anonymous">
 
-    <link rel="stylesheet" href="templates/assets/css/bundle.min.css?v=5">
+    <link rel="stylesheet" href="templates/assets/css/bundle.min.css?v=6">
 </head>
 
 <body>
@@ -497,17 +497,18 @@
                                         <input name="date_selectionTwo" type="radio" value="">
                                         <span class="date_selection_text">90 дней</span>
                                     </label>
-                                    <script
-                                        src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.0/dist/index.umd.min.js">
-                                    </script>
                                     <div class="date_input date_selection_item">
                                         <input type="text" class="date_input_input"
-                                            placeholder="ДД.ММ.ГГГГ — ДД.ММ.ГГГГ" readonly=""><span
-                                            class="easepick-wrapper"
-                                            style="position: absolute; pointer-events: none;"></span>
+                                            placeholder="ДД.ММ.ГГГГ — ДД.ММ.ГГГГ" readonly="">
+                                        <span class="date_input_clear">
+                                            <svg>
+                                                <use xlink:href="templates/assets/imgs/sprite.symbol.svg#clear">
+                                                </use>
+                                            </svg>
+                                        </span>
                                     </div>
                                     <div class="date_selection_block">
-                                        <div class="search">
+                                        <div class="search date_selection_block_item">
                                             <button class="search_btn">
                                                 <svg>
                                                     <use xlink:href="templates/assets/imgs/sprite.symbol.svg#search">
@@ -517,13 +518,13 @@
                                             <input type="text" placeholder="Поиск">
                                         </div>
 
-                                        <div class="select_wrapper">
+                                        <div class="select_wrapper date_selection_block_item">
                                             <select name="" class="select_add">
                                                 <option selected value="Сначала последние">Сначала последние</option>
                                                 <option value="Сначала последние">Сначала последние</option>
                                             </select>
                                         </div>
-                                        <div class="select_wrapper">
+                                        <div class="select_wrapper date_selection_block_item">
                                             <select name="" class="select_add">
                                                 <option selected value="Все статусы">Все статусы</option>
                                                 <option value="Не все статусы">Не все статусы</option>
@@ -775,7 +776,7 @@
         <div class="modal_bg"></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-    <script src="templates/assets/js/bundle.min.js?v=3"></script>
+    <script src="templates/assets/js/bundle.min.js?v=4"></script>
 </body>
 
 </html>

@@ -1258,7 +1258,6 @@ textarea.form-control {
 	display: flex;
 	align-items: center;
 	padding: 7px 8px;
-	margin-bottom: 12px;
 	width: 180px;
 
 	input {
@@ -1331,6 +1330,19 @@ textarea.form-control {
 		margin-bottom: 12px;
 		margin-left: auto;
 	}
+
+	.date_selection_block_item {
+		margin-left: 0;
+	}
+}
+
+.date_selection_block_item {
+	margin-left: 0;
+	margin-bottom: 12px;
+
+	&:not(:last-child) {
+		margin-right: 8px;
+	}
 }
 
 .date_selection_block {
@@ -1338,24 +1350,6 @@ textarea.form-control {
 	align-items: center;
 	flex-wrap: wrap;
 	width: 100%;
-	// overflow: auto;
-	// scrollbar-width: none;
-
-	// &::-webkit-scrollbar {
-	// 	display: none;
-	// }
-
-	.search {
-		margin-right: 8px;
-	}
-
-	.select_wrapper {
-		margin-left: 0;
-
-		&:not(:last-child) {
-			margin-right: 8px;
-		}
-	}
 }
 
 .date_selection_item {
@@ -1439,8 +1433,6 @@ textarea.form-control {
 
 .date_input {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 	position: relative;
 
@@ -1452,6 +1444,37 @@ textarea.form-control {
 
 		}
 	}
+}
+
+.date_input_clear {
+	width: 20px;
+	height: 20px;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	display: none;
+
+	svg {
+		width: 12px;
+		height: 12px;
+	}
+
+	&.show {
+		display: flex;
+	}
+}
+
+.date_btn {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 13px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #999999;
+	background: #F0F0F0;
+	border-radius: 10px;
+	padding: 7px 8px;
 }
 
 .statistics_list {
@@ -2165,6 +2188,16 @@ textarea.form-control {
 	padding: 16px;
 	text-align: center;
 	border-bottom: 1px solid #F4F4F4;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	img {
+		width: 20px;
+		height: 20px;
+		object-fit: contain;
+		margin-right: 6px;
+	}
 }
 
 .info_open,
@@ -3011,7 +3044,6 @@ main {
 
 	.date_input {
 		width: 100%;
-		align-items: flex-start;
 	}
 
 	.receipts_statistics {

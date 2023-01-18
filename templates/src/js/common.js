@@ -327,7 +327,12 @@ $(document).ready(function () {
             ],
             setup(picker) {
                 picker.on('select', (e) => {
-                    this.element.parentNode.classList.add('completed')
+                    this.element.parentNode.classList.add('completed');
+                    this.element.parentNode.querySelector('.date_input_clear').classList.add('show');
+                });
+                picker.on('clear', (e) => {
+                    this.element.parentNode.querySelector('.date_input_clear')
+
                 });
             },
             lang: 'ru-US',
@@ -343,8 +348,16 @@ $(document).ready(function () {
                 nextMonth: '<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 8.5L4.5 5L1.5 1.5" stroke="#B9B9B9" stroke-width="1.5" stroke-linecap="round"/></svg>',
             },
             plugins: [
-                "RangePlugin"
+                "RangePlugin",
             ],
+        });
+        $(".date_input_clear").on("click", function () {
+            const pickerBtnParentInput = this.parentNode.querySelector('.date_input_input');
+            if (picker.options.element == pickerBtnParentInput) {
+                picker.clear();
+                this.parentNode.classList.remove('completed');
+                $(this).remove()
+            }
         });
     })
 

@@ -21,21 +21,6 @@
 </head>
 
 <body>
-    <div class="baner">
-        <div class="container">
-            <div class="baner_text">
-                Приглашайте новых клиентов <span>USDPAY</span> по реферальной системе и <span>получай постоянный 5% с
-                    комиссия от их оборота</span>
-            </div>
-            <a href="#" class="btn">Подробнее</a>
-            <div class="baner_close">
-                <svg>
-                    <use xlink:href="templates/assets/imgs/sprite.symbol.svg#close">
-                    </use>
-                </svg>
-            </div>
-        </div>
-    </div>
     <header class="header">
         <div class="container">
             <div class="row header_row_top">
@@ -88,10 +73,7 @@
                                             <use xlink:href="templates/assets/imgs/sprite.symbol.svg#wallet">
                                             </use>
                                         </svg>
-                                        <div class="wallet_card_balans">
-                                            <div class="number">650,220.85</div>
-                                            <span> USDT</span>
-                                        </div>
+                                        <div class="wallet_card_balans">650,220<span>.85 USDT</span></div>
                                     </div>
                                     <div class="wallet_card_bottom">
                                         <div class="wallet_card_profit_percent">+2.5%</div>
@@ -186,7 +168,7 @@
                 <!-- <ul class="functional_menu_list_mobile"></ul> -->
             </li>
             <li class="functional_menu_item">
-                <a href="#" class="functional_menu_link active">
+                <a href="#" class="functional_menu_link">
                     <span class="functional_menu_icon">
                         <svg>
                             <use xlink:href="templates/assets/imgs/sprite.symbol.svg#category">
@@ -197,7 +179,7 @@
                 </a>
             </li>
             <li class="functional_menu_item">
-                <a href="#" class="functional_menu_link">
+                <a href="#" class="functional_menu_link active">
                     <span class="functional_menu_icon">
                         <svg>
                             <use xlink:href="templates/assets/imgs/sprite.symbol.svg#store">
@@ -335,7 +317,7 @@
                 <div class="content_left">
                     <div class="menu">
                         <ul class="menu_list">
-                            <li class="menu_item active">
+                            <li class="menu_item">
                                 <a href="#" class="menu_item_link">
                                     <svg class="menu_icon">
                                         <use xlink:href="templates/assets/imgs/sprite.symbol.svg#category">
@@ -360,7 +342,7 @@
                                     </svg>
                                 </a>
                             </li>
-                            <li class="menu_item">
+                            <li class="menu_item active">
                                 <a href="#" class="menu_item_link">
                                     <svg class="menu_icon">
                                         <use xlink:href="templates/assets/imgs/sprite.symbol.svg#receipts">
@@ -431,169 +413,10 @@
                 </div>
                 <div class="content_right">
                     <div class="content_card">
-                        <div class="date_selection">
-                            <label class="date_selection_item">
-                                <input name="date_selection" type="radio" value="" checked>
-                                <span class="date_selection_text">24 часа</span>
-                            </label>
-                            <label class="date_selection_item">
-                                <input name="date_selection" type="radio" value="">
-                                <span class="date_selection_text">7 дней</span>
-                            </label>
-                            <label class="date_selection_item">
-                                <input name="date_selection" type="radio" value="">
-                                <span class="date_selection_text">30 дней</span>
-                            </label>
-                            <label class="date_selection_item">
-                                <input name="date_selection" type="radio" value="">
-                                <span class="date_selection_text">90 дней</span>
-                            </label>
-                            <div class="date_input date_selection_item">
-                                <input type="text" class="date_input_input" placeholder="ДД.ММ.ГГГГ — ДД.ММ.ГГГГ">
-                                <span class="date_input_clear">
-                                    <svg>
-                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#clear">
-                                        </use>
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="statistics_list">
-                            <div class="statistics_item">
-                                <span class="statistics_item_title">Общая сумма поступлений</span>
-                                <div class="statistics_item_number">12,8520<span>.88 USDT</span></div>
-                            </div>
-                            <div class="statistics_item">
-                                <span class="statistics_item_title">Подтвержденных оплат</span>
-                                <div class="statistics_item_number">256</div>
-                            </div>
-                            <div class="statistics_item">
-                                <span class="statistics_item_title">Процент успеха</span>
-                                <div class="statistics_item_number">88%</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content_card ">
-                        <div class="title_wrap">
-                            <h2 class="title_arrow">Статистика поступлений</h2>
-                        </div>
-
-                        <div class="data_absence">
-                            <span>К сожалению, пока нет данных по статистике</span>
-                            <a href="#" class="btn btn_icon">
-                                <svg class="menu_icon">
-                                    <use xlink:href="templates/assets/imgs/sprite.symbol.svg#add_plus">
-                                    </use>
-                                </svg>
-                                Добавить магазин </a>
-                        </div>
-                    </div>
-                    <div class="content_card">
-                        <div class="title_wrap">
-                            <h2 class="title_arrow">Статистика поступлений</h2>
-                            <div class="select_wrapper">
-                                <select name="" class="select_add">
-                                    <option selected value="2022">2022</option>
-                                    <option value="2021">2021</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="receipts_block">
-                            <div class="tabs_block">
-                                <div class="shop_list_slider_block tabs_slide_nav">
-                                    <div class="shop_list_slider_wrapper">
-                                        <div class="swiper shop_list_slider">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide active">
-                                                    <a href="#tabSlide-1" class="shop_item tabs_slide_nav_item">
-                                                        BotPay</a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a href="#tabSlide-2"
-                                                        class="shop_item tabs_slide_nav_item">PayKassa</a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a href="#tabSlide-3"
-                                                        class="shop_item tabs_slide_nav_item">CoinPayments</a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a href="#tabSlide-4" class="shop_item tabs_slide_nav_item">
-                                                        BotPay</a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a href="#tabSlide-5"
-                                                        class="shop_item tabs_slide_nav_item">PayKassa</a>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <a href="#tabSlide-6"
-                                                        class="shop_item tabs_slide_nav_item">CoinPayments</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="shop_slider_arrows">
-                                        <div class="swiper-button-prev shop_slider_arrows_prev"></div>
-                                        <div class="swiper-button-next shop_slider_arrows_next"></div>
-                                    </div>
-                                </div>
-                                <div class="tabs_slide_content">
-                                    <div class="tabs_slide_item" id="tabSlide-1">
-                                        <div class="receipts_link">
-                                            <a href="#">crm.botpay.me</a>
-                                            <span class="receipts_link_id">ID: 15954</span>
-                                        </div>
-                                        <div class="chart_time_wrapper">
-                                            <div id="chart_time"></div>
-                                        </div>
-                                    </div>
-                                    <div class="tabs_slide_item" id="tabSlide-2">
-                                        <div class="receipts_link">
-                                            <a href="#">crm.botpay.me</a>
-                                            <span class="receipts_link_id">ID: 15954</span>
-                                        </div>
-                                        <div class="data_absence">
-                                            <span>К сожалению, пока нет данных по статистике магазина BotPay</span>
-                                            <a href="#" class="btn btn_icon">
-                                                Страница магазина</a>
-                                        </div>
-                                    </div>
-                                    <div class="tabs_slide_item" id="tabSlide-3">
-                                        <div class="receipts_link">
-                                            <a href="#">crm.botpay.me</a>
-                                            <span class="receipts_link_id">ID: 15954</span>
-                                        </div>
-                                        <div class="data_absence">
-                                            <span>К сожалению, пока нет данных по статистике магазина BotPay</span>
-                                            <a href="#" class="btn btn_icon">
-                                                Страница магазина</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="receipts_statistics">
-                                <div class="receipts_fraction">
-                                    <div class="receipts_statistics_title">Доля</div>
-                                    <div class="total-chart__wrapper" data-id="total-chart">
-                                        <canvas id="total-chart" width="120" height="120"></canvas>
-                                    </div>
-                                </div>
-                                <div class="receipts_quantity">
-                                    <div class="receipts_statistics_title">Количество всех сделок</div>
-                                    <div class="receipts_quantity_list_wrapper">
-                                        <div class="receipts_quantity_list" id="doughnut-charts"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="content_card">
                         <h2 class="title_arrow">Поступления</h2>
                         <div class="date_selection">
                             <label class="date_selection_item">
-                                <input name="date_selectionTwo" type="radio" value="" checked>
+                                <input name="date_selectionTwo" type="radio" value="" checked="">
                                 <span class="date_selection_text">24 часа</span>
                             </label>
                             <label class="date_selection_item">
@@ -609,7 +432,8 @@
                                 <span class="date_selection_text">90 дней</span>
                             </label>
                             <div class="date_input date_selection_item">
-                                <input type="text" class="date_input_input" placeholder="ДД.ММ.ГГГГ — ДД.ММ.ГГГГ">
+                                <input type="text" class="date_input_input" placeholder="ДД.ММ.ГГГГ — ДД.ММ.ГГГГ"
+                                    readonly="">
                                 <span class="date_input_clear">
                                     <svg>
                                         <use xlink:href="templates/assets/imgs/sprite.symbol.svg#clear">
@@ -617,11 +441,26 @@
                                     </svg>
                                 </span>
                             </div>
-                            <div class="select_wrapper">
-                                <select name="" class="select_add">
-                                    <option selected value="Сначала последние">Сначала последние</option>
-                                    <option value="Сначала последние">Сначала последние</option>
-                                </select>
+                            <div class="date_selection_block">
+                                <div class="search date_selection_block_item">
+                                    <button class="search_btn">
+                                        <svg>
+                                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#search">
+                                            </use>
+                                        </svg>
+                                    </button>
+                                    <input type="text" placeholder="Поиск">
+                                </div>
+
+                                <div class="select_wrapper date_selection_block_item">
+                                    <select name="" class="select_add">
+                                        <option selected value="Сначала последние">Сначала последние</option>
+                                        <option value="Сначала последние">Сначала последние</option>
+                                    </select>
+                                </div>
+                                <div class="date_btn_wrapper date_selection_block_item">
+                                    <a href="#" class="date_btn">Выгрузить в .XLS</a>
+                                </div>
                             </div>
                         </div>
                         <!-- Обертки внурти td,th нужны для border-bottom -->
@@ -851,13 +690,36 @@
                             </tbody>
                         </table>
                         <div class="table_missing">
-                            Больше поступлений нет
+                            <img src="templates/assets/imgs/update.svg" alt=""> Ещё 10 из 1024
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </main>
+    <div class="modal" data-modal="remove-magazin">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="close" data-modal-close>
+                    <svg>
+                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#close">
+                        </use>
+                    </svg>
+                </button>
+                <div class="modal_title">Вы уверены, что хотите удалить магазин?</div>
+                <div class="modal_text">
+                    После удаления, магазин будет отправлен в архив. Данные для экспорта будут доступны
+                    <b>до 11.01.2022.</b>
+                </div>
+                <div class="modal_btns">
+                    <button class="btn btn_dark">Удалить</button>
+                    <button data-modal-close class="btn btn_white">Отмена</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal_bg"></div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
     <script src="templates/assets/js/bundle.min.js?v=4"></script>
 </body>
