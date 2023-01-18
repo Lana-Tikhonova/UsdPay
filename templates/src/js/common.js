@@ -844,9 +844,15 @@ $(document).ready(function () {
     $('.shop_ip_item_btn').on('click', function () {
         let copyText = $(this).parent().find('.shop_ip_item_text').text();
         var $tmp = $("<textarea>");
+        var $copiedText = $("<span class='text_copied'>Скопированно</span>");
         $("body").append($tmp);
+        $(this).parent().append($copiedText)
         $tmp.val(copyText).select();
         document.execCommand("copy");
         $tmp.remove();
+        setTimeout(() => {
+            $copiedText.remove();
+
+        }, 1500);
     });
 });
