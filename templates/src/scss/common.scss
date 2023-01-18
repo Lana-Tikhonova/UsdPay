@@ -4814,3 +4814,48 @@ body {
 		display: none;
 	}
 }
+
+.message_alert {
+	background: #FFFFFF;
+	box-shadow: 0px 4px 80px rgba(22, 22, 22, 0.12);
+	border-radius: 15px;
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 16px;
+	display: flex;
+	align-items: center;
+	padding: 12px 12px 12px 16px;
+	margin-bottom: 24px;
+
+	.btn {
+		margin-left: auto;
+	}
+
+	svg {
+		margin-right: 12px;
+		width: 24px;
+		flex: 0 0 auto;
+		height: 24px;
+	}
+}
+
+.message_alert_text {
+	padding-right: 15px;
+}
+
+@media screen and (max-width:576px) {
+	.message_alert {
+		font-size: 12px;
+		flex-wrap: wrap;
+
+		.btn {
+			font-size: 12px;
+			padding: 9px 12px;
+			margin-top: 10px;
+		}
+	}
+
+	.message_alert_text {
+		padding-right: 0;
+	}
+}
