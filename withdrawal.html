@@ -17,7 +17,7 @@
     <link rel="preload" href="templates/assets/fonts/Montserrat-Bold.woff2" as="font" type="font/woff2"
         crossorigin="anonymous">
 
-    <link rel="stylesheet" href="templates/assets/css/bundle.min.css?v=8">
+    <link rel="stylesheet" href="templates/assets/css/bundle.min.css?v=9">
 </head>
 
 <body>
@@ -417,7 +417,7 @@
                 <div class="content_right">
                     <div class="content_card">
                         <div class="message_alert">
-                            <div class="d-flex">
+                            <div class="d-flex align-items-center">
                                 <svg class="menu_icon">
                                     <use xlink:href="templates/assets/imgs/sprite.symbol.svg#danger">
                                     </use>
@@ -632,7 +632,7 @@
             </div>
         </div>
     </main>
-    <div class="modal" data-modal="table_comment">
+    <div class="modal withdrawal_modal" data-modal="table_comment">
         <div class="modal-dialog">
             <div class="modal-content text_left -big_modal">
                 <button type="button" class="close" data-modal-close>
@@ -641,18 +641,24 @@
                         </use>
                     </svg>
                 </button>
-                <div class="modal_title">Комментарий операции вывода</div>
-                <div class="modal_text">
-                    Перевод выручки за января 2022.
+                <div class="modal_head">
+                    <div class="modal_title">Комментарий операции вывода</div>
                 </div>
-                <div class="modal_text_bottom">
-                    Invoice ID 15228759
+                <div class="modal_body">
+                    <div class="modal_text">
+                        Перевод выручки за января 2022.
+                    </div>
+                </div>
+                <div class="modal_footer">
+                    <div class="modal_text_bottom">
+                        Invoice ID 15228759
+                    </div>
                 </div>
             </div>
         </div>
         <div class="modal_bg"></div>
     </div>
-    <div class="modal" data-modal="recipient_modal">
+    <div class="modal withdrawal_modal" data-modal="recipient_modal">
         <div class="modal-dialog">
             <div class="modal-content text_left -big_modal">
                 <button type="button" class="close" data-modal-close>
@@ -661,12 +667,18 @@
                         </use>
                     </svg>
                 </button>
-                <div class="modal_title">Кошелёк получателя</div>
-                <div class="modal_text">
-                    TWyDRJNuaSBfFWcW5ho31Ao8FPaTHdnugN
+                <div class="modal_head">
+                    <div class="modal_title">Кошелёк получателя</div>
                 </div>
-                <div class="modal_text_bottom">
-                    Invoice ID 15228759
+                <div class="modal_body">
+                    <div class="modal_text">
+                        TWyDRJNuaSBfFWcW5ho31Ao8FPaTHdnugN
+                    </div>
+                </div>
+                <div class="modal_footer">
+                    <div class="modal_text_bottom">
+                        Invoice ID 15228759
+                    </div>
                 </div>
             </div>
         </div>

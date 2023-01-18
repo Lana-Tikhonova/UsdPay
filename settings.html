@@ -329,7 +329,7 @@
                                     Обзор
                                 </a>
                             </li>
-                            <li class="menu_item active">
+                            <li class="menu_item">
                                 <a href="#" class="menu_item_link">
                                     <svg class="menu_icon">
                                         <use xlink:href="templates/assets/imgs/sprite.symbol.svg#store">
@@ -375,7 +375,7 @@
                             </li>
                         </ul>
                         <ul class="menu_list">
-                            <li class="menu_item">
+                            <li class="menu_item active">
                                 <a href="#" class="menu_item_link">
                                     <svg class="menu_icon">
                                         <use xlink:href="templates/assets/imgs/sprite.symbol.svg#settings">
@@ -415,150 +415,221 @@
                     </div>
                 </div>
                 <div class="content_right">
-                    <div class="content_shops">
-                        <div class="content_shops_head">
-                            <h2>Добавить магазин</h2>
+                    <div class="content_card">
+                        <h2>Настройки профиля</h2>
+                        <div class="form_list">
+                            <div class="form-group_wrapper width_66">
+                                <div class="form-group form_input form_input_edit">
+                                    <div class="form__label">
+                                        <input name="" placeholder=" " value="dmitry@knyaginin.com" class="form-control"
+                                            disabled />
+                                        <span class="form__label_text">E-mail </span>
+                                        <button class="btn" data-open-modal="edit_email">Изменить</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- для переноса на новую стрку -->
+                            <div class="width_100"></div>
+
+                            <div class="form-group_wrapper width_33">
+                                <div class="form-group form_input">
+                                    <div class="form__label">
+                                        <input name="" placeholder=" " value="Дмитрий" class="form-control" />
+                                        <span class="form__label_text">Имя</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group_wrapper width_33">
+                                <div class="form-group form_input">
+                                    <div class="form__label">
+                                        <input name="" placeholder=" " value="Княгинин" class="form-control" />
+                                        <span class="form__label_text">Фамилия</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group_wrapper width_33">
+                                <div class="form-group form_input">
+                                    <div class="form__label">
+                                        <input name="" placeholder=" " value="Иванович" class="form-control" />
+                                        <span class="form__label_text">Отчество</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- для переноса на новую стрку -->
+                            <div class="width_100"></div>
+                            <div class="form-group_wrapper width_33">
+                                <div class="form-group form_input">
+                                    <div class="form__label">
+                                        <input name="" placeholder=" " value="Россия" class="form-control" />
+                                        <span class="form__label_text">Страна</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group_wrapper width_33">
+                                <div class="form-group form_input">
+                                    <div class="form__label">
+                                        <input name="" placeholder=" " value="Москва" class="form-control" />
+                                        <span class="form__label_text">Город</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="content_shops_body">
-                            <div class="content_shops_info">
-                                <div class="content_shops_info_block">
-                                    <div class="content_shops_info_title">Документация и SDK</div>
-                                    <div class="shop_docs">
-                                        <a href="#" class="shop_docs_item">Как использовать</a>
-                                        <a href="#" class="shop_docs_item">PHP Examples</a>
-                                        <a href="#" class="shop_docs_item">SDK Python, Node, Golang</a>
-                                        <a href="#" class="shop_docs_item">SCI/API документация</a>
+                        <div class="form_btn">
+                            <a href="#" class="btn">Обновить</a>
+                        </div>
+                    </div>
+                    <div class="content_card">
+                        <h2>Настройки профиля</h2>
+                        <div class="form_list">
+                            <div class="form-group_wrapper width_33">
+                                <div class="form-group form_input">
+                                    <div class="form__label">
+                                        <input name="" type="password" placeholder=" " value="" class="form-control" />
+                                        <span class="form__label_text">Текущий пароль</span>
                                     </div>
                                 </div>
-                                <div class="content_shops_info_block">
-                                    <div class="content_shops_info_title">IP для firewall, cloudflare, ddos-guard:</div>
-                                    <div class="shop_ip">
-                                        <div class="shop_ip_item">
-                                            <div class="shop_ip_item_text">54.37.60.196</div>
-                                            <div class="shop_ip_item_btn">
-                                                <svg>
-                                                    <use xlink:href="templates/assets/imgs/sprite.symbol.svg#copy">
-                                                    </use>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="shop_ip_item">
-                                            <div class="shop_ip_item_text">51.91.80.241</div>
-                                            <div class="shop_ip_item_btn">
-                                                <svg>
-                                                    <use xlink:href="templates/assets/imgs/sprite.symbol.svg#copy">
-                                                    </use>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="shop_ip_item">
-                                            <div class="shop_ip_item_text">138.68.137.53</div>
-                                            <div class="shop_ip_item_btn">
-                                                <svg>
-                                                    <use xlink:href="templates/assets/imgs/sprite.symbol.svg#copy">
-                                                    </use>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="shop_ip_item">
-                                            <div class="shop_ip_item_text">2604:a880:4:1d0::1d1:d000 </div>
-                                            <div class="shop_ip_item_btn">
-                                                <svg>
-                                                    <use xlink:href="templates/assets/imgs/sprite.symbol.svg#copy">
-                                                    </use>
-                                                </svg>
-                                            </div>
-                                        </div>
+                            </div>
+                            <!-- для переноса на новую стрку -->
+                            <div class="width_100"></div>
+
+                            <div class="form-group_wrapper width_33">
+                                <div class="form-group form_input">
+                                    <div class="form__label">
+                                        <input name="" type="password" placeholder=" " value="" class="form-control" />
+                                        <span class="form__label_text">Новый пароль</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- для переноса на новую стрку -->
+                            <div class="width_100"></div>
+
+                            <div class="form-group_wrapper width_33">
+                                <div class="form-group form_input">
+                                    <div class="form__label">
+                                        <input name="" type="password" placeholder=" " value="" class="form-control" />
+                                        <span class="form__label_text">Повторите новый пароль</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="content_shops_footer">
-                            <div class="content_shops_block">
-                                <h3>Данные магазина</h3>
-
-                                <div class="form_list">
-                                    <div class="form-group_wrapper width_66">
-                                        <div class="form-select">
-                                            <select name="" class="select_shop">
-                                                <option selected value="CMS моего сайта нет в списке">CMS моего сайта
-                                                    нет в
-                                                    списке
-                                                </option>
-                                                <option value="CMS моего сайта">CMS моего сайтаs</option>
-                                            </select>
-                                            <span class="form__label_text">Какой используете CMS</span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group_wrapper width_66">
-                                        <div class="form-group form_input">
-                                            <div class="form__label">
-                                                <input name="" placeholder=" " value="BotPay" class="form-control" />
-                                                <span class="form__label_text">Название магазина</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group_wrapper width_66">
-                                        <div class="form-group form_input">
-                                            <div class="form__label">
-                                                <input name="" placeholder=" " value="E-mail поддержки вашего магазина"
-                                                    class="form-control" />
-                                                <span class="form__label_text">E-mail поддержки вашего магазина</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group_wrapper width_66">
-                                        <div class="form-group form_input">
-                                            <div class="form__label">
-                                                <input name="" placeholder=" " value="Jt6XT4h3nqkZtRpu4iwf7ZZ6kFrL7GHe"
-                                                    class="form-control" />
-                                                <span class="form__label_text">Пароль магазина</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="content_shops_block">
-                                <h3>Настройка URL</h3>
-
-                                <div class="form_list">
-                                    <div class="form-group_wrapper width_66">
-                                        <div class="form-group form_input">
-                                            <div class="form__label">
-                                                <input name="" placeholder=" "
-                                                    value="https://crm.botpay.me/api/payments/paykassa/"
-                                                    class="form-control" />
-                                                <span class="form__label_text">URL уведомлений об оплате инвойса
-                                                    [sci_confirm_order]</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group_wrapper width_66">
-                                        <div class="form-group form_input">
-                                            <div class="form__label">
-                                                <input name="" placeholder=" "
-                                                    value="https://crm.botpay.me/api/payments/paykassa/"
-                                                    class="form-control" />
-                                                <span class="form__label_text">URL уведомлений об оплате инвойса
-                                                    [sci_confirm_order]</span>
-                                            </div>
-                                            <div class="form-group_message">Необязательное</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form_btn">
-                                <a href="#" class="btn">Добавить магазин</a>
-                            </div>
+                        <div class="form_btn">
+                            <a href="#" class="btn" data-open-modal="edit_password">Изменить пароль</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    <div class="modal edit_email" data-modal="edit_email">
+        <div class="modal-dialog">
+            <div class="modal-content text_center">
+                <button type="button" class="close" data-modal-close>
+                    <svg>
+                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#close">
+                        </use>
+                    </svg>
+                </button>
+                <form action="#">
+                    <div class="modal_head">
+                        <div class="modal_title">Изменить E-mail</div>
+                    </div>
+                    <div class="modal_body">
+                        <div class="form-group form_input">
+                            <div class="form__label">
+                                <input name="" placeholder=" " value="" class="form-control" />
+                                <span class="form__label_text">Старый E-mail</span>
+                            </div>
+                        </div>
+                        <div class="form-group form_input">
+                            <div class="form__label">
+                                <input name="" placeholder=" " value="" class="form-control" />
+                                <span class="form__label_text">Новый E-mail</span>
+                            </div>
+                        </div>
+                        <div class="modal_code">
+                            <div class="modal_text">
+                                Введите код подтверждения, который был направлен на адрес электронной почты
+                                <b>kon***@gmail.com</b>
+                            </div>
+                            <div class="form-group form_input form_input_code">
+                                <div class="form__label">
+                                    <div class="pin-code">
+                                        <input type="number" maxlength="1" autofocus>
+                                        <input type="number" maxlength="1">
+                                        <input type="number" maxlength="1">
+                                        <input type="number" maxlength="1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text_center"><a href="#" class="input_code_again">Прислать код
+                                    повторно</a></div>
+                            <div class="input_code_timer">Отправка повторного кода возможна через <span>00:59</spa>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal_footer">
+                        <div class="modal_btns">
+                            <button class="btn">Изменить</button>
+                            <button data-modal-close class="btn btn_white">Отмена</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal_bg"></div>
+    </div>
+
+    <div class="modal edit_password" data-modal="edit_password">
+        <div class="modal-dialog">
+            <div class="modal-content text_center">
+                <button type="button" class="close" data-modal-close>
+                    <svg>
+                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#close">
+                        </use>
+                    </svg>
+                </button>
+                <form action="#">
+                    <div class="modal_head">
+                        <div class="modal_title">Подтвердите смену пароля</div>
+                    </div>
+                    <div class="modal_body">
+                        <div class="modal_text">
+                            <div class="modal_code">
+                                <div class="modal_text">
+                                    Введите код подтверждения, который был направлен на адрес электронной почты
+                                    <b>kon***@gmail.com</b>
+                                </div>
+                                <div class="form-group form_input form_input_code">
+                                    <div class="form__label">
+                                        <div class="pin-code">
+                                            <input type="number" maxlength="1" autofocus>
+                                            <input type="number" maxlength="1">
+                                            <input type="number" maxlength="1">
+                                            <input type="number" maxlength="1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text_center"><a href="#" class="input_code_again">Прислать код
+                                        повторно</a></div>
+                                <div class="input_code_timer">Отправка повторного кода возможна через <span>00:59</spa>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal_footer">
+                        <div class="modal_btns">
+                            <button class="btn">Сменить</button>
+                            <button data-modal-close class="btn btn_white">Отмена</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal_bg"></div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-    <script src="templates/assets/js/bundle.min.js?v=5"></script>
+    <script src="templates/assets/js/bundle.min.js?v=6"></script>
 </body>
 
 </html>
