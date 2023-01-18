@@ -2891,6 +2891,12 @@ main {
 				justify-content: space-between;
 				align-items: center;
 				width: 100%;
+				text-align: right;
+
+				span {
+					text-align: left;
+					padding-right: 10px;
+				}
 			}
 		}
 	}
@@ -2907,6 +2913,7 @@ main {
 		font-size: 12px;
 		line-height: 15px;
 		color: #999999;
+		flex: 0 0 auto;
 	}
 
 	.table_tbody_bottom {
