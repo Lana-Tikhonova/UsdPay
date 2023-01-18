@@ -5085,3 +5085,140 @@ p {
 		padding-top: 0;
 	}
 }
+
+.payment_page {
+	background: #fff;
+}
+
+.payment_wrapper {
+	padding-top: 32px;
+	padding-bottom: 32px;
+	max-width: 524px;
+	margin: 0 auto;
+
+	.form_input_copy {
+		margin-top: 32px;
+		margin-bottom: 0;
+	}
+}
+
+.payment_head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 41px;
+}
+
+.payment_title {
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 18px;
+	margin-bottom: 16px;
+}
+
+.payment_links {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 16px;
+
+	a {
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 15px;
+		color: #129B75;
+	}
+}
+
+.payment_block {
+	background: #F4F4F4;
+	border-radius: 10px;
+	padding: 32px;
+	margin: auto;
+
+
+	ul {
+		margin-top: 32px;
+
+		li {
+			position: relative;
+			font-size: 12px;
+			line-height: 180%;
+
+			&:not(:last-of-type) {
+				margin-bottom: 1px;
+			}
+
+			&:before {
+				content: '';
+				display: inline-block;
+				position: relative;
+				margin-right: 6px;
+				top: 0;
+				left: 0;
+				width: 12px;
+				height: 12px;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.45094 1.20777C6.15326 1.14823 5.84674 1.14823 5.54906 1.20777C4.88761 1.34006 4.31761 1.75613 3.99002 2.34579L0.897066 7.91312C0.718635 8.23429 0.625 8.59564 0.625 8.96305C0.625 10.1571 1.59294 11.125 2.78695 11.125H9.21305C10.4071 11.125 11.375 10.1571 11.375 8.96305C11.375 8.59564 11.2814 8.23429 11.1029 7.91312L8.00998 2.34579C7.68239 1.75613 7.11239 1.34006 6.45094 1.20777ZM6 7.25003C5.58579 7.25003 5.25 6.91424 5.25 6.50003V4.50003C5.25 4.08582 5.58579 3.75003 6 3.75003C6.41421 3.75003 6.75 4.08582 6.75 4.50003V6.50003C6.75 6.91404 6.41454 7.2497 6.0006 7.25003C6.41454 7.25036 6.75 7.58602 6.75 8.00003V8.25003C6.75 8.66424 6.41421 9.00003 6 9.00003C5.58579 9.00003 5.25 8.66424 5.25 8.25003V8.00003C5.25 7.58582 5.58579 7.25003 6 7.25003Z' fill='%23222222'/%3e%3c/svg%3e ");
+			}
+		}
+	}
+}
+
+.payment_block_text {
+	font-size: 13px;
+	line-height: 160%;
+	margin-bottom: 32px;
+}
+
+.payment_block_img {
+	background: #FFFFFF;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 32px;
+	max-width: 244px;
+	max-height: 244px;
+	margin: auto;
+
+	img {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
+	}
+}
+
+.form_input_copy {
+	.form__label {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.form_input_copy_btn {
+	width: 36px;
+	height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #2EE8A2;
+	border-radius: 5px;
+	margin-right: 6px;
+	cursor: pointer;
+	flex: 0 0 auto;
+
+	svg {
+		width: 24px;
+		height: 24px;
+		fill: none;
+	}
+}
+
+@media screen and (max-width:440px) {
+	.payment_block {
+		padding: 24px;
+	}
+}

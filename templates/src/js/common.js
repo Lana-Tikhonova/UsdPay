@@ -885,6 +885,12 @@ $(document).ready(function () {
 
         }, 1500);
     });
+    //копирование в буфер из инпута
+    $('.form_input_copy_btn').on('click', function () {
+        let copyText = $(this).parent().find('.form-control');
+        copyText.select();
+        document.execCommand("copy");
+    });
 
     //код подверждения при авторизации/рег
     var pinContainer = document.querySelector(".pin-code");
