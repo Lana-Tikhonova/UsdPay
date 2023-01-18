@@ -923,4 +923,10 @@ $(document).ready(function () {
             target.value = "";
         }, false);
     }
+
+    //faq
+    $('.faq_item_btn').on('click', function () {
+        $(this).toggleClass('active');
+        $(this).next().slideToggle();
+    });
 });
