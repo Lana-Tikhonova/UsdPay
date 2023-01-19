@@ -16,7 +16,9 @@ const config = {
 		entry: {
 			js: [
 				'templates/src/vendors/jquery/jquery-3.5.1.min.js',
+				'templates/src/vendors/imask/imask.js',
 				'templates/src/vendors/select2/select2.full.min.js',
+				'templates/src/vendors/chart/Chart.min.js',
 				'templates/src/vendors/apexcharts/apexcharts.min.js',
 				'templates/src/vendors/easepick/easepick.umd.min.js',
 				'templates/src/vendors/swiper/swiper-bundle.min.js',
