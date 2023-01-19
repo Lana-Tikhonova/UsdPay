@@ -578,13 +578,16 @@ textarea.form-control {
 	}
 }
 
-.form_input_withdrawa {
+.form_input_withdrawal {
 	.form__label_text {
 		color: #222222;
+		// font-size: 18px;
+		// top: 19px;
+
 		font-weight: 600;
-		font-size: 18px;
+		font-size: 9px;
 		line-height: 130%;
-		top: 19px
+		top: 6px;
 	}
 
 	.form-control {

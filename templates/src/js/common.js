@@ -936,4 +936,22 @@ $(document).ready(function () {
         $(this).toggleClass('active');
         $(this).next().slideToggle();
     });
+
+    //маска на инпут с Суммой вывода
+    $('#currency-mask').on('focus', function () {
+        var currencyMask = IMask(
+            document.getElementById('currency-mask'), {
+                mask: 'DD USDT',
+                lazy: false,
+                scale: 2,
+                blocks: {
+                    DD: {
+                        mask: Number,
+
+                    }
+                }
+
+            });
+    });
+
 });
