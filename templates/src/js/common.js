@@ -889,7 +889,6 @@ $(document).ready(function () {
     $('.form_input_copy_btn').on('click', function () {
         let copyText = $(this).parent().find('.form-control');
         copyText.select();
-        copyText.setSelectionRange(0, 99999);
         document.execCommand("copy");
     });
 

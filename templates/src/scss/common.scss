@@ -373,6 +373,12 @@ button {
 	}
 }
 
+input.form-control {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
 .form-control {
 	border-radius: 7px;
 	background: transparent;
@@ -583,8 +589,6 @@ textarea.form-control {
 		color: #222222;
 		// font-size: 18px;
 		// top: 19px;
-
-		font-weight: 600;
 		font-size: 9px;
 		line-height: 130%;
 		top: 6px;
@@ -2128,6 +2132,44 @@ textarea.form-control {
 	}
 }
 
+.table_additional {
+	width: 100%;
+	height: 100%;
+
+	th {
+		font-weight: 600;
+		font-size: 11px;
+		line-height: 130%;
+		border-bottom: 1px solid #E7EDEB;
+		padding: 5px 10px 18px;
+		text-align: left;
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	td {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 15px;
+		border-bottom: 1px solid #E7EDEB;
+		padding: 14px 10px 24px;
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+}
+
 .table {
 	width: calc(100% + 64px);
 	margin-left: -32px;
@@ -3562,17 +3604,35 @@ body {
 
 .content_shops_footer {
 	padding: 24px 32px 32px;
+
+	.shops_info {
+		margin-bottom: -24px;
+		border: none;
+		padding-bottom: 0;
+	}
+
+	.shops_info_item {
+		&:first-of-type {
+			padding-left: 0;
+		}
+	}
 }
 
 .shops_info {
 	display: flex;
 	flex-wrap: wrap;
-	margin-bottom: -24px;
+	padding-bottom: 8px;
+	margin-bottom: 32px;
+	border-bottom: 1px solid #F0F0F0;
 }
 
 .shops_info_item {
 	padding-right: 10%;
 	margin-bottom: 24px;
+
+	&:first-of-type {
+		padding-left: 17px;
+	}
 }
 
 .shops_info_item_number {
@@ -4670,6 +4730,10 @@ body {
 		padding: 16px;
 	}
 
+	.shops_info_item:first-of-type {
+		padding-left: 0;
+	}
+
 	.shop_docs {
 		margin: -20px -16px -20px;
 		padding: 20px 16px 20px;
@@ -4882,17 +4946,51 @@ body {
 	}
 }
 
-.message_alert {
+.message_alert_wrapper {
 	background: #FFFFFF;
 	box-shadow: 0px 4px 80px rgba(22, 22, 22, 0.12);
 	border-radius: 15px;
+	margin-bottom: 24px;
+
+	.form-group {
+		margin-bottom: 0;
+	}
+
+	.form__label {
+		margin-bottom: 0;
+		border: none !important;
+	}
+
+	.form__label_text {
+		color: #222222;
+	}
+
+	.form-control {
+		font-size: 16px;
+		padding: 28px 16px 15px;
+
+
+		&.focus-visible~.form__label_text,
+		&:focus~.form__label_text,
+		&:not(:placeholder-shown)~.form__label_text {
+			font-size: 10px;
+			top: 11px;
+		}
+
+		&:-webkit-autofill~.form__label_text {
+			font-size: 10px;
+			top: 11px;
+		}
+	}
+}
+
+.message_alert {
 	font-weight: 600;
 	font-size: 13px;
 	line-height: 16px;
 	display: flex;
 	align-items: center;
 	padding: 12px 12px 12px 16px;
-	margin-bottom: 24px;
 
 	.btn {
 		margin-left: auto;
@@ -4952,6 +5050,17 @@ body {
 			margin: 5px 16px 22px;
 			width: calc(100% - 32px);
 			padding: 7px 16px 8px;
+		}
+	}
+
+	.message_alert_wrapper {
+		.form__label {
+			flex-direction: column;
+		}
+
+		.form_input_copy_btn {
+			margin: 8px 16px 16px;
+			width: calc(100% - 32px);
 		}
 	}
 }
@@ -5163,19 +5272,44 @@ p {
 	margin-right: 6px;
 	cursor: pointer;
 	flex: 0 0 auto;
-	// position: absolute;
-	// top: 8px;
-	// right: 0px;
 
 	svg {
 		width: 24px;
 		height: 24px;
 		fill: none;
+		flex: 0 0 auto
+	}
+
+	&.-lenght {
+		padding: 12px 16px;
+		width: auto;
+		height: auto;
+		font-weight: 600;
+		font-size: 13px;
+		line-height: 130%;
+		border-radius: 10px;
+
+		svg {
+			margin-right: 8px;
+		}
 	}
 }
 
 @media screen and (max-width:440px) {
 	.payment_block {
 		padding: 24px;
+	}
+}
+
+.content_text {
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 160%;
+	color: #222222;
+
+	p {
+		&:not(:last-of-type) {
+			margin-bottom: 12px;
+		}
 	}
 }
