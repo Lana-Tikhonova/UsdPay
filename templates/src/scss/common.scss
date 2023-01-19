@@ -135,15 +135,15 @@ button {
 }
 
 .text_center {
-	text-align: center;
+	text-align: center !important;
 }
 
 .text_left {
-	text-align: left;
+	text-align: left !important;
 }
 
 .text_right {
-	text-align: right;
+	text-align: right !important;
 }
 
 @media screen and (min-width:681px) {
@@ -476,6 +476,11 @@ textarea.form-control {
 	text-align: right;
 	color: #B9B9B9;
 	text-align: right;
+
+	&.-dark {
+		font-weight: 600;
+		color: #999999;
+	}
 }
 
 /* checkbox,radio */
@@ -2259,6 +2264,10 @@ textarea.form-control {
 			}
 		}
 
+		&.name {
+			font-weight: 600;
+		}
+
 		&.status {
 			.circle {
 				width: 8px;
@@ -2279,6 +2288,10 @@ textarea.form-control {
 
 		&.recipient {
 			width: 250px;
+		}
+
+		&.edit {
+			width: 24px;
 		}
 	}
 
@@ -2452,7 +2465,19 @@ textarea.form-control {
 }
 
 main {
-	padding-bottom: 120px;
+	padding-bottom: 60px;
+}
+
+@media screen and (max-width:992px) {
+	main {
+		padding-bottom: 150px;
+	}
+}
+
+@media screen and (max-width:576px) {
+	main {
+		padding-bottom: 100px;
+	}
 }
 
 .data_absence {
@@ -2893,6 +2918,26 @@ main {
 					justify-content: space-between;
 				}
 			}
+
+			&.edit {
+				width: 100%;
+			}
+		}
+	}
+
+	.edit_block {
+		width: 100%;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 15px;
+		padding: 10px;
+
+		svg {
+			margin-right: 8px;
+		}
+
+		span {
+			display: inline-block;
 		}
 	}
 
@@ -4095,6 +4140,7 @@ body {
 	.btn {
 		padding: 15.5px 30px;
 		min-width: 120px;
+		width: 47%;
 	}
 }
 
@@ -4115,10 +4161,16 @@ body {
 
 	.modal_btns {
 		margin-top: 24px;
+	}
 
-		.btn {
-			width: 47%;
-		}
+	.modal_title {
+		margin-bottom: 32px;
+	}
+}
+
+.api_modal {
+	.modal-content {
+		max-width: 500px;
 	}
 
 	.modal_title {
@@ -4147,6 +4199,12 @@ body {
 			padding-left: 30px;
 			padding-right: 30px;
 		}
+	}
+
+	.modal_btns .btn {
+		padding-left: 16px;
+		padding-right: 16px;
+		width: 46%;
 	}
 }
 
@@ -4777,6 +4835,7 @@ body {
 	align-items: center;
 	width: 200px;
 	flex: 0 0 auto;
+	margin-right: 8px;
 }
 
 .recipient_block_text {
@@ -4808,7 +4867,6 @@ body {
 	width: 28px;
 	height: 28px;
 	flex: 0 0 auto;
-	margin-left: 8px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -4818,6 +4876,26 @@ body {
 		width: 20px;
 		height: 20px;
 		fill: none;
+	}
+}
+
+.edit_block {
+	background: #F9F9F9;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 4px;
+	cursor: pointer;
+
+	svg {
+		width: 20px;
+		height: 20px;
+		fill: none;
+	}
+
+	span {
+		display: none;
 	}
 }
 

@@ -17,25 +17,10 @@
     <link rel="preload" href="templates/assets/fonts/Montserrat-Bold.woff2" as="font" type="font/woff2"
         crossorigin="anonymous">
 
-   <link rel="stylesheet" href="templates/assets/css/bundle.min.css?v=17">
+    <link rel="stylesheet" href="templates/assets/css/bundle.min.css?v=17">
 </head>
 
 <body>
-    <div class="baner">
-        <div class="container">
-            <div class="baner_text">
-                Приглашайте новых клиентов <span>USDPAY</span> по реферальной системе и <span>получай постоянный 5% с
-                    комиссия от их оборота</span>
-            </div>
-            <a href="#" class="btn">Подробнее</a>
-            <div class="baner_close">
-                <svg>
-                    <use xlink:href="templates/assets/imgs/sprite.symbol.svg#close">
-                    </use>
-                </svg>
-            </div>
-        </div>
-    </div>
     <header class="header">
         <div class="container">
             <div class="row header_row_top">
@@ -344,7 +329,7 @@
                                     Обзор
                                 </a>
                             </li>
-                            <li class="menu_item active">
+                            <li class="menu_item">
                                 <a href="#" class="menu_item_link">
                                     <svg class="menu_icon">
                                         <use xlink:href="templates/assets/imgs/sprite.symbol.svg#store">
@@ -399,7 +384,7 @@
                                     Настройки
                                 </a>
                             </li>
-                            <li class="menu_item">
+                            <li class="menu_item active">
                                 <a href="#" class="menu_item_link">
                                     <svg class="menu_icon">
                                         <use xlink:href="templates/assets/imgs/sprite.symbol.svg#api">
@@ -430,221 +415,100 @@
                     </div>
                 </div>
                 <div class="content_right">
-                    <a href="#" class="back">
-                        <svg>
-                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#arrow_left">
-                            </use>
-                        </svg>К списку магазинов
-                    </a>
-                    <div class="content_shops">
-                        <div class="content_shops_head">
-                            <div class="title_wrap">
-                                <h2 class="">BotPay</h2>
-                                <div class="receipts_link">
-                                    <a href="#">crm.botpay.me</a>
-                                    <span class="receipts_link_id">ID: 15954</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content_shops_body">
-                            <div class="shops_settings">
-                                <a href="#" class="shops_settings_item">
-                                    <svg>
-                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#shops_receipts">
-                                        </use>
-                                    </svg>
-                                    Поступления
-                                </a>
-                                <a href="#" class="shops_settings_item active">
-                                    <svg>
-                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#shops_settings">
-                                        </use>
-                                    </svg>
-                                    Настройки
-                                    магазина
-                                </a>
-                                <a href="#" class="shops_settings_item">
-                                    <svg>
-                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#shops_commission">
-                                        </use>
-                                    </svg>
-                                    Комиссия и условия
-                                </a>
-                                <a href="#" data-open-modal="remove-magazin" class="shops_settings_item">
-                                    <svg>
-                                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#shops_delete">
-                                        </use>
-                                    </svg>
-                                    Удалить магазин
-                                </a>
-                            </div>
-                        </div>
-                        <div class="content_shops_footer">
-                            <div class="content_card">
-                                <h3>Настройки магазина</h3>
-                                <div class="tabs_nav">
-                                    <ul class="tabs_list">
-                                        <li>
-                                            <a href="#tabs-1" class="tabs_item active">Общие</a>
-                                        </li>
-                                        <li>
-                                            <a href="#tabs-2" class="tabs_item">Технические</a>
-                                        </li>
-                                        <li>
-                                            <a href="#tabs-3" class="tabs_item">Безопасность</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="tabs_content">
-                                    <div class="tabs_content_item" id="tabs-1">
-                                        <div class="form_list">
-                                            <div class="form-group_wrapper width_33">
-                                                <div class="form-group form_input">
-                                                    <div class="form__label">
-                                                        <!-- placeholder должен быть с пробелом, текст в него не вставлять, он должен быть в form__label_text -->
-                                                        <input name="" placeholder=" " value="15954"
-                                                            class="form-control" disabled="disabled" />
-                                                        <span class="form__label_text">ID магазина</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group_wrapper width_33">
-                                                <!--  класс success для галочки -->
-                                                <div class="form-group form_input success">
-                                                    <div class="form__label">
-                                                        <input name="" placeholder=" " value="crm.botpay.me"
-                                                            class="form-control" disabled="disabled" />
-                                                        <span class="form__label_text">Домен магазина</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group_wrapper width_33">
-                                                <div class="form-group form_input">
-                                                    <div class="form__label">
-                                                        <input name="" placeholder=" " value="" class="form-control" />
-                                                        <span class="form__label_text">E-mail для связи</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group_wrapper width_66">
-                                                <div class="form-group form_input">
-                                                    <div class="form__label">
-                                                        <input name="" placeholder=" " value="BotPay"
-                                                            class="form-control" />
-                                                        <span class="form__label_text">Название магазина</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- для переноса на новую стрку -->
-                                            <div class="width_100"></div>
-
-                                            <div class="form-group_wrapper width_33">
-                                                <div class="form-select">
-                                                    <select name="" class="select_shop">
-                                                        <option selected value="Русский">Русский
-                                                        </option>
-                                                        <option value="Русский">Русский</option>
-                                                    </select>
-                                                    <span class="form__label_text">Язык</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_btn">
-                                            <a href="#" class="btn">Сохранить</a>
-                                        </div>
-                                    </div>
-                                    <div class="tabs_content_item" id="tabs-2">
-                                        <div class="form_list">
-                                            <div class="form-group_wrapper width_50">
-                                                <div class="form-group form_input success">
-                                                    <div class="form__label">
-                                                        <input name="" placeholder=" " value="https://crm.botpay.me"
-                                                            class="form-control" disabled="disabled" />
-                                                        <span class="form__label_text">URL магазина</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group_wrapper width_100">
-                                                <div class="form-group form_input">
-                                                    <div class="form__label">
-                                                        <input name="" placeholder=" "
-                                                            value="https://crm.botpay.me/api/payments/paykassa/"
-                                                            class="form-control" />
-                                                        <span class="form__label_text">URL уведомлений об оплате инвойса
-                                                            [sci_confirm_order]</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group_wrapper width_100">
-                                                <div class="form-group form_input">
-                                                    <div class="form__label">
-                                                        <input name="" placeholder=" "
-                                                            value="https://crm.botpay.me/api/payments/paykassa/"
-                                                            class="form-control" />
-                                                        <span class="form__label_text">URL страницы с сообщением об
-                                                            успешной оплате [redirect]</span>
-                                                    </div>
-                                                    <div class="form-group_message">Необязательное</div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group_wrapper width_33">
-                                                <div class="form-select">
-                                                    <select name="" class="select_shop">
-                                                        <option selected value="Нет">Нет
-                                                        </option>
-                                                        <option value="Да">Да</option>
-                                                    </select>
-                                                    <span class="form__label_text">Принимать любую сумму</span>
-                                                </div>
-                                            </div>
-                                            <div class="form-group_wrapper width_33">
-                                                <div class="form-select">
-                                                    <select name="" class="select_shop">
-                                                        <option selected value="Включить">Включить
-                                                        </option>
-                                                        <option value="Включить">Включить</option>
-                                                    </select>
-                                                    <span class="form__label_text">Включить тестовый режим
-                                                        SCI/API</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_btn">
-                                            <a href="#" class="btn">Сохранить</a>
-                                        </div>
-                                    </div>
-                                    <div class="tabs_content_item" id="tabs-3">
-                                        <div class="form_list">
-                                            <div class="form-group_wrapper width_50">
-                                                <div class="form-group form_input">
-                                                    <div class="form__label">
-                                                        <input name="" placeholder=" " value=""
-                                                            class="form-control generate" data-size="15"
-                                                            data-character-set="a-z,A-Z,0-9,#" id="#gr_1" />
-                                                        <span class="form__label_text">Пароль магазина</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group_wrapper width_50">
-                                                <div class="form-group form_button">
-                                                    <button type="button" class="getNewPass"
-                                                        data-generate="#gr_1">Сгенерировать</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_btn">
-                                            <a href="#" class="btn">Сохранить</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="content_card ">
+                        <div class="data_absence">
+                            <span>Вы пока не добавили ни одного API</span>
+                            <a href="#" data-open-modal="add_api" class="btn btn_icon">
+                                <svg class="menu_icon">
+                                    <use xlink:href="templates/assets/imgs/sprite.symbol.svg#add_plus">
+                                    </use>
+                                </svg>
+                                Добавить API </a>
                         </div>
                     </div>
+                    <div class="content_card">
+                        <h2>Ваши API</h2>
+                        <!-- Обертки внурти td,th нужны для border-bottom -->
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div>Название API</div>
+                                    </th>
+                                    <th>
+                                        <div>ID API</div>
+                                    </th>
+                                    <th>
+                                        <div>Комментарий</div>
+                                    </th>
+                                    <th>
+                                        <div>Статус</div>
+                                    </th>
+                                    <th>
+                                        <div></div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <div>
+                                            <span class="table_td_title">Название API</span>
+                                            BotPay API
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span class="table_td_title">ID API</span>
+                                            0025
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span class="table_td_title">Комментарий</span>
+                                            <div class="comment_block" data-open-modal="table_comment">
+                                                <svg>
+                                                    <use xlink:href="templates/assets/imgs/sprite.symbol.svg#comment">
+                                                    </use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="status">
+                                        <div>
+                                            <span class="table_td_title">Статус</span>
+                                            <div>
+                                                <span style="background: #00CA8B;" class="circle"></span>
+                                                Подключен
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="edit">
+                                        <div>
+                                            <div class="edit_block" data-open-modal="edit_api">
+                                                <svg>
+                                                    <use xlink:href="templates/assets/imgs/sprite.symbol.svg#edit">
+                                                    </use>
+                                                </svg>
+                                                <span>Редактировать</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <a href="#" data-open-modal="add_api" class="btn btn_icon width_100">
+                        <svg class="menu_icon">
+                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#add_plus">
+                            </use>
+                        </svg>
+                        Добавить API</a>
                 </div>
             </div>
         </div>
     </main>
-    <div class="modal" data-modal="remove-magazin">
+    <div class="modal api_modal" data-modal="add_api">
         <div class="modal-dialog">
             <div class="modal-content text_center">
                 <button type="button" class="close" data-modal-close>
@@ -654,18 +518,113 @@
                     </svg>
                 </button>
                 <div class="modal_head">
-                    <div class="modal_title">Вы уверены, что хотите удалить магазин?</div>
+                    <div class="modal_title">Добавить API</div>
                 </div>
                 <div class="modal_body">
-                    <div class="modal_text">
-                        После удаления, магазин будет отправлен в архив. Данные для экспорта будут доступны
-                        <b>до 11.01.2022.</b>
+                    <div class="form-group form_input">
+                        <div class="form__label">
+                            <input name="" placeholder=" " value="" class="form-control" />
+                            <span class="form__label_text">Название API</span>
+                        </div>
+                    </div>
+                    <div class="form-group form_input">
+                        <div class="form__label">
+                            <input name="" placeholder=" " value="" class="form-control" />
+                            <span class="form__label_text">API Password</span>
+                        </div>
+                    </div>
+                    <div class="form-group form_input">
+                        <div class="form__label">
+                            <input name="" placeholder=" " value="" class="form-control" />
+                            <span class="form__label_text">Описание API</span>
+                        </div>
+                    </div>
+                    <div class="form-group form_input">
+                        <div class="form__label">
+                            <input name="" placeholder=" " value="" class="form-control" />
+                            <span class="form__label_text">Доступные IP</span>
+                        </div>
+                        <div class="form-group_message text_left -dark">Если их несколько, заполняются через точку с
+                            запятой ;
+                        </div>
                     </div>
                 </div>
                 <div class="modal_footer">
                     <div class="modal_btns">
-                        <button class="btn btn_dark">Удалить</button>
-                        <button data-modal-close class="btn btn_white">Отмена</button>
+                        <button class="btn">Добавить API</button>
+                        <button data-modal-close class="btn btn_white">Очистить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal_bg"></div>
+    </div>
+    <div class="modal api_modal" data-modal="edit_api">
+        <div class="modal-dialog">
+            <div class="modal-content text_center">
+                <button type="button" class="close" data-modal-close>
+                    <svg>
+                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#close">
+                        </use>
+                    </svg>
+                </button>
+                <div class="modal_head">
+                    <div class="modal_title">Редактировать BotPay API</div>
+                </div>
+                <div class="modal_body">
+                    <div class="form-group form_input">
+                        <div class="form__label">
+                            <input name="" placeholder=" " value="" class="form-control" />
+                            <span class="form__label_text">Название API</span>
+                        </div>
+                    </div>
+                    <div class="form-group form_input">
+                        <div class="form__label">
+                            <input name="" placeholder=" " value="" class="form-control" />
+                            <span class="form__label_text">API Password</span>
+                        </div>
+                    </div>
+                    <div class="form-group form_input">
+                        <div class="form__label">
+                            <input name="" placeholder=" " value="" class="form-control" />
+                            <span class="form__label_text">Описание API</span>
+                        </div>
+                    </div>
+                    <div class="form-group form_input">
+                        <div class="form__label">
+                            <input name="" placeholder=" " value="" class="form-control" />
+                            <span class="form__label_text">Доступные IP</span>
+                        </div>
+                        <div class="form-group_message text_left -dark">Если их несколько, заполняются через точку с
+                            запятой ;
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_footer">
+                    <div class="modal_btns">
+                        <button class="btn">Добавить API</button>
+                        <button data-modal-close class="btn btn_white">Очистить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal_bg"></div>
+    </div>
+    <div class="modal" data-modal="table_comment">
+        <div class="modal-dialog">
+            <div class="modal-content text_left -big_modal">
+                <button type="button" class="close" data-modal-close>
+                    <svg>
+                        <use xlink:href="templates/assets/imgs/sprite.symbol.svg#close">
+                        </use>
+                    </svg>
+                </button>
+                <div class="modal_head">
+                    <div class="modal_title">Комментарий BotPay API</div>
+                </div>
+                <div class="modal_body">
+                    <div class="modal_text">
+                        API запроса на создание токена платежной страницы.
                     </div>
                 </div>
             </div>
