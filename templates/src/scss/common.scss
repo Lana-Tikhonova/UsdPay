@@ -265,8 +265,8 @@ button {
 
 	.content_shops .content_card {
 		.form_btn {
-			margin-left: -21px;
-			margin-right: -21px;
+			margin-left: -24px;
+			margin-right: -24px;
 		}
 	}
 }
@@ -2134,27 +2134,17 @@ textarea.form-control {
 	margin-right: -32px;
 	margin-top: -10px;
 	border-collapse: collapse;
-	// margin-bottom: 40px;
+	height: 100%;
 
 	tr {
 		position: relative;
 		display: table-row;
-
-		// &:after {
-		// 	content: "";
-		// 	display: block;
-		// 	position: absolute;
-		// 	left: 32px;
-		// 	bottom: 0;
-		// 	width: calc(100% - 64px);
-		// 	height: 1px;
-		// 	background: #f4f4f4;
-		// }
 	}
 
 	th,
 	td {
-		height: 1px;
+		// height: 1px;
+		height: 100%;
 
 		&:first-child {
 			padding-left: 32px;
@@ -2180,6 +2170,18 @@ textarea.form-control {
 		&>div {
 			padding: 10px 10px;
 		}
+
+		&:first-of-type {
+			&>div {
+				padding-left: 0;
+			}
+		}
+
+		&:last-of-type {
+			&>div {
+				padding-right: 0;
+			}
+		}
 	}
 
 	td {
@@ -2195,11 +2197,25 @@ textarea.form-control {
 
 		&>div {
 			padding: 12px 10px;
+			display: flex;
+			align-items: center;
+
+			&.text_right {
+				justify-content: flex-end;
+			}
 		}
 
-		// &.sum {
-		// 	text-align: right;
-		// }
+		&:first-of-type {
+			&>div {
+				padding-left: 0;
+			}
+		}
+
+		&:last-of-type {
+			&>div {
+				padding-right: 0;
+			}
+		}
 
 		&.status {
 			.circle {
@@ -2261,8 +2277,16 @@ textarea.form-control {
 			border: none;
 		}
 	}
+}
 
+@-moz-document url-prefix() {
+	.table {
 
+		th,
+		td {
+			height: 100%;
+		}
+	}
 }
 
 .table_missing {
@@ -2328,34 +2352,6 @@ textarea.form-control {
 	}
 }
 
-// .table_thead,
-// .table_tbody_item {
-// 	position: relative;
-
-// 	&:after {
-// 		content: '';
-// 		display: block;
-// 		position: absolute;
-// 		left: 32px;
-// 		bottom: 0;
-// 		width: calc(100% - 64px);
-// 		height: 1px;
-// 		background: #F4F4F4;
-// 	}
-// }
-
-// .table_thead {
-// 	padding-left: 32px;
-// 	padding-right: 32px;
-// 	display: flex;
-// 	align-items: center;
-// }
-
-// .table_tbody_top {
-// 	display: flex;
-// 	align-items: center;
-// }
-
 .table_tbody_bottom {
 	display: flex;
 	padding: 20px 32px 22px;
@@ -2363,62 +2359,12 @@ textarea.form-control {
 	border-radius: 0 0 15px 15px;
 	background: #fff;
 	box-shadow: 0px 32px 40px rgba(22, 22, 22, 0.04);
+	width: 100%;
 
 	&[style*="display: block"] {
 		display: flex !important;
 	}
 }
-
-// .table_tbody_item {
-// 	width: 100%;
-// 	padding-left: 32px;
-// 	padding-right: 32px;
-// 	transition: $transition;
-
-// 	&.active {
-// 		background: #FFFFFF;
-// 		box-shadow: 0px 4px 80px rgba(22, 22, 22, 0.08);
-// 		border-radius: 15px;
-
-// 		.info_open:after {
-// 			transform: rotate(180deg);
-// 		}
-// 	}
-
-// }
-
-// .table_th {
-// 	font-weight: 600;
-// 	font-size: 11px;
-// 	line-height: 130%;
-// 	padding: 10px 10px;
-// 	color: #0C1135;
-// 	text-align: left;
-
-// 	&:first-child {
-// 		padding-left: 0;
-// 	}
-
-// 	&:last-child {
-// 		padding-right: 0;
-// 	}
-// }
-
-// .table_td {
-// 	font-weight: 400;
-// 	font-size: 12px;
-// 	line-height: 15px;
-// 	color: #222222;
-// 	padding: 12px 10px;
-
-// 	&:first-child {
-// 		padding-left: 0;
-// 	}
-
-// 	&:last-child {
-// 		padding-right: 0;
-// 	}
-// }
 
 .table_td_title {
 	display: none;
@@ -2899,6 +2845,10 @@ main {
 				span {
 					text-align: left;
 					padding-right: 10px;
+				}
+
+				&.text_right {
+					justify-content: space-between;
 				}
 			}
 		}
@@ -4984,7 +4934,8 @@ body {
 		.btn {
 			font-size: 12px;
 			padding: 9px 12px;
-			margin-top: 10px;
+			margin-top: 15px;
+			width: 100%;
 		}
 	}
 
