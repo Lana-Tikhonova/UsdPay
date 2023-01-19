@@ -2175,6 +2175,22 @@ textarea.form-control {
 	}
 }
 
+@media screen and (min-width:701px) {
+	.table {
+		tr {
+			&.new_proceeds {
+				td {
+					background: #F4F4F4;
+				}
+
+				.info_open {
+					background: #fff;
+				}
+			}
+		}
+	}
+}
+
 .table {
 	width: calc(100% + 64px);
 	margin-left: -32px;
@@ -2191,7 +2207,9 @@ textarea.form-control {
 	th,
 	td {
 		// height: 1px;
+		padding: 0;
 		height: 100%;
+		// transition: $transition;
 
 		&:first-child {
 			padding-left: 32px;

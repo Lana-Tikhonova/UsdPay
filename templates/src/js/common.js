@@ -953,4 +953,8 @@ $(document).ready(function () {
             });
     });
 
+    $('tr.new_proceeds').hover(function () {
+        $(this).removeClass('new_proceeds');
+    });
+
 });
