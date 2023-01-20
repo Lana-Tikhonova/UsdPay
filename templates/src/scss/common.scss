@@ -2036,11 +2036,17 @@ textarea.form-control {
 }
 
 .receipts_statistics {
-	margin: 27px -32px -24px;
 	display: flex;
 	background: #FFFFFF;
-	box-shadow: 0px 4px 80px rgba(22, 22, 22, 0.06);
+	box-shadow: 0px 4px 55px rgba(22, 22, 22, 0.06);
 	border-radius: 15px;
+	overflow: hidden;
+}
+
+.receipts_statistics_wrapper {
+	margin: -12px -32px -24px;
+	overflow: hidden;
+	padding-top: 35px;
 }
 
 .receipts_fraction {
@@ -3246,7 +3252,7 @@ main {
 		line-height: 16px;
 	}
 
-	.receipts_statistics {
+	.receipts_statistics_wrapper {
 		margin-left: -16px;
 		margin-right: -16px;
 		margin-bottom: -16px;
