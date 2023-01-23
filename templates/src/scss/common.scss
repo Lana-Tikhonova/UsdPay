@@ -4888,7 +4888,7 @@ body {
 
 .text_copied {
 	position: absolute;
-	top: calc(-100% + 9px);
+	bottom: calc(100% + 9px);
 	right: 0;
 	padding: 3px 6px;
 	background: #119b75;
@@ -4967,8 +4967,11 @@ body {
 
 	.text_copied {
 		font-size: 9px;
-		top: calc(-100% + 14px);
-		padding: 2px 5px;
+		padding: 3px 5px 2px;
+	}
+
+	.shop_ip_item .text_copied {
+		bottom: calc(100% + 4px);
 	}
 }
 
@@ -5516,6 +5519,8 @@ p {
 		align-items: center;
 		justify-content: space-between;
 	}
+
+	.text_copied {}
 }
 
 .form_input_copy_btn {
