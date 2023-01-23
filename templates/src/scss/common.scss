@@ -1367,9 +1367,12 @@ textarea.form-control {
 	font-size: 12px;
 	line-height: 15px;
 	margin-top: auto;
+	display: flex;
+	align-items: center;
 
 	span {
 		color: #C4C4C4;
+		margin-left: 3px;
 	}
 }
 

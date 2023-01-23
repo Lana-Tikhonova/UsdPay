@@ -52,20 +52,23 @@ $(document).ready(function () {
 
     $('.profit_hide').on("click", function () {
         $(this).toggleClass('active')
-        let hideElem = $(this).parents('.wallet_card').find('.wallet_card_balans .number');
-        var hideElemText = hideElem.text();
-        console.log(hideElemText);
-        if (!hideElemText.indexOf("*")) {
-            hideElem.text(hideElem.attr("data-text"));
-            hideElem.removeClass('active');
-            return;
-        }
-        var starText = "";
-        for (let i = 0; i < hideElemText.length; i++) starText += "*";
-        hideElem
-            .attr("data-text", hideElemText)
-            .addClass('active')
-            .text(starText);
+        let hideElems = $('.wallet_balance .number');
+        hideElems.each(function (index) {
+            let hideElem = $(this);
+            let hideElemText = hideElem.text();
+            if (!hideElemText.indexOf("*")) {
+                hideElem.text(hideElem.attr("data-text"));
+                hideElem.removeClass('active');
+                return;
+            }
+            var starText = "";
+            for (let i = 0; i < hideElemText.length; i++) starText += "*";
+            hideElem
+                .attr("data-text", hideElemText)
+                .addClass('active')
+                .text(starText);
+        });
+
     });
 
 

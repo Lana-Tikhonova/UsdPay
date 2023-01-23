@@ -17,7 +17,7 @@
     <link rel="preload" href="templates/assets/fonts/Montserrat-Bold.woff2" as="font" type="font/woff2"
         crossorigin="anonymous">
 
-    <link rel="stylesheet" href="templates/assets/css/bundle.min.css?v=21">
+    <link rel="stylesheet" href="templates/assets/css/bundle.min.css?v=22">
 </head>
 
 <body>
@@ -88,7 +88,7 @@
                                             <use xlink:href="templates/assets/imgs/sprite.symbol.svg#wallet">
                                             </use>
                                         </svg>
-                                        <div class="wallet_card_balans">
+                                        <div class="wallet_card_balans wallet_balance">
                                             <div class="number">650,220.85</div>
                                             <span> USDT</span>
                                         </div>
@@ -110,7 +110,9 @@
                                                     <div class="wallet_card_title">BotPay</div>
                                                 </div>
                                                 <div class="wallet_card_center">
-                                                    <div class="wallet_card_balans -small">+5,220<span>.11 USDT</span>
+                                                    <div class="wallet_card_balans -small wallet_balance">
+                                                        <div class="number">+5,220.11</div>
+                                                        <span>USDT</span>
                                                     </div>
                                                     <div class="wallet_card_time">За сутки</div>
                                                 </div>
@@ -124,7 +126,9 @@
                                                     <div class="wallet_card_title">PayBotPay</div>
                                                 </div>
                                                 <div class="wallet_card_center">
-                                                    <div class="wallet_card_balans -small">+5,670<span>.11 USDT</span>
+                                                    <div class="wallet_card_balans -small wallet_balance">
+                                                        <div class="number">+5,220.11</div>
+                                                        <span>USDT</span>
                                                     </div>
                                                     <div class="wallet_card_time">За сутки</div>
                                                 </div>
@@ -143,7 +147,10 @@
                     <div class="chart_receipts_month">
                         <div class="chart_receipts_title">Поступления за декабрь</div>
                         <div id="chart"></div>
-                        <div class="chart_receipts_sum">24,440 <span>USDT</span></div>
+                        <div class="chart_receipts_sum wallet_balance">
+                            <div class="number">24,440</div>
+                            <span>USDT</span>
+                        </div>
                     </div>
                 </div>
                 <div class="header_btn_wrapper">
@@ -675,7 +682,7 @@
         </div>
         <div class="modal_bg"></div>
     </div>
-    <script src="templates/assets/js/bundle.min.js?v=17"></script>
+    <script src="templates/assets/js/bundle.min.js?v=18"></script>
 </body>
 
 </html>
