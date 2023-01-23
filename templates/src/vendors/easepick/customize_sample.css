@@ -25,7 +25,9 @@
 }
 
 .container {
+  font-family: "Montserrat", sans-serif;
   left: 50% !important;
+  top: 10px !important;
   transform: scale(1) translateX(-50%);
 }
 

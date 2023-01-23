@@ -88,7 +88,7 @@
                                             <use xlink:href="templates/assets/imgs/sprite.symbol.svg#wallet">
                                             </use>
                                         </svg>
-                                        <div class="wallet_card_balans">
+                                        <div class="wallet_card_balans wallet_balance">
                                             <div class="number">650,220.85</div>
                                             <span> USDT</span>
                                         </div>
@@ -110,7 +110,9 @@
                                                     <div class="wallet_card_title">BotPay</div>
                                                 </div>
                                                 <div class="wallet_card_center">
-                                                    <div class="wallet_card_balans -small">+5,220<span>.11 USDT</span>
+                                                    <div class="wallet_card_balans -small wallet_balance">
+                                                        <div class="number">+5,220.11</div>
+                                                        <span>USDT</span>
                                                     </div>
                                                     <div class="wallet_card_time">За сутки</div>
                                                 </div>
@@ -124,7 +126,9 @@
                                                     <div class="wallet_card_title">PayBotPay</div>
                                                 </div>
                                                 <div class="wallet_card_center">
-                                                    <div class="wallet_card_balans -small">+5,670<span>.11 USDT</span>
+                                                    <div class="wallet_card_balans -small wallet_balance">
+                                                        <div class="number">+5,220.11</div>
+                                                        <span>USDT</span>
                                                     </div>
                                                     <div class="wallet_card_time">За сутки</div>
                                                 </div>
@@ -143,7 +147,10 @@
                     <div class="chart_receipts_month">
                         <div class="chart_receipts_title">Поступления за декабрь</div>
                         <div id="chart"></div>
-                        <div class="chart_receipts_sum">24,440 <span>USDT</span></div>
+                        <div class="chart_receipts_sum wallet_balance">
+                            <div class="number">24,440</div>
+                            <span>USDT</span>
+                        </div>
                     </div>
                 </div>
                 <div class="header_btn_wrapper">
@@ -180,10 +187,13 @@
                             <use xlink:href="templates/assets/imgs/sprite.symbol.svg#all">
                             </use>
                         </svg>
+                        <svg>
+                            <use xlink:href="templates/assets/imgs/sprite.symbol.svg#close">
+                            </use>
+                        </svg>
                     </span>
                     Ещё
                 </button>
-                <!-- <ul class="functional_menu_list_mobile"></ul> -->
             </li>
             <li class="functional_menu_item">
                 <a href="#" class="functional_menu_link active">
@@ -475,7 +485,7 @@
                     </div>
                     <div class="content_card ">
                         <div class="title_wrap">
-                            <h2 class="title_arrow">Статистика поступлений</h2>
+                            <h2>Статистика поступлений</h2>
                         </div>
 
                         <div class="data_absence">
@@ -490,7 +500,7 @@
                     </div>
                     <div class="content_card">
                         <div class="title_wrap">
-                            <h2 class="title_arrow">Статистика поступлений</h2>
+                            <h2>Статистика поступлений</h2>
                             <div class="select_wrapper">
                                 <select name="" class="select_add">
                                     <option selected value="2022">2022</option>
@@ -592,7 +602,7 @@
                     </div>
 
                     <div class="content_card">
-                        <h2 class="title_arrow">Поступления</h2>
+                        <h2 class="title_arrow"><a href="/proceeds.html">Поступления</a></h2>
                         <div class="date_selection">
                             <label class="date_selection_item">
                                 <input name="date_selectionTwo" type="radio" value="" checked>

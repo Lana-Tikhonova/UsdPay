@@ -196,6 +196,7 @@ button {
 
 	&:hover {
 		background: #00E48E;
+		color: #00402C;
 	}
 
 }
@@ -878,14 +879,28 @@ textarea.form-control {
 			padding: 0 12px;
 
 			a {
-				border-bottom: 3px solid transparent;
-				border-radius: 3px;
+				// border-bottom: 3px solid transparent;
+				// border-radius: 3px;
 				padding: 4px 0;
 				font-weight: 600;
 				font-size: 13px;
 				line-height: 16px;
 				color: rgba(34, 34, 34, 0.5);
 				transition: $transition;
+				position: relative;
+
+				&:after {
+					content: '';
+					display: block;
+					position: absolute;
+					left: 0;
+					bottom: -3px;
+					right: 0;
+					width: 100%;
+					height: 3px;
+					background: transparent;
+					border-radius: 50px;
+				}
 
 				&:hover:not(.active) {
 					color: #222222;
@@ -893,7 +908,11 @@ textarea.form-control {
 
 				&.active {
 					color: #000;
-					border-color: #17BD90;
+
+					// border-color: #17BD90;
+					&:after {
+						background: #17BD90;
+					}
 				}
 			}
 		}
@@ -915,6 +934,11 @@ textarea.form-control {
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		overflow: hidden;
+		transition: $transition;
+
+		&:hover {
+			color: #129B75;
+		}
 	}
 
 	.exit {
@@ -1096,11 +1120,7 @@ textarea.form-control {
 	margin-right: 8px;
 }
 
-.wallet_card_balans {
-	font-weight: 600;
-	font-size: 24px;
-	line-height: 29px;
-
+.wallet_balance {
 	.number {
 		display: inline;
 
@@ -1108,6 +1128,12 @@ textarea.form-control {
 			vertical-align: sub;
 		}
 	}
+}
+
+.wallet_card_balans {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 29px;
 
 	span {
 		font-size: 16px;
@@ -1223,9 +1249,14 @@ textarea.form-control {
 	&.active {
 		.menu_item_link {
 			background: $color_green01;
+			cursor: initial;
 
 			.number_new {
 				background: #fff;
+			}
+
+			&:hover {
+				box-shadow: none;
 			}
 		}
 
@@ -1247,7 +1278,8 @@ textarea.form-control {
 	transition: $transition;
 
 	&:hover {
-		color: #00402C;
+		box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.08);
+		color: #222222;
 	}
 
 	.number {
@@ -1470,6 +1502,12 @@ textarea.form-control {
 			background: #222222;
 		}
 	}
+
+	&:hover {
+		.date_selection_text {
+			background: #EBEBEB;
+		}
+	}
 }
 
 .date_selection_text {
@@ -1481,6 +1519,7 @@ textarea.form-control {
 	font-size: 11px;
 	line-height: 130%;
 	color: #999999;
+	transition: $transition;
 }
 
 .date_input_input {
@@ -1498,6 +1537,11 @@ textarea.form-control {
 	line-height: 130%;
 	color: #C4C4C4;
 	padding: 7px 8px;
+
+	&:focus,
+	&:hover {
+		border-color: #EBEBEB;
+	}
 
 	&::-webkit-input-placeholder {
 		font-weight: 600;
@@ -1528,10 +1572,15 @@ textarea.form-control {
 	}
 }
 
+.easepick-wrapper {
+	bottom: 0;
+}
+
 .date_input {
 	display: flex;
 	align-items: center;
 	position: relative;
+	justify-content: center;
 
 	&.completed {
 		.date_input_input {
@@ -1650,6 +1699,10 @@ textarea.form-control {
 		background-repeat: no-repeat;
 		background-position: center;
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.5 9.5L7.5 6L4.5 2.5' stroke='%23129B75' stroke-width='1.5' stroke-linecap='round'/%3e%3c/svg%3e ");
+	}
+
+	a:hover {
+		color: #129B75;
 	}
 }
 
@@ -2374,6 +2427,19 @@ textarea.form-control {
 	}
 }
 
+button.table_missing {
+	cursor: pointer;
+
+	&:hover {
+		color: #129b75;
+		background: #F4F4F4;
+
+		img {
+			filter: invert(56%) sepia(92%) saturate(340%) hue-rotate(112deg) brightness(89%) contrast(99%)
+		}
+	}
+}
+
 .table_missing {
 	font-weight: 600;
 	font-size: 12px;
@@ -2381,16 +2447,21 @@ textarea.form-control {
 	color: #c4c4c4;
 	padding: 16px;
 	text-align: center;
+	border: none;
 	border-bottom: 1px solid #F4F4F4;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background: transparent;
+	width: 100%;
+	transition: $transition;
 
 	img {
 		width: 20px;
 		height: 20px;
 		object-fit: contain;
 		margin-right: 6px;
+		transition: $transition;
 	}
 }
 
@@ -2513,7 +2584,7 @@ main {
 .data_absence {
 	display: flex;
 	background: #FFFFFF;
-	border: 1px dashed #E7EDEB;
+	border: 1px dashed #DFE6E3;
 	border-radius: 15px;
 	text-align: center;
 	align-items: center;
@@ -2521,6 +2592,7 @@ main {
 	flex-direction: column;
 	padding: 20px;
 	margin: 8px 0 8px;
+
 
 	span {
 		font-weight: 600;
@@ -3214,6 +3286,7 @@ main {
 
 	.date_input {
 		width: 100%;
+		justify-content: flex-start;
 	}
 
 	.receipts_statistics {
@@ -3350,6 +3423,29 @@ main {
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
+
+	svg {
+		&:first-child {
+			display: block;
+		}
+
+		&:last-child {
+			display: none;
+			stroke: #222222;
+		}
+	}
+
+	&.active {
+		svg {
+			&:first-child {
+				display: none;
+			}
+
+			&:last-child {
+				display: block;
+			}
+		}
+	}
 }
 
 .mobile_menu {
@@ -4931,6 +5027,13 @@ body {
 		width: 20px;
 		height: 20px;
 		fill: none;
+		stroke: #999999;
+	}
+
+	&:hover {
+		svg {
+			stroke: #222222;
+		}
 	}
 }
 
@@ -4947,6 +5050,13 @@ body {
 		width: 20px;
 		height: 20px;
 		fill: none;
+		stroke: #999999;
+	}
+
+	&:hover {
+		svg {
+			stroke: #222222;
+		}
 	}
 
 	span {
@@ -5231,11 +5341,16 @@ body {
 	justify-content: space-between;
 	position: relative;
 	cursor: pointer;
+	transition: $transition;
 
 	&.active {
 		.icon svg {
 			transform: rotate(45deg);
 		}
+	}
+
+	&:hover {
+		color: #5C5C5C;
 	}
 
 	.icon-add {
@@ -5414,12 +5529,17 @@ p {
 	margin-right: 6px;
 	cursor: pointer;
 	flex: 0 0 auto;
+	transition: $transition;
 
 	svg {
 		width: 24px;
 		height: 24px;
 		fill: none;
 		flex: 0 0 auto
+	}
+
+	&:hover {
+		background: #00E48E;
 	}
 
 	&.-lenght {
